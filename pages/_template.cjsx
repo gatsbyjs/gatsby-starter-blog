@@ -4,13 +4,14 @@ Router = require 'react-router'
 {Container, Grid, Breakpoint, Span} = require 'react-responsive-grid'
 Typography = require 'typography'
 require '../css/styles.css'
+{link} = require 'gatsby-helpers'
 
 typography = Typography()
 {rhythm, fontSizeToMS} = typography
 
 module.exports = React.createClass
   render: ->
-    if @props.state.path is "/"
+    if @props.state.path is link('/')
       header = (
         <h1
           style={{
@@ -24,7 +25,7 @@ module.exports = React.createClass
               textDecoration: 'none'
               color: 'inherit'
             }}
-            to="/"
+            to={link('/')}
           >
             {@props.config.blogTitle}
           </Link>
@@ -38,7 +39,7 @@ module.exports = React.createClass
               textDecoration: 'none'
               color: 'inherit'
             }}
-            to="/"
+            to={link('/')}
           >
             {@props.config.blogTitle}
           </Link>

@@ -1,7 +1,8 @@
 React = require 'react'
 Router = require 'react-router'
 {RouteHandler, Link} = Router
-sortBy = require 'lodash/collection/sortby'
+sortBy = require 'lodash/collection/sortBy'
+{link} = require 'gatsby-helpers'
 
 module.exports = React.createClass
   statics:
@@ -13,7 +14,7 @@ module.exports = React.createClass
     pageLinks = []
     for page in sortBy(@props.pages, (page) -> page.data?.date).reverse()
       title = page.data?.title || page.path
-      if page.path isnt "/" and not page.data?.draft
+      if page.path isnt link("/") and not page.data?.draft
         pageLinks.push (
           <li
             key={page.path}
