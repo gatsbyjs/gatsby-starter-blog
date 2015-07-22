@@ -2,6 +2,7 @@ React = require 'react'
 require '../css/zenburn.css'
 moment = require 'moment'
 DocumentTitle = require 'react-document-title'
+{link} = require 'gatsby-helpers'
 
 ReadNext = require '../components/ReadNext'
 
@@ -12,7 +13,7 @@ module.exports = React.createClass
     {rhythm} = @props.typography
     post = @props.page.data
 
-    <DocumentTitle title="Name of blog | #{post.title}">
+    <DocumentTitle title="#{post.title} | #{@props.config.blogTitle}">
       <div className="markdown">
         <h1>{post.title}</h1>
         <div dangerouslySetInnerHTML={{__html: post.body}}/>
@@ -32,7 +33,7 @@ module.exports = React.createClass
         <ReadNext post={post} {...@props}/>
         <p>
           <img
-            src="/kyle-round-small-pantheon.jpg"
+            src={link("/kyle-round-small-pantheon.jpg")}
             style={{
               float: 'left'
               marginRight: rhythm(1/4)

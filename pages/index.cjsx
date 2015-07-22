@@ -2,6 +2,7 @@ React = require 'react'
 Router = require 'react-router'
 {RouteHandler, Link} = Router
 sortBy = require 'lodash/collection/sortBy'
+DocumentTitle = require 'react-document-title'
 {link} = require 'gatsby-helpers'
 
 module.exports = React.createClass
@@ -26,25 +27,27 @@ module.exports = React.createClass
           </li>
         )
 
-    <div>
-      <p
-        style={{
-          marginBottom: rhythm(2.5)
-        }}
-      >
-        <img
-          src="./kyle-round-small-pantheon.jpg"
+    <DocumentTitle title="#{@props.config.blogTitle}">
+      <div>
+        <p
           style={{
-            float: 'left'
-            marginRight: rhythm(1/4)
-            marginBottom: 0
-            width: rhythm(2)
-            height: rhythm(2)
+            marginBottom: rhythm(2.5)
           }}
-        />
-        Written by <strong>{@props.config.authorName}</strong> who lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
-      </p>
-      <ul>
-        {pageLinks}
-      </ul>
-    </div>
+        >
+          <img
+            src="./kyle-round-small-pantheon.jpg"
+            style={{
+              float: 'left'
+              marginRight: rhythm(1/4)
+              marginBottom: 0
+              width: rhythm(2)
+              height: rhythm(2)
+            }}
+          />
+          Written by <strong>{@props.config.authorName}</strong> who lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
+        </p>
+        <ul>
+          {pageLinks}
+        </ul>
+      </div>
+    </DocumentTitle>

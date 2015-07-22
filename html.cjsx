@@ -1,15 +1,23 @@
 React = require 'react'
 Typography = require 'typography'
+DocumentTitle = require 'react-document-title'
 
 typography = new Typography()
 {TypographyStyle} = typography
 
 module.exports = React.createClass
   getDefaultProps: ->
-    title: "Default title"
     body: ""
 
   render: ->
+    title = DocumentTitle.rewind()
+    if @props.title then title = @props.title
+
+    if __GH_PAGES__? and __GH_PAGES__
+      urlPrefix = @props.config.ghPagesURLPrefix
+    else
+      urlPrefix = ""
+
     <html lang="en">
       <head>
         <meta charSet="utf-8"/>
@@ -36,6 +44,6 @@ module.exports = React.createClass
       </head>
       <body className="landing-page">
         <div id="react-mount" dangerouslySetInnerHTML={{__html: @props.body}} />
-        <script src="/bundle.js"/>
+        <script src={urlPrefix + "/bundle.js"}/>
       </body>
     </html>
