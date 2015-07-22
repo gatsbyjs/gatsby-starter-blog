@@ -1,0 +1,32 @@
+{
+  "name": "gatsby-starter-blog",
+  "version": "1.0.0",
+  "description": "Starter Gatsby Blog",
+  "main": "n/a",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "dependencies": {
+    "lodash": "^3.10.0",
+    "moment": "^2.10.3",
+    "react": "^0.13.3",
+    "react-document-title": "^1.0.2",
+    "react-responsive-grid": "^0.2.0",
+    "react-router": "^0.13.3",
+    "typography": "^0.3.6",
+    "underscore.string": "^3.1.1"
+  }
+}
