@@ -4,7 +4,7 @@ import DocumentTitle from 'react-document-title';
 
 var TypographyStyle = new Typography().TypographyStyle;
 
-module.exports = React.createClass({displayName: "exports",
+module.exports = React.createClass({
   getDefaultProps: function() {
     return {
       body: ""
