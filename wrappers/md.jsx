@@ -13,7 +13,7 @@ module.exports = React.createClass({
     post = this.props.page.data;
 
     return (
-      <DocumentTitle title={`post.title | props.config.blogTitle`}>
+      <DocumentTitle title={`${post.title} | ${this.props.config.blogTitle}`}>
         <div className="markdown">
           <h1>{post.title}</h1>
           <div dangerouslySetInnerHTML={{__html: post.body}}/>
