@@ -9,7 +9,7 @@ var rhythm = typography.rhythm, fontSizeToMS = typography.fontSizeToMS;
 
 import '../css/styles.css';
 
-module.exports = React.createClass({displayName: "exports",
+module.exports = React.createClass({
   render: function() {
     var header;
     if (this.props.state.path === link('/')) {
