@@ -3,8 +3,8 @@ import { Link } from 'react-router';
 import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/collection/find';
 
-module.exports = React.createClass({
-  render: function() {
+export default class extends React.Component {
+  render() {
     var body, fontSizeToMS, html, nextPost, readNext, ref, rhythm;
     ref = this.props.typography, rhythm = ref.rhythm, fontSizeToMS = ref.fontSizeToMS;
     readNext = this.props.post.readNext;
@@ -53,4 +53,4 @@ module.exports = React.createClass({
       );
     }
   }
-});
+}
