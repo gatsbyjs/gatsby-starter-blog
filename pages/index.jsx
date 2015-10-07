@@ -4,20 +4,18 @@ import sortBy from 'lodash/collection/sortBy';
 import DocumentTitle from 'react-document-title';
 import { link } from 'gatsby-helpers';
 
-module.exports = React.createClass({
-  statics: {
-    data: function() {
-      return {
-        yo: true
-      };
+export default class extends React.Component {
+  static data() {
+    return {
+      yo: true
     }
-  },
-  render: function() {
-    var i, len, page, pageLinks, ref, ref1, ref2, rhythm, title;
+  }
+  render() {
+    let i, len, page, pageLinks, ref, ref1, ref2, rhythm, title;
     rhythm = this.props.typography.rhythm;
     pageLinks = [];
-    ref = sortBy(this.props.pages, function(page) {
-      var ref;
+    ref = sortBy(this.props.pages, (page) => {
+      let ref;
       return (ref = page.data) != null ? ref.date : void 0;
     }).reverse();
     for (i = 0, len = ref.length; i < len; i++) {
@@ -63,4 +61,4 @@ module.exports = React.createClass({
       </DocumentTitle>
     );
   }
-});
+}

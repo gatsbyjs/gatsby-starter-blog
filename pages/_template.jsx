@@ -4,14 +4,14 @@ import { Container, Grid, Breakpoint, Span } from 'react-responsive-grid';
 import Typography from 'typography';
 import { link } from 'gatsby-helpers';
 
-var typography = new Typography();
-var rhythm = typography.rhythm, fontSizeToMS = typography.fontSizeToMS;
+let typography = new Typography();
+let rhythm = typography.rhythm, fontSizeToMS = typography.fontSizeToMS;
 
 import '../css/styles.css';
 
-module.exports = React.createClass({
-  render: function() {
-    var header;
+export default class extends React.Component {
+  render() {
+    let header;
     if (this.props.state.path === link('/')) {
       header = (
         <h1
@@ -59,4 +59,4 @@ module.exports = React.createClass({
       </Container>
     );
   }
-});
+}
