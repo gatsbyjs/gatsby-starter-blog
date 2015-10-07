@@ -2,17 +2,11 @@ import React from 'react';
 import Typography from 'typography';
 import DocumentTitle from 'react-document-title';
 
-var TypographyStyle = new Typography().TypographyStyle;
+let TypographyStyle = new Typography().TypographyStyle;
 
-module.exports = React.createClass({
-  getDefaultProps: function() {
-    return {
-      body: ""
-    };
-  },
-
-  render: function() {
-    var title, urlPrefix;
+export default class Html extends React.Component {
+  render() {
+    let title, urlPrefix;
     title = DocumentTitle.rewind();
     if (this.props.title) {
       title = this.props.title;
@@ -56,6 +50,6 @@ module.exports = React.createClass({
         </body>
       </html>
     );
-
   }
-});
+}
+Html.defaultProps = { body: "" };

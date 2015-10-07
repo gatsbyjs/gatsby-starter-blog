@@ -5,8 +5,11 @@ import find from 'lodash/collection/find';
 
 export default class extends React.Component {
   render() {
-    var body, fontSizeToMS, html, nextPost, readNext, ref, rhythm;
-    ref = this.props.typography, rhythm = ref.rhythm, fontSizeToMS = ref.fontSizeToMS;
+    let body, fontSizeToMS, html, nextPost, readNext, ref, rhythm;
+    ref = this.props.typography, 
+    rhythm = ref.rhythm, 
+    fontSizeToMS = ref.fontSizeToMS;
+    
     readNext = this.props.post.readNext;
     if (readNext != null) {
       nextPost = find(this.props.pages, function(page) {
