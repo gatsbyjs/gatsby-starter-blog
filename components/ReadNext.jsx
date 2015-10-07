@@ -3,10 +3,13 @@ import { Link } from 'react-router';
 import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/collection/find';
 
-module.exports = React.createClass({
-  render: function() {
-    var body, fontSizeToMS, html, nextPost, readNext, ref, rhythm;
-    ref = this.props.typography, rhythm = ref.rhythm, fontSizeToMS = ref.fontSizeToMS;
+export default class extends React.Component {
+  render() {
+    let body, fontSizeToMS, html, nextPost, readNext, ref, rhythm;
+    ref = this.props.typography, 
+    rhythm = ref.rhythm, 
+    fontSizeToMS = ref.fontSizeToMS;
+    
     readNext = this.props.post.readNext;
     if (readNext != null) {
       nextPost = find(this.props.pages, function(page) {
@@ -53,4 +56,4 @@ module.exports = React.createClass({
       );
     }
   }
-});
+}
