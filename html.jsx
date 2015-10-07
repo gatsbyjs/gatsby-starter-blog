@@ -5,7 +5,6 @@ import DocumentTitle from 'react-document-title';
 let TypographyStyle = new Typography().TypographyStyle;
 
 export default class Html extends React.Component {
-  static defaultProps = { body: "" };
   render() {
     let title, urlPrefix;
     title = DocumentTitle.rewind();
@@ -53,4 +52,4 @@ export default class Html extends React.Component {
     );
   }
 }
-// Html.defaultProps = { body: "" };
+Html.defaultProps = { body: "" };
