@@ -1,20 +1,15 @@
 import React from 'react';
 import Typography from 'typography';
 import DocumentTitle from 'react-document-title';
-
-let TypographyStyle = new Typography().TypographyStyle;
+import { link } from 'gatsby-helpers'
+import { TypographyStyle } from 'utils/typography'
 
 export default class Html extends React.Component {
   render() {
-    let title, urlPrefix;
+    let title;
     title = DocumentTitle.rewind();
     if (this.props.title) {
       title = this.props.title;
-    }
-    if ((typeof __GH_PAGES__ !== "undefined" && __GH_PAGES__ !== null) && __GH_PAGES__) {
-      urlPrefix = this.props.config.ghPagesURLPrefix;
-    } else {
-      urlPrefix = "";
     }
 
     return (
@@ -46,7 +41,7 @@ export default class Html extends React.Component {
         </head>
         <body className="landing-page">
           <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}} />
-          <script src={urlPrefix + "/bundle.js"}/>
+          <script src={link("/bundle.js")}/>
         </body>
       </html>
     );

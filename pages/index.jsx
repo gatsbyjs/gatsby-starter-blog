@@ -21,7 +21,7 @@ export default class extends React.Component {
     for (i = 0, len = ref.length; i < len; i++) {
       page = ref[i];
       title = ((ref1 = page.data) != null ? ref1.title : void 0) || page.path;
-      if (page.path !== link("/") && !((ref2 = page.data) != null ? ref2.draft : void 0)) {
+      if (page.path !== "/" && !((ref2 = page.data) != null ? ref2.draft : void 0)) {
         pageLinks.push(
           <li
             key={page.path}
@@ -29,7 +29,7 @@ export default class extends React.Component {
               marginBottom: rhythm(1/4)
             }}
           >
-            <Link to={page.path}>{title}</Link>
+            <Link to={link(page.path)}>{title}</Link>
           </li>
         );
       }

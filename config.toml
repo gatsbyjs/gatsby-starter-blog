@@ -1,3 +1,3 @@
 blogTitle = "My Awesome Blog"
 authorName = "Kyle Mathews"
-ghPagesURLPrefix = "/gatsby-starter-blog"
+linkPrefix = "/gatsby-starter-blog"
