@@ -3,13 +3,13 @@ import moment from 'moment';
 import DocumentTitle from 'react-document-title';
 import { link } from 'gatsby-helpers';
 import ReadNext from '../components/ReadNext';
+import { rhythm, fontSizeToMS } from 'utils/typography'
 
 import '../css/zenburn.css';
 
 module.exports = React.createClass({
   render: function() {
-    var post, rhythm;
-    rhythm = this.props.typography.rhythm;
+    var post
     post = this.props.page.data;
 
     return (

@@ -1,11 +1,8 @@
 import React from 'react';
 import { RouteHandler, Link } from 'react-router';
 import { Container, Grid, Breakpoint, Span } from 'react-responsive-grid';
-import Typography from 'typography';
 import { link } from 'gatsby-helpers';
-
-let typography = new Typography();
-let rhythm = typography.rhythm, fontSizeToMS = typography.fontSizeToMS;
+import { rhythm, fontSizeToMS } from 'utils/typography'
 
 import '../css/styles.css';
 
@@ -55,7 +52,7 @@ export default class extends React.Component {
         }}
       >
         {header}
-        <RouteHandler typography={typography} {...this.props}/>
+        <RouteHandler {...this.props}/>
       </Container>
     );
   }

@@ -3,6 +3,7 @@ import { RouteHandler, Link } from 'react-router';
 import sortBy from 'lodash/collection/sortBy';
 import DocumentTitle from 'react-document-title';
 import { link } from 'gatsby-helpers';
+import { rhythm, fontSizeToMS } from 'utils/typography'
 
 export default class extends React.Component {
   static data() {
@@ -11,8 +12,7 @@ export default class extends React.Component {
     }
   }
   render() {
-    let i, len, page, pageLinks, ref, ref1, ref2, rhythm, title;
-    rhythm = this.props.typography.rhythm;
+    let i, len, page, pageLinks, ref, ref1, ref2, title;
     pageLinks = [];
     ref = sortBy(this.props.pages, (page) => {
       let ref;

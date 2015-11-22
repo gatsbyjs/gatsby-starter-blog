@@ -20,13 +20,14 @@
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "dependencies": {
-    "lodash": "^3.10.0",
+    "lodash": "^3.10.1",
     "moment": "^2.10.3",
-    "react": "^0.13.3",
-    "react-document-title": "^1.0.2",
-    "react-responsive-grid": "^0.2.0",
-    "react-router": "^0.13.3",
-    "typography": "^0.3.6",
-    "underscore.string": "^3.1.1"
+    "react": "^0.14.3",
+    "react-document-title": "^2.0.1",
+    "react-dom": "^0.14.3",
+    "react-responsive-grid": "^0.2.1",
+    "react-router": "^0.13.5",
+    "typography": "^0.6.2",
+    "underscore.string": "^3.2.2"
   }
 }
