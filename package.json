@@ -25,7 +25,7 @@
     "react": "^0.14.3",
     "react-document-title": "^2.0.1",
     "react-dom": "^0.14.3",
-    "react-responsive-grid": "^0.2.1",
+    "react-responsive-grid": "^0.3.0",
     "react-router": "^0.13.5",
     "typography": "^0.6.2",
     "underscore.string": "^3.2.2"
