@@ -1,45 +1,45 @@
-import React from 'react';
-import { RouteHandler, Link } from 'react-router';
-import sortBy from 'lodash/collection/sortBy';
-import DocumentTitle from 'react-document-title';
-import { link } from 'gatsby-helpers';
-import { rhythm, fontSizeToMS } from 'utils/typography'
+import React from 'react'
+import { Link } from 'react-router'
+import sortBy from 'lodash/sortBy'
+import DocumentTitle from 'react-document-title'
+import { link } from 'gatsby-helpers'
+import { rhythm } from 'utils/typography'
+import access from 'safe-access'
+import { config } from 'config'
 
 export default class extends React.Component {
-  static data() {
+  propTypes () {
     return {
-      yo: true
+      route: React.PropTypes.object,
     }
   }
-  render() {
-    let i, len, page, pageLinks, ref, ref1, ref2, title;
-    pageLinks = [];
-    ref = sortBy(this.props.pages, (page) => {
-      let ref;
-      return (ref = page.data) != null ? ref.date : void 0;
-    }).reverse();
-    for (i = 0, len = ref.length; i < len; i++) {
-      page = ref[i];
-      title = ((ref1 = page.data) != null ? ref1.title : void 0) || page.path;
-      if (page.path && page.path !== "/" && !((ref2 = page.data) != null ? ref2.draft : void 0)) {
+  render () {
+    const pageLinks = []
+    // Sort pages.
+    const sortedPages = sortBy(this.props.route.pages, (page) =>
+      access(page, 'data.date')
+    ).reverse()
+    sortedPages.forEach((page) => {
+      const title = access(page, 'data.title') || page.path
+      if (page.path && page.path !== '/' && access(page, 'file.extension') === '.md') {
         pageLinks.push(
           <li
             key={page.path}
             style={{
-              marginBottom: rhythm(1/4)
+              marginBottom: rhythm(1/4),
             }}
           >
             <Link to={link(page.path)}>{title}</Link>
           </li>
-        );
+        )
       }
-    }
+    })
     return (
-      <DocumentTitle title={this.props.config.blogTitle}>
+      <DocumentTitle title={config.blogTitle}>
         <div>
           <p
             style={{
-              marginBottom: rhythm(2.5)
+              marginBottom: rhythm(2.5),
             }}
           >
             <img
@@ -49,10 +49,10 @@ export default class extends React.Component {
                 marginRight: rhythm(1/4),
                 marginBottom: 0,
                 width: rhythm(2),
-                height: rhythm(2)
+                height: rhythm(2),
               }}
             />
-            Written by <strong>{this.props.config.authorName}</strong> who lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
+            Written by <strong>{config.authorName}</strong> who lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
           </p>
           <ul>
             {pageLinks}

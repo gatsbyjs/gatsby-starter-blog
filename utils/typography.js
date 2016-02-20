@@ -1,19 +1,19 @@
-import Typography from 'typography';
+import Typography from 'typography'
 
 const options = {
   baseFontSize: '18px',
   baseLineHeight: '27px',
   modularScales: [
     {
-      "scale": "minor third"
-    }
-  ]
+      scale: 'minor third',
+    },
+  ],
 }
 
 const typography = new Typography(options)
 
 // Hot reload typography in development.
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== 'production') {
   typography.injectStyles()
 }
 

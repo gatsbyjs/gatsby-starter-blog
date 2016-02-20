@@ -4,6 +4,7 @@
   "description": "Starter Gatsby Blog",
   "main": "n/a",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +28,13 @@
     "react-dom": "^0.14.3",
     "react-responsive-grid": "^0.3.0",
     "react-router": "^0.13.5",
+    "safe-access": "^0.1.0",
     "typography": "^0.6.2",
     "underscore.string": "^3.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.1",
+    "eslint-plugin-react": "^4.0.0"
   }
 }
