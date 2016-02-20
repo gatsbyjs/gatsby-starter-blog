@@ -1,22 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router'
 import { prune, include as includes } from 'underscore.string'
-import find from 'lodash/collection/find'
+import find from 'lodash/find'
 import { rhythm, fontSizeToMS } from 'utils/typography'
 
-export default class ReadNext extends React.Component {
-  propTypes () {
-    return {
-      post: React.PropTypes.object,
-      pages: React.PropTypes.object,
-    }
-  }
+class ReadNext extends React.Component {
   render () {
     const readNext = this.props.post.readNext
     let nextPost
-    if (readNext !== null) {
+    if (readNext) {
       nextPost = find(this.props.pages, (page) =>
-        includes(page.path, readNext.slice(1, -1))
+        includes(page.path, readNext)
       )
     }
     if (!nextPost) {
@@ -47,8 +41,12 @@ export default class ReadNext extends React.Component {
             }}
           >
             <Link
-              to={nextPost.path}
-              query={{ readNext: true }}
+              to={{
+                pathname: nextPost.path,
+                query: {
+                  readNext: true,
+                },
+              }}
             >
               {nextPost.data.title}
             </Link>
@@ -60,3 +58,10 @@ export default class ReadNext extends React.Component {
     }
   }
 }
+
+ReadNext.propTypes = {
+  post: React.PropTypes.object.isRequired,
+  pages: React.PropTypes.array,
+}
+
+export default ReadNext

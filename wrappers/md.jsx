@@ -8,12 +8,7 @@ import { config } from 'config'
 
 import '../css/zenburn.css'
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      route: React.PropTypes.object,
-    }
-  },
+class MarkdownWrapper extends React.Component {
   render () {
     const post = this.props.route.page.data
 
@@ -35,7 +30,7 @@ module.exports = React.createClass({
               marginBottom: rhythm(2),
             }}
           />
-          <ReadNext post={post} {...this.props}/>
+          <ReadNext post={post} pages={this.props.route.pages} />
           <p>
             <img
               src={link('/kyle-round-small-pantheon.jpg')}
@@ -47,10 +42,16 @@ module.exports = React.createClass({
                 height: rhythm(2),
               }}
             />
-            <strong>{this.props.config.authorName}</strong> lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
+            <strong>{config.authorName}</strong> lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
           </p>
         </div>
       </DocumentTitle>
     )
-  },
-})
+  }
+}
+
+MarkdownWrapper.propTypes = {
+  route: React.PropTypes.object,
+}
+
+export default MarkdownWrapper

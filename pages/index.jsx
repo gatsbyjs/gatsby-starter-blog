@@ -7,12 +7,7 @@ import { rhythm } from 'utils/typography'
 import access from 'safe-access'
 import { config } from 'config'
 
-export default class extends React.Component {
-  propTypes () {
-    return {
-      route: React.PropTypes.object,
-    }
-  }
+class BlogIndex extends React.Component {
   render () {
     const pageLinks = []
     // Sort pages.
@@ -20,8 +15,8 @@ export default class extends React.Component {
       access(page, 'data.date')
     ).reverse()
     sortedPages.forEach((page) => {
-      const title = access(page, 'data.title') || page.path
-      if (page.path && page.path !== '/' && access(page, 'file.extension') === '.md') {
+      if (access(page, 'file.ext') === 'md') {
+        const title = access(page, 'data.title') || page.path
         pageLinks.push(
           <li
             key={page.path}
@@ -62,3 +57,9 @@ export default class extends React.Component {
     )
   }
 }
+
+BlogIndex.propTypes = {
+  route: React.PropTypes.object,
+}
+
+export default BlogIndex

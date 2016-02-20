@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouteHandler, Link } from 'react-router'
+import { Link } from 'react-router'
 import { Container } from 'react-responsive-grid'
 import { link } from 'gatsby-helpers'
 import { rhythm, fontSizeToMS } from 'utils/typography'
@@ -7,15 +7,10 @@ import { config } from 'config'
 
 import '../css/styles.css'
 
-export default class extends React.Component {
-  propTypes () {
-    return {
-      route: React.PropTypes.object,
-    }
-  }
+class Template extends React.Component {
   render () {
     let header
-    if (this.props.route.path === link('/')) {
+    if (this.props.location.pathname === link('/')) {
       header = (
         <h1
           style={{
@@ -58,8 +53,16 @@ export default class extends React.Component {
         }}
       >
         {header}
-        <RouteHandler {...this.props}/>
+        {this.props.children}
       </Container>
     )
   }
 }
+
+Template.propTypes = {
+  children: React.PropTypes.any,
+  location: React.PropTypes.object,
+  route: React.PropTypes.object,
+}
+
+export default Template
