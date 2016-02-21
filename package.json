@@ -5,7 +5,8 @@
   "main": "n/a",
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gatsby develop"
   },
   "repository": {
     "type": "git",
@@ -22,21 +23,21 @@
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "dependencies": {
     "lodash": "^4.5.0",
-    "moment": "^2.10.3",
+    "moment": "^2.11.2",
     "react": "^0.14.7",
     "react-document-title": "^2.0.1",
     "react-dom": "^0.14.7",
-    "react-responsive-grid": "^0.3.0",
+    "react-responsive-grid": "^0.3.1",
     "react-router": "^2.0.0",
     "safe-access": "^0.1.0",
     "typography": "^0.7.0",
-    "underscore.string": "^3.2.2"
+    "underscore.string": "^3.2.3"
   },
   "devDependencies": {
     "babel-plugin-react-transform": "^1.1.1",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^5.0.1",
-    "eslint-plugin-react": "^4.0.0",
+    "eslint-plugin-react": "^3.16.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.1"

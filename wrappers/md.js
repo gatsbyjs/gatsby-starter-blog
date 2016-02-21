@@ -10,7 +10,8 @@ import '../css/zenburn.css'
 
 class MarkdownWrapper extends React.Component {
   render () {
-    const post = this.props.route.page.data
+    const { route } = this.props
+    const post = route.page.data
 
     return (
       <DocumentTitle title={`${post.title} | ${config.blogTitle}`}>
@@ -30,7 +31,7 @@ class MarkdownWrapper extends React.Component {
               marginBottom: rhythm(2),
             }}
           />
-          <ReadNext post={post} pages={this.props.route.pages} />
+          <ReadNext post={post} pages={route.pages} />
           <p>
             <img
               src={link('/kyle-round-small-pantheon.jpg')}

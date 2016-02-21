@@ -6,17 +6,18 @@ import { rhythm, fontSizeToMS } from 'utils/typography'
 
 class ReadNext extends React.Component {
   render () {
-    const readNext = this.props.post.readNext
+    const { pages, post } = this.props
+    const { readNext } = post
     let nextPost
     if (readNext) {
-      nextPost = find(this.props.pages, (page) =>
+      nextPost = find(pages, (page) =>
         includes(page.path, readNext)
       )
     }
     if (!nextPost) {
       return React.createElement('noscript', null)
     } else {
-      nextPost = find(this.props.pages, (page) =>
+      nextPost = find(pages, (page) =>
         includes(page.path, readNext.slice(1, -1))
       )
       // Create pruned version of the body.
