@@ -9,8 +9,9 @@ import '../css/styles.css'
 
 class Template extends React.Component {
   render () {
+    const { location, children } = this.props
     let header
-    if (this.props.location.pathname === link('/')) {
+    if (location.pathname === link('/')) {
       header = (
         <h1
           style={{
@@ -53,7 +54,7 @@ class Template extends React.Component {
         }}
       >
         {header}
-        {this.props.children}
+        {children}
       </Container>
     )
   }

@@ -4,14 +4,8 @@ import { link } from 'gatsby-helpers'
 import { TypographyStyle } from 'utils/typography'
 
 export default class Html extends React.Component {
-  propTypes () {
-    return {
-      body: React.PropTypes.string,
-      favicon: React.PropTypes.string,
-      title: React.PropTypes.string,
-    }
-  }
   render () {
+    const { favicon, body } = this.props
     let title = DocumentTitle.rewind()
     if (this.props.title) {
       title = this.props.title
@@ -27,7 +21,7 @@ export default class Html extends React.Component {
             content="user-scalable=no width=device-width, initial-scale=1.0 maximum-scale=1.0"
           />
           <title>{this.props.title}</title>
-          <link rel="shortcut icon" href={this.props.favicon}/>
+          <link rel="shortcut icon" href={favicon}/>
           <TypographyStyle/>
           <style
             dangerouslySetInnerHTML={{
@@ -51,12 +45,18 @@ export default class Html extends React.Component {
           />
         </head>
         <body className="landing-page">
-          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
           <script src={link('/bundle.js')}/>
         </body>
       </html>
     )
   }
+}
+
+Html.propTypes = {
+  body: React.PropTypes.string,
+  favicon: React.PropTypes.string,
+  title: React.PropTypes.string,
 }
 
 Html.defaultProps = { body: '' }
