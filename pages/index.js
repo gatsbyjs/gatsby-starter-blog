@@ -15,7 +15,7 @@ class BlogIndex extends React.Component {
       access(page, 'data.date')
     ).reverse()
     sortedPages.forEach((page) => {
-      if (access(page, 'file.ext') === 'md') {
+      if (access(page, 'file.ext') === 'md' && page.path !== '/404/') {
         const title = access(page, 'data.title') || page.path
         pageLinks.push(
           <li
