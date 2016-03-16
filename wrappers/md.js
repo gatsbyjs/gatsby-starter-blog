@@ -5,6 +5,7 @@ import { link } from 'gatsby-helpers'
 import ReadNext from '../components/ReadNext'
 import { rhythm } from 'utils/typography'
 import { config } from 'config'
+import Bio from 'components/Bio'
 
 import '../css/zenburn.css'
 
@@ -32,19 +33,7 @@ class MarkdownWrapper extends React.Component {
             }}
           />
           <ReadNext post={post} pages={route.pages} />
-          <p>
-            <img
-              src={link('/kyle-round-small-pantheon.jpg')}
-              style={{
-                float: 'left',
-                marginRight: rhythm(1/4),
-                marginBottom: 0,
-                width: rhythm(2),
-                height: rhythm(2),
-              }}
-            />
-            <strong>{config.authorName}</strong> lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
-          </p>
+          <Bio />
         </div>
       </DocumentTitle>
     )
