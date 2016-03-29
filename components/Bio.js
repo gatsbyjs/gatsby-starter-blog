@@ -1,7 +1,7 @@
 import React from 'react'
 import { config } from 'config'
 import { rhythm } from 'utils/typography'
-import { link } from 'gatsby-helpers'
+import { prefixLink } from 'gatsby-helpers'
 
 class Bio extends React.Component {
   render () {
@@ -12,7 +12,7 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={link('/kyle-round-small-pantheon.jpg')}
+          src={prefixLink('/kyle-round-small-pantheon.jpg')}
           style={{
             float: 'left',
             marginRight: rhythm(1/4),

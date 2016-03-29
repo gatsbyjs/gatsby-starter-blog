@@ -1,47 +1,46 @@
 {
   "name": "gatsby-starter-blog",
-  "version": "1.0.0",
   "description": "Starter Gatsby Blog",
-  "main": "n/a",
-  "scripts": {
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "gatsby develop"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "keywords": [
-    "gatsby"
-  ],
+  "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "dependencies": {
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-1": "^6.5.0",
+    "gatsby": "^0.9.0",
     "history": "^2.0.0",
     "lodash": "^4.5.0",
     "moment": "^2.11.2",
-    "react": "^0.14.7",
     "react-document-title": "^2.0.1",
-    "react-dom": "^0.14.7",
     "react-responsive-grid": "^0.3.1",
-    "react-router": "^2.0.0",
     "safe-access": "^0.1.0",
     "typography": "^0.7.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
-    "babel-plugin-react-transform": "^1.1.1",
+    "babel-preset-react-hmre": "^1.1.1",
     "eslint": "^2.4.0",
     "eslint-config-airbnb": "^6.1.0",
     "eslint-plugin-react": "^4.2.1",
-    "gh-pages": "^0.11.0",
-    "react-transform-catch-errors": "^1.0.0",
-    "react-transform-hmr": "^1.0.0",
-    "redbox-react": "^1.0.1"
+    "gh-pages": "^0.11.0"
+  },
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+  },
+  "scripts": {
+    "dev": "gatsby develop",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

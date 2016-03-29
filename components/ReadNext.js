@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { link } from 'gatsby-helpers'
+import { prefixLink } from 'gatsby-helpers'
 import { prune, include as includes } from 'underscore.string'
 import find from 'lodash/find'
 import { rhythm, fontSizeToMS } from 'utils/typography'
@@ -44,7 +44,7 @@ class ReadNext extends React.Component {
           >
             <Link
               to={{
-                pathname: link(nextPost.path),
+                pathname: prefixLink(nextPost.path),
                 query: {
                   readNext: true,
                 },

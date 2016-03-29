@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import sortBy from 'lodash/sortBy'
 import DocumentTitle from 'react-document-title'
-import { link } from 'gatsby-helpers'
+import { prefixLink } from 'gatsby-helpers'
 import { rhythm } from 'utils/typography'
 import access from 'safe-access'
 import { config } from 'config'
@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
               marginBottom: rhythm(1/4),
             }}
           >
-            <Link to={link(page.path)}>{title}</Link>
+            <Link to={prefixLink(page.path)}>{title}</Link>
           </li>
         )
       }
@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
     return (
       <DocumentTitle title={config.blogTitle}>
         <div>
-          <Bio/>
+          <Bio />
           <ul>
             {pageLinks}
           </ul>
