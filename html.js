@@ -1,19 +1,20 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-import { link } from 'gatsby-helpers'
-import { TypographyStyle } from 'utils/typography'
+import { prefixLink } from 'gatsby-helpers'
+const TypographyStyle = require('utils/typography').TypographyStyle
 
-export default class Html extends React.Component {
+module.exports = React.createClass({
+  displayName: 'HTML',
+  propTypes: {
+    body: React.PropTypes.string,
+  },
   render () {
-    const { favicon, body } = this.props
-    let title = DocumentTitle.rewind()
-    if (this.props.title) {
-      title = this.props.title
-    }
+    const { body } = this.props
+    const title = DocumentTitle.rewind()
 
     let cssLink
     if (process.env.NODE_ENV === 'production') {
-      cssLink = <link rel="stylesheet" href={link('/styles.css')} />
+      cssLink = <link rel="stylesheet" href={prefixLink('/styles.css')} />
     }
 
     return (
@@ -25,24 +26,15 @@ export default class Html extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0 maximum-scale=5.0"
           />
-          <title>{this.props.title}</title>
-          <link rel="shortcut icon" href={favicon} />
+          <title>{title}</title>
           <TypographyStyle />
           {cssLink}
         </head>
         <body className="landing-page">
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
-          <script src={link('/bundle.js')} />
+          <script src={prefixLink('/bundle.js')} />
         </body>
       </html>
     )
-  }
-}
-
-Html.propTypes = {
-  body: React.PropTypes.string,
-  favicon: React.PropTypes.string,
-  title: React.PropTypes.string,
-}
-
-Html.defaultProps = { body: '' }
+  },
+})
