@@ -1,7 +1,9 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
-const TypographyStyle = require('utils/typography').TypographyStyle
+import { TypographyStyle } from 'utils/typography'
+
+const BUILD_TIME = new Date().getTime()
 
 module.exports = React.createClass({
   displayName: 'HTML',
@@ -32,7 +34,7 @@ module.exports = React.createClass({
         </head>
         <body className="landing-page">
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
-          <script src={prefixLink('/bundle.js')} />
+          <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
       </html>
     )
