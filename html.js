@@ -14,9 +14,9 @@ module.exports = React.createClass({
     const { body } = this.props
     const title = DocumentTitle.rewind()
 
-    let cssLink
+    let css
     if (process.env.NODE_ENV === 'production') {
-      cssLink = <link rel="stylesheet" href={prefixLink('/styles.css')} />
+      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
     }
 
     return (
@@ -30,7 +30,7 @@ module.exports = React.createClass({
           />
           <title>{title}</title>
           <TypographyStyle />
-          {cssLink}
+          {css}
         </head>
         <body className="landing-page">
           <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
