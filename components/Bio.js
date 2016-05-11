@@ -13,6 +13,7 @@ class Bio extends React.Component {
       >
         <img
           src={prefixLink('/kyle-round-small-pantheon.jpg')}
+          alt={`author ${config.authorName}`}
           style={{
             float: 'left',
             marginRight: rhythm(1/4),
