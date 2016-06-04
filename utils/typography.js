@@ -3,11 +3,6 @@ import Typography from 'typography'
 const options = {
   baseFontSize: '18px',
   baseLineHeight: '27px',
-  modularScales: [
-    {
-      scale: 'minor third',
-    },
-  ],
 }
 
 const typography = new Typography(options)

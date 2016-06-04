@@ -15,8 +15,8 @@ class Template extends React.Component {
       header = (
         <h1
           style={{
-            fontSize: fontSizeToMS(2.5).fontSize,
-            lineHeight: fontSizeToMS(2.5).lineHeight,
+            fontSize: fontSizeToMS(1.5).fontSize,
+            lineHeight: fontSizeToMS(1.5).lineHeight,
             marginBottom: rhythm(1.5),
           }}
         >
