@@ -3,6 +3,7 @@ import Typography from 'typography'
 const options = {
   baseFontSize: '18px',
   baseLineHeight: '27px',
+  headerWeight: 900,
 }
 
 const typography = new Typography(options)
