@@ -15,7 +15,9 @@
     "history": "^2.1.1",
     "lodash": "^4.13.1",
     "moment": "^2.11.2",
+    "react": "^15.1.0",
     "react-document-title": "^2.0.1",
+    "react-dom": "^15.1.0",
     "react-responsive-grid": "^0.3.3",
     "react-router": "^2.4.1",
     "safe-access": "^0.1.0",
@@ -24,13 +26,22 @@
   },
   "devDependencies": {
     "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
     "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.23.1",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.8.1",
     "eslint-plugin-jsx-a11y": "^1.2.3",
     "eslint-plugin-react": "^5.1.1",
-    "gh-pages": "^0.11.0"
+    "gh-pages": "^0.11.0",
+    "null-loader": "^0.1.1",
+    "postcss-loader": "^0.9.1",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "redbox-react": "^1.2.6",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
