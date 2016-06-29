@@ -21,7 +21,8 @@
     "react-responsive-grid": "^0.3.3",
     "react-router": "^2.4.1",
     "safe-access": "^0.1.0",
-    "typography": "^0.8.3",
+    "typography": "^0.10.2",
+    "typography-react": "^0.10.3",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
