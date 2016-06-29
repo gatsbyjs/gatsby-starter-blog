@@ -5,8 +5,6 @@ import { prefixLink } from 'gatsby-helpers'
 import { rhythm, fontSizeToMS } from 'utils/typography'
 import { config } from 'config'
 
-import '../css/styles.css'
-
 class Template extends React.Component {
   render () {
     const { location, children } = this.props
@@ -18,10 +16,12 @@ class Template extends React.Component {
             fontSize: fontSizeToMS(1.5).fontSize,
             lineHeight: fontSizeToMS(1.5).lineHeight,
             marginBottom: rhythm(1.5),
+            marginTop: 0,
           }}
         >
           <Link
             style={{
+              boxShadow: 'none',
               textDecoration: 'none',
               color: 'inherit',
             }}
@@ -33,9 +33,15 @@ class Template extends React.Component {
       )
     } else {
       header = (
-        <h3>
+        <h3
+          style={{
+            fontFamily: 'Montserrat, sans-serif',
+            marginTop: 0,
+          }}
+        >
           <Link
             style={{
+              boxShadow: 'none',
               textDecoration: 'none',
               color: 'inherit',
             }}

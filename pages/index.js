@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
               marginBottom: rhythm(1/4),
             }}
           >
-            <Link to={prefixLink(page.path)}>{title}</Link>
+            <Link style={{boxShadow: 'none'}} to={prefixLink(page.path)}>{title}</Link>
           </li>
         )
       }

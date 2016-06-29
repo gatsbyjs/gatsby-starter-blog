@@ -1,11 +1,7 @@
 import Typography from 'typography'
+import Wordpress2016 from 'typography-theme-wordpress-2016'
 
-const options = {
-  baseFontSize: '18px',
-  baseLineHeight: '27px',
-}
-
-const typography = new Typography(options)
+const typography = new Typography(Wordpress2016)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

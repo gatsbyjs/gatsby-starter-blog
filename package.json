@@ -23,6 +23,7 @@
     "safe-access": "^0.1.0",
     "typography": "^0.10.2",
     "typography-react": "^0.10.3",
+    "typography-theme-wordpress-2016": "^0.10.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
