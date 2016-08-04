@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { Container } from 'react-responsive-grid'
 import { prefixLink } from 'gatsby-helpers'
-import { rhythm, fontSizeToMS } from 'utils/typography'
+import { rhythm, adjustFontSizeToMSValue } from 'utils/typography'
 import { config } from 'config'
 
 class Template extends React.Component {
@@ -13,8 +13,7 @@ class Template extends React.Component {
       header = (
         <h1
           style={{
-            fontSize: fontSizeToMS(1.5).fontSize,
-            lineHeight: fontSizeToMS(1.5).lineHeight,
+            ...adjustFontSizeToMSValue(1.5),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
