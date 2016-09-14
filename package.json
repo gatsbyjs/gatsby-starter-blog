@@ -10,7 +10,7 @@
     "gatsby": "^0.12.6",
     "lodash": "^4.15.0",
     "moment": "^2.14.1",
-    "react-document-title": "^2.0.2",
+    "react-helmet": "^3.1.0",
     "react-responsive-grid": "^0.3.3",
     "react-typography": "^0.12.0",
     "safe-access": "^0.1.0",
