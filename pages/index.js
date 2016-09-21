@@ -1,38 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router'
-import sortBy from 'lodash/sortBy'
+import get from 'lodash/get'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
 import { rhythm } from 'utils/typography'
-import access from 'safe-access'
-import { config } from 'config'
 import include from 'underscore.string/include'
 import Bio from 'components/Bio'
 
 class BlogIndex extends React.Component {
   render () {
     const pageLinks = []
-    // Sort pages.
-    const sortedPages = sortBy(this.props.route.pages, (page) =>
-      access(page, 'data.date')
-    ).reverse()
-    sortedPages.forEach((page) => {
-      if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
-        const title = access(page, 'data.title') || page.path
+    const posts = get(this, 'props.data.allMarkdown.edges')
+    posts.forEach((post) => {
+      if (post.node.path !== '/404/') {
+        const title = get(post, 'node.frontmatter.title') || post.node.path
         pageLinks.push(
           <li
-            key={page.path}
+            key={post.node.path}
             style={{
               marginBottom: rhythm(1/4),
             }}
           >
-            <Link style={{boxShadow: 'none'}} to={prefixLink(page.path)}>{title}</Link>
+            <Link
+              style={{boxShadow: 'none'}}
+              to={prefixLink(post.node.path)}
+            >
+              {post.node.frontmatter.title}
+            </Link>
           </li>
         )
       }
     })
+
     return (
-      <DocumentTitle title={config.blogTitle}>
+      <DocumentTitle title={get(this, 'props.data.site.siteMetadata.title')}>
         <div>
           <Bio />
           <ul>
@@ -49,3 +50,24 @@ BlogIndex.propTypes = {
 }
 
 export default BlogIndex
+
+export const pageQuery = `
+{
+  site {
+    buildTime
+    siteMetadata {
+      title
+    }
+  }
+  allMarkdown(first: 2000) {
+    edges {
+      node {
+        path
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+`

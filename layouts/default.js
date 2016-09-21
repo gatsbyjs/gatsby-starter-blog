@@ -3,7 +3,6 @@ import { Link } from 'react-router'
 import { Container } from 'react-responsive-grid'
 import { prefixLink } from 'gatsby-helpers'
 import { rhythm, adjustFontSizeToMSValue } from 'utils/typography'
-import { config } from 'config'
 
 class Template extends React.Component {
   render () {
@@ -26,7 +25,7 @@ class Template extends React.Component {
             }}
             to={prefixLink('/')}
           >
-            {config.blogTitle}
+            {'TODO insert blog title here from query'}
           </Link>
         </h1>
       )
@@ -46,7 +45,7 @@ class Template extends React.Component {
             }}
             to={prefixLink('/')}
           >
-            {config.blogTitle}
+            {'insert blog title here'}
           </Link>
         </h3>
       )

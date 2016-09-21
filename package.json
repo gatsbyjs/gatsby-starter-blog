@@ -7,7 +7,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
-    "gatsby": "^0.12.6",
+    "gatsby": "1.0.0-alpha2",
     "lodash": "^4.15.0",
     "moment": "^2.14.1",
     "react-document-title": "^2.0.2",
