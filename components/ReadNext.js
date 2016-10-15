@@ -3,7 +3,7 @@ import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { prune, include as includes } from 'underscore.string'
 import find from 'lodash/find'
-import { rhythm, fontSizeToMS } from 'utils/typography'
+import { rhythm, scale } from 'utils/typography'
 
 class ReadNext extends React.Component {
   render () {
@@ -29,9 +29,8 @@ class ReadNext extends React.Component {
         <div>
           <h6
             style={{
+              ...scale(-0.5),
               margin: 0,
-              fontSize: fontSizeToMS(-0.5).fontSize,
-              lineHeight: fontSizeToMS(-0.5).lineHeight,
               letterSpacing: -0.25,
             }}
           >

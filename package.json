@@ -12,10 +12,10 @@
     "moment": "^2.14.1",
     "react-helmet": "^3.1.0",
     "react-responsive-grid": "^0.3.3",
-    "react-typography": "^0.12.0",
+    "react-typography": "^0.14.0",
     "safe-access": "^0.1.0",
-    "typography": "^0.13.0",
-    "typography-theme-wordpress-2016": "^0.13.0",
+    "typography": "^0.14.0",
+    "typography-theme-wordpress-2016": "^0.14.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
