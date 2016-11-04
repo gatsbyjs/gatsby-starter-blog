@@ -7,15 +7,22 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
+    "cheerio": "^0.22.0",
     "gatsby": "^0.12.6",
+    "image-size": "^0.5.0",
     "lodash": "^4.15.0",
+    "mkdirp": "^0.5.1",
     "moment": "^2.14.1",
+    "node-sass": "^3.11.1",
     "react-helmet": "^3.1.0",
     "react-responsive-grid": "^0.3.3",
-    "react-typography": "^0.12.0",
+    "react-typography": "^0.14.0",
+    "recursive-readdir": "^2.1.0",
+    "rimraf": "^2.5.4",
     "safe-access": "^0.1.0",
-    "typography": "^0.13.0",
-    "typography-theme-wordpress-2016": "^0.13.0",
+    "sync-request": "^3.0.1",
+    "typography": "^0.14.0",
+    "typography-theme-wordpress-2016": "^0.14.0",
     "underscore.string": "^3.2.3"
   },
   "devDependencies": {
@@ -36,7 +43,7 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build && node ampify.js",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
   }
 }
