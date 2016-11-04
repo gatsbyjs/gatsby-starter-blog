@@ -2,7 +2,6 @@ import React from 'react'
 import { config } from 'config'
 import { rhythm } from 'utils/typography'
 import { prefixLink } from 'gatsby-helpers'
-import profilePic from './profile-pic.jpg'
 
 class Bio extends React.Component {
   render () {
@@ -13,8 +12,10 @@ class Bio extends React.Component {
         }}
       >
         <img
-          src={prefixLink(profilePic)}
+          src={prefixLink('/static/img/profile-pic.jpg')}
           alt={`author ${config.authorName}`}
+          width="46"
+          height="46"
           style={{
             float: 'left',
             marginRight: rhythm(1/4),
