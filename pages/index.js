@@ -17,7 +17,8 @@ class BlogIndex extends React.Component {
       access(page, 'data.date')
     ).reverse()
     sortedPages.forEach((page) => {
-      if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
+      // Posts are those with md extension that are not 404 pages OR have a date (meaning they're a react component post).
+      if (access(page, 'file.ext') === 'md' && !include(page.path, '/404') || access(page, 'data.date')) {
         const title = access(page, 'data.title') || page.path
         pageLinks.push(
           <li
