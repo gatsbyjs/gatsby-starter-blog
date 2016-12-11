@@ -10,6 +10,7 @@
     "gatsby": "^0.12.22",
     "lodash": "^4.17.2",
     "moment": "^2.17.1",
+    "react-addons-shallow-compare": "^15.4.1",
     "react-dates": "^4.1.0",
     "react-helmet": "^3.2.2",
     "react-responsive-grid": "^0.3.3",
