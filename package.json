@@ -7,7 +7,7 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
-    "gatsby": "^0.12.22",
+    "gatsby": "^0.12.36",
     "lodash": "^4.17.2",
     "moment": "^2.17.1",
     "react-addons-shallow-compare": "^15.4.1",
