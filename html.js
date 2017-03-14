@@ -1,19 +1,25 @@
 import React from 'react'
-import DocumentTitle from 'react-document-title'
-import { prefixLink } from 'gatsby-helpers'
-import { GoogleFont, TypographyStyle } from 'react-typography'
+import { TypographyStyle } from 'react-typography'
+import Helmet from 'react-helmet'
+
 import typography from './utils/typography'
-import HTMLScripts from 'html-scripts'
-import HTMLStyles from 'html-styles'
+
+let stylesStr
+if (process.env.NODE_ENV === `production`) {
+  try {
+    stylesStr = require(`!raw-loader!./public/styles.css`)
+  } catch (e) {
+    console.log(e)
+  }
+}
 
 module.exports = React.createClass({
-  displayName: 'HTML',
-  propTypes: {
-    body: React.PropTypes.string,
-  },
   render () {
-    const { body } = this.props
-    const title = DocumentTitle.rewind()
+    const head = Helmet.rewind()
+    let css
+    if (process.env.NODE_ENV === `production`) {
+      css = <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: stylesStr }} />
+    }
 
     return (
       <html lang="en">
@@ -24,14 +30,16 @@ module.exports = React.createClass({
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <title>{title}</title>
+          {this.props.headComponents}
           <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />
-          <HTMLStyles />
+          {css}
+          {head.title.toComponent()}
+          {head.meta.toComponent()}
+          {head.link.toComponent()}
         </head>
-        <body className="landing-page">
-          <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
-          <HTMLScripts scripts={this.props.scripts} />
+        <body>
+          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          {this.props.postBodyComponents}
         </body>
       </html>
     )

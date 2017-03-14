@@ -3,6 +3,10 @@ import { rhythm } from 'utils/typography'
 import { prefixLink } from 'gatsby-helpers'
 import profilePic from './profile-pic.jpg'
 
+// Import typefaces
+import 'typeface-montserrat'
+import 'typeface-merriweather'
+
 class Bio extends React.Component {
   render () {
     return (
@@ -13,7 +17,7 @@ class Bio extends React.Component {
       >
         <img
           src={prefixLink(profilePic)}
-          alt={`author name`}
+          alt={`Kyle Mathews`}
           style={{
             float: 'left',
             marginRight: rhythm(1/4),
@@ -22,7 +26,7 @@ class Bio extends React.Component {
             height: rhythm(2),
           }}
         />
-        Written by <strong>TODO author name</strong> who lives and works in TODO San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
+        Written by <strong>Kyle Mathews</strong> who lives and works in San Francisco building useful things. <a href="https://twitter.com/kylemathews">You should follow him on Twitter</a>
       </p>
     )
   }

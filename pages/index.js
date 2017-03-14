@@ -1,16 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router'
 import get from 'lodash/get'
-import DocumentTitle from 'react-document-title'
-import { prefixLink } from 'gatsby-helpers'
+import Helmet from 'react-helmet'
 import { rhythm } from 'utils/typography'
 import include from 'underscore.string/include'
 import Bio from 'components/Bio'
 
 class BlogIndex extends React.Component {
   render () {
+    console.log(this.props)
     const pageLinks = []
-    const posts = get(this, 'props.data.allMarkdown.edges')
+    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
     posts.forEach((post) => {
       if (post.node.path !== '/404/') {
         const title = get(post, 'node.frontmatter.title') || post.node.path
@@ -23,7 +24,7 @@ class BlogIndex extends React.Component {
           >
             <Link
               style={{boxShadow: 'none'}}
-              to={prefixLink(post.node.path)}
+              to={post.node.slug}
             >
               {post.node.frontmatter.title}
             </Link>
@@ -33,14 +34,13 @@ class BlogIndex extends React.Component {
     })
 
     return (
-      <DocumentTitle title={get(this, 'props.data.site.siteMetadata.title')}>
-        <div>
-          <Bio />
-          <ul>
-            {pageLinks}
-          </ul>
-        </div>
-      </DocumentTitle>
+      <div>
+        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
+        <Bio />
+        <ul>
+          {pageLinks}
+        </ul>
+      </div>
     )
   }
 }
@@ -54,15 +54,14 @@ export default BlogIndex
 export const pageQuery = `
 {
   site {
-    buildTime
     siteMetadata {
       title
     }
   }
-  allMarkdown(first: 2000) {
+  allMarkdownRemark {
     edges {
       node {
-        path
+        slug
         frontmatter {
           title
         }

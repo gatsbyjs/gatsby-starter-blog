@@ -1,46 +1,66 @@
-import _ from 'lodash'
-import Promise from 'bluebird'
-import path from 'path'
+const _ = require('lodash')
+const Promise = require('bluebird')
+const path = require('path')
+const select = require(`unist-util-select`)
+const precache = require(`sw-precache`)
+const fs = require(`fs-extra`)
 
-exports.rewritePath = (parsedFilePath, metadata) => {
-  if (parsedFilePath.ext === 'md') {
-    return `/${parsedFilePath.dirname.split('---')[1]}/`
-  }
-}
+exports.createPages = ({ args }) => {
+  const { graphql } = args
 
-exports.createPages = ({ graphql }) => (
-  new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     const pages = []
-    const blogPost = path.resolve('./page-templates/blog-post.js')
+    const blogPost = path.resolve('templates/template-blog-post.js')
     graphql(`
       {
-        allMarkdown(first: 1000) {
+        allMarkdownRemark(limit: 1000) {
           edges {
             node {
-              path
+              slug
             }
           }
         }
       }
     `)
-    .then(result => {
+    .then((result) => {
       if (result.errors) {
         console.log(result.errors)
         reject(result.errors)
       }
 
       // Create blog posts pages.
-      _.each(result.data.allMarkdown.edges, (edge) => {
-        if (edge.node.path !== '/404/') {
-          pages.push({
-            path: edge.node.path,
-            component: blogPost,
-          })
-        }
+      _.each(result.data.allMarkdownRemark.edges, (edge) => {
+        pages.push({
+          path: edge.node.slug, // required
+          component: blogPost,
+          context: {
+            slug: edge.node.slug,
+          },
+        })
       })
 
-      console.log(pages)
       resolve(pages)
     })
   })
-)
+}
+
+// Add custom url pathname for blog posts.
+exports.modifyAST = ({ args }) => {
+  const { ast } = args
+  const files = select(ast, 'File')
+  files.forEach((file) => {
+    if (file.extension !== `md`) {
+      return
+    }
+    const parsedFilePath = path.parse(file.relativePath)
+    console.log(parsedFilePath)
+    const slug = `/${parsedFilePath.dir}/`
+    console.log(slug)
+    file.slug = slug
+    const markdownNode = select(file, `MarkdownRemark`)[0]
+    if (markdownNode) {
+      markdownNode.slug = slug
+    }
+  })
+  return files
+}
