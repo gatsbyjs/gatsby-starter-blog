@@ -1,8 +1,7 @@
-const _ = require('lodash')
-const Promise = require('bluebird')
-const path = require('path')
+const _ = require("lodash")
+const Promise = require("bluebird")
+const path = require("path")
 const select = require(`unist-util-select`)
-const precache = require(`sw-precache`)
 const fs = require(`fs-extra`)
 
 exports.createPages = ({ args }) => {
@@ -10,8 +9,9 @@ exports.createPages = ({ args }) => {
 
   return new Promise((resolve, reject) => {
     const pages = []
-    const blogPost = path.resolve('templates/template-blog-post.js')
-    graphql(`
+    const blogPost = path.resolve("templates/template-blog-post.js")
+    graphql(
+      `
       {
         allMarkdownRemark(limit: 1000) {
           edges {
@@ -21,15 +21,15 @@ exports.createPages = ({ args }) => {
           }
         }
       }
-    `)
-    .then((result) => {
+    `
+    ).then(result => {
       if (result.errors) {
         console.log(result.errors)
         reject(result.errors)
       }
 
       // Create blog posts pages.
-      _.each(result.data.allMarkdownRemark.edges, (edge) => {
+      _.each(result.data.allMarkdownRemark.edges, edge => {
         pages.push({
           path: edge.node.slug, // required
           component: blogPost,
@@ -47,8 +47,8 @@ exports.createPages = ({ args }) => {
 // Add custom url pathname for blog posts.
 exports.modifyAST = ({ args }) => {
   const { ast } = args
-  const files = select(ast, 'File')
-  files.forEach((file) => {
+  const files = select(ast, "File")
+  files.forEach(file => {
     if (file.extension !== `md`) {
       return
     }
