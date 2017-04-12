@@ -1,15 +1,15 @@
-const _ = require("lodash")
-const Promise = require("bluebird")
-const path = require("path")
-const select = require(`unist-util-select`)
-const fs = require(`fs-extra`)
+const _ = require("lodash");
+const Promise = require("bluebird");
+const path = require("path");
+const select = require(`unist-util-select`);
+const fs = require(`fs-extra`);
 
-exports.createPages = ({ args }) => {
-  const { graphql } = args
+exports.createPages = ({ graphql, actionCreators }) => {
+  const { upsertPage } = actionCreators;
 
   return new Promise((resolve, reject) => {
-    const pages = []
-    const blogPost = path.resolve("templates/template-blog-post.js")
+    const pages = [];
+    const blogPost = path.resolve("templates/template-blog-post.js");
     graphql(
       `
       {
@@ -24,43 +24,39 @@ exports.createPages = ({ args }) => {
     `
     ).then(result => {
       if (result.errors) {
-        console.log(result.errors)
-        reject(result.errors)
+        console.log(result.errors);
+        reject(result.errors);
       }
 
       // Create blog posts pages.
       _.each(result.data.allMarkdownRemark.edges, edge => {
-        pages.push({
+        upsertPage({
           path: edge.node.slug, // required
           component: blogPost,
           context: {
             slug: edge.node.slug,
           },
-        })
-      })
+        });
+      });
 
-      resolve(pages)
-    })
-  })
-}
+      resolve();
+    });
+  });
+};
 
 // Add custom url pathname for blog posts.
-exports.modifyAST = ({ args }) => {
-  const { ast } = args
-  const files = select(ast, "File")
-  files.forEach(file => {
-    if (file.extension !== `md`) {
-      return
-    }
-    const parsedFilePath = path.parse(file.relativePath)
-    console.log(parsedFilePath)
-    const slug = `/${parsedFilePath.dir}/`
-    console.log(slug)
-    file.slug = slug
-    const markdownNode = select(file, `MarkdownRemark`)[0]
-    if (markdownNode) {
-      markdownNode.slug = slug
-    }
-  })
-  return files
-}
+exports.onNodeCreate = ({ node, actionCreators, getNode }) => {
+  const { updateNode } = actionCreators;
+  if (node.type === `File` && typeof node.slug === "undefined") {
+    const parsedFilePath = path.parse(node.relativePath);
+    const slug = `/${parsedFilePath.dir}/`;
+    node.slug = slug;
+    updateNode(node);
+  } else if (
+    node.type === `MarkdownRemark` && typeof node.slug === "undefined"
+  ) {
+    const fileNode = getNode(node.parent);
+    node.slug = fileNode.slug;
+    updateNode(node);
+  }
+};
