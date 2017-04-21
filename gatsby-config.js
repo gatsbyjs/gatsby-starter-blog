@@ -1,18 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Blog',
-    author: 'Kyle Mathews',
+    title: "Gatsby Starter Blog",
+    author: "Kyle Mathews",
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/pages`,
+        name: "pages",
       },
     },
-    `gatsby-parser-remark`,
-    `gatsby-parser-sharp`,
+    `gatsby-transformer-remark`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-typegen-remark`,
       options: {
@@ -29,9 +29,9 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-typegen-remark-prismjs',
-          'gatsby-typegen-remark-copy-linked-files',
-          'gatsby-typegen-remark-smartypants',
+          "gatsby-typegen-remark-prismjs",
+          "gatsby-typegen-remark-copy-linked-files",
+          "gatsby-typegen-remark-smartypants",
         ],
       },
     },

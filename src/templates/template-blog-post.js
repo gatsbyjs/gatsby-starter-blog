@@ -1,24 +1,25 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { Link } from 'react-router'
-import get from 'lodash/get'
-import { rhythm, scale } from 'utils/typography'
-import Bio from 'components/Bio'
+import React from "react"
+import Helmet from "react-helmet"
+import Link from "gatsby-link"
+import get from "lodash/get"
+
+import Bio from "../components/Bio"
+import { rhythm, scale } from "../utils/typography"
 
 class BlogPostRoute extends React.Component {
-  render () {
+  render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteTitle = get(this.props, "data.site.siteMetadata.title")
     console.log(this.props)
 
     return (
       <div>
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}/>
+        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1/5),
-            display: 'block',
+            ...scale(-1 / 5),
+            display: "block",
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
           }}
