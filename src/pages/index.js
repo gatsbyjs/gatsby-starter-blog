@@ -11,7 +11,7 @@ class BlogIndex extends React.Component {
   render() {
     console.log(this.props)
     const pageLinks = []
-    const siteTitle = get(this, "props.data.site.siteMetadata.title")
+    const { title, author } = get(this, "props.data.site.siteMetadata")
     const posts = get(this, "props.data.allMarkdownRemark.edges")
     posts.forEach(post => {
       if (post.node.path !== "/404/") {
@@ -34,7 +34,7 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={get(this, "props.data.site.siteMetadata.title")} />
-        <Bio />
+        <Bio author={author || ''} />
         <ul>
           {pageLinks}
         </ul>
@@ -49,22 +49,23 @@ BlogIndex.propTypes = {
 
 export default BlogIndex
 
-export const pageQuery = `
-{
-  site {
-    siteMetadata {
-      title
+export const pageQuery = graphql`
+  query indexQuery {
+    site {
+      siteMetadata {
+        ...Bio_author
+        title
+      }
     }
-  }
-  allMarkdownRemark {
-    edges {
-      node {
-        slug
-        frontmatter {
-          title
+    allMarkdownRemark {
+      edges {
+        node {
+          slug
+          frontmatter {
+            title
+          }
         }
       }
     }
   }
-}
 `

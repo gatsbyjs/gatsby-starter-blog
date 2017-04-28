@@ -17,7 +17,7 @@ class Bio extends React.Component {
       >
         <img
           src={profilePic}
-          alt={`Kyle Mathews`}
+          alt={this.props.author}
           style={{
             float: "left",
             marginRight: rhythm(1 / 4),
@@ -28,7 +28,7 @@ class Bio extends React.Component {
         />
         Written by
         {" "}
-        <strong>Kyle Mathews</strong>
+        <strong>{this.props.author}</strong>
         {" "}
         who lives and works in San Francisco building useful things.
         {" "}
@@ -39,5 +39,11 @@ class Bio extends React.Component {
     )
   }
 }
+
+let authorFragment = graphql`
+  fragment Bio_author on SiteMetadata {
+    author
+  }
+`
 
 export default Bio
