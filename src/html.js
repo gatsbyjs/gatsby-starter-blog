@@ -1,24 +1,29 @@
-import React from 'react'
-import { TypographyStyle } from 'react-typography'
-import Helmet from 'react-helmet'
+import React from "react"
+import { TypographyStyle } from "react-typography"
+import Helmet from "react-helmet"
 
-import typography from './utils/typography'
+import typography from "./utils/typography"
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!./public/styles.css`)
+    stylesStr = require(`!raw-loader!../public/styles.css`)
   } catch (e) {
     console.log(e)
   }
 }
 
 module.exports = React.createClass({
-  render () {
+  render() {
     const head = Helmet.rewind()
     let css
     if (process.env.NODE_ENV === `production`) {
-      css = <style id="gatsby-inlined-css" dangerouslySetInnerHTML={{ __html: stylesStr }} />
+      css = (
+        <style
+          id="gatsby-inlined-css"
+          dangerouslySetInnerHTML={{ __html: stylesStr }}
+        />
+      )
     }
 
     return (
@@ -38,7 +43,10 @@ module.exports = React.createClass({
           {head.link.toComponent()}
         </head>
         <body>
-          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          <div
+            id="react-mount"
+            dangerouslySetInnerHTML={{ __html: this.props.body }}
+          />
           {this.props.postBodyComponents}
         </body>
       </html>
