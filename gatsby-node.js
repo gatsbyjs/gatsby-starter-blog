@@ -16,7 +16,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         allMarkdownRemark(limit: 1000) {
           edges {
             node {
-              slug
+              id
+              frontmatter {
+                path
+              }
             }
           }
         }
@@ -31,10 +34,10 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       // Create blog posts pages.
       _.each(result.data.allMarkdownRemark.edges, edge => {
         upsertPage({
-          path: edge.node.slug, // required
+          path: edge.node.frontmatter.path, // required
           component: blogPost,
           context: {
-            slug: edge.node.slug,
+            id: edge.node.id,
           },
         })
       })

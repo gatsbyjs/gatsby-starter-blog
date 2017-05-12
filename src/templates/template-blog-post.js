@@ -40,15 +40,15 @@ class BlogPostRoute extends React.Component {
 
 export default BlogPostRoute
 
-export const pageQuery = `
-  query BlogPostByPath($slug: String!) {
+export const pageQuery = graphql`
+  query BlogPostByPath($id: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    markdownRemark(slug: { eq: $slug }) {
+    markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
