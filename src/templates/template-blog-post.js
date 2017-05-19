@@ -10,7 +10,7 @@ class BlogPostRoute extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, "data.site.siteMetadata.title")
-    console.log(this.props)
+    // console.log(this.props)
 
     return (
       <div>
@@ -40,7 +40,7 @@ class BlogPostRoute extends React.Component {
 
 export default BlogPostRoute
 
-export const pageQuery = `
+export const pageQuery = graphql`
   query BlogPostByPath($slug: String!) {
     site {
       siteMetadata {

@@ -10,8 +10,9 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   return new Promise((resolve, reject) => {
     const pages = []
     const blogPost = path.resolve("./src/templates/template-blog-post.js")
-    graphql(
-      `
+    resolve(
+      graphql(
+        `
       {
         allMarkdownRemark(limit: 1000) {
           edges {
@@ -22,38 +23,37 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
       }
     `
-    ).then(result => {
-      if (result.errors) {
-        console.log(result.errors)
-        reject(result.errors)
-      }
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
 
-      // Create blog posts pages.
-      _.each(result.data.allMarkdownRemark.edges, edge => {
-        upsertPage({
-          path: edge.node.slug, // required
-          component: blogPost,
-          context: {
-            slug: edge.node.slug,
-          },
+        // Create blog posts pages.
+        _.each(result.data.allMarkdownRemark.edges, edge => {
+          upsertPage({
+            path: edge.node.slug, // required
+            component: blogPost,
+            context: {
+              slug: edge.node.slug,
+            },
+          })
         })
       })
-
-      resolve()
-    })
+    )
   })
 }
 
 // Add custom url pathname for blog posts.
 exports.onNodeCreate = ({ node, boundActionCreators, getNode }) => {
   const { updateNode } = boundActionCreators
-  if (node.type === `File` && typeof node.slug === "undefined") {
+  if (node.internal.type === `File` && typeof node.slug === "undefined") {
     const parsedFilePath = path.parse(node.relativePath)
     const slug = `/${parsedFilePath.dir}/`
     node.slug = slug
     updateNode(node)
   } else if (
-    node.type === `MarkdownRemark` &&
+    node.internal.type === `MarkdownRemark` &&
     typeof node.slug === "undefined"
   ) {
     const fileNode = getNode(node.parent)

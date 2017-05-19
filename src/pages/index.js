@@ -9,7 +9,7 @@ import { rhythm } from "../utils/typography"
 
 class BlogIndex extends React.Component {
   render() {
-    console.log(this.props)
+    // console.log("props", this.props)
     const pageLinks = []
     const siteTitle = get(this, "props.data.site.siteMetadata.title")
     const posts = get(this, "props.data.allMarkdownRemark.edges")
@@ -49,8 +49,8 @@ BlogIndex.propTypes = {
 
 export default BlogIndex
 
-export const pageQuery = `
-{
+export const pageQuery = graphql`
+query IndexQuery {
   site {
     siteMetadata {
       title

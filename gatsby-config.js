@@ -11,32 +11,29 @@ module.exports = {
         name: "pages",
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-typegen-remark`,
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: `gatsby-typegen-remark-responsive-image`,
+            resolve: `gatsby-remark-responsive-image`,
             options: {
               maxWidth: 590,
             },
           },
           {
-            resolve: `gatsby-typegen-remark-responsive-iframe`,
+            resolve: `gatsby-remark-responsive-iframe`,
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          "gatsby-typegen-remark-prismjs",
-          "gatsby-typegen-remark-copy-linked-files",
-          "gatsby-typegen-remark-smartypants",
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
         ],
       },
     },
-    `gatsby-typegen-filesystem`,
-    `gatsby-typegen-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
