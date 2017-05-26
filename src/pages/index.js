@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
               marginBottom: rhythm(1 / 4),
             }}
           >
-            <Link style={{ boxShadow: "none" }} to={post.node.slug}>
+            <Link style={{ boxShadow: "none" }} to={post.node.fields.slug}>
               {post.node.frontmatter.title}
             </Link>
           </li>
@@ -59,7 +59,9 @@ query IndexQuery {
   allMarkdownRemark {
     edges {
       node {
-        slug
+        fields {
+          slug
+        }
         frontmatter {
           title
         }

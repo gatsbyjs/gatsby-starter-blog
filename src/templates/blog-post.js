@@ -6,11 +6,10 @@ import get from "lodash/get"
 import Bio from "../components/Bio"
 import { rhythm, scale } from "../utils/typography"
 
-class BlogPostRoute extends React.Component {
+class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, "data.site.siteMetadata.title")
-    // console.log(this.props)
 
     return (
       <div>
@@ -38,7 +37,7 @@ class BlogPostRoute extends React.Component {
   }
 }
 
-export default BlogPostRoute
+export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostByPath($slug: String!) {
@@ -48,7 +47,7 @@ export const pageQuery = graphql`
         author
       }
     }
-    markdownRemark(slug: { eq: $slug }) {
+    markdownRemark(fields: { slug: { eq: $slug }}) {
       id
       html
       frontmatter {
