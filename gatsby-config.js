@@ -43,4 +43,5 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
   ],
+  linkPrefix: '/gatsby-starter-blog'
 }
