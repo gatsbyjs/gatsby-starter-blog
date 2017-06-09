@@ -49,16 +49,25 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 // Add custom slug for blog posts to both File and MarkdownRemark nodes.
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
   const { createNodeField } = boundActionCreators
-  if (node.internal.type === `File`) {
-    const parsedFilePath = path.parse(node.relativePath)
-    const slug = `/${parsedFilePath.dir}/`
-    createNodeField({ node, fieldName: `slug`, fieldValue: slug })
-  } else if (node.internal.type === `MarkdownRemark`) {
-    const fileNode = getNode(node.parent)
-    createNodeField({
-      node,
-      fieldName: `slug`,
-      fieldValue: fileNode.fields.slug,
-    })
+
+  switch (node.internal.type) {
+    case 'File':
+      const parsedFilePath = path.parse(node.relativePath)
+      const slug = `/${parsedFilePath.dir}/`
+      createNodeField({
+        node,
+        fieldName: 'slug',
+        fieldValue: slug
+      })
+      return
+
+    case 'MarkdownRemark':
+      const fileNode = getNode(node.parent)
+      createNodeField({
+        node,
+        fieldName: 'slug',
+        fieldValue: fileNode.fields.slug,
+      })
+      return
   }
 }
