@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
-module.exports = React.createClass({
+export default class HTML extends React.Component {
   render() {
     const head = Helmet.rewind()
     let css
@@ -38,9 +38,6 @@ module.exports = React.createClass({
           {this.props.headComponents}
           <TypographyStyle typography={typography} />
           {css}
-          {head.title.toComponent()}
-          {head.meta.toComponent()}
-          {head.link.toComponent()}
         </head>
         <body>
           <div
@@ -51,5 +48,5 @@ module.exports = React.createClass({
         </body>
       </html>
     )
-  },
-})
+  }
+}

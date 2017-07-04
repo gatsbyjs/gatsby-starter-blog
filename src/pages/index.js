@@ -2,7 +2,6 @@ import React from "react"
 import Link from "gatsby-link"
 import get from "lodash/get"
 import Helmet from "react-helmet"
-import include from "underscore.string/include"
 
 import Bio from "../components/Bio"
 import { rhythm } from "../utils/typography"
@@ -23,7 +22,7 @@ class BlogIndex extends React.Component {
               marginBottom: rhythm(1 / 4),
             }}
           >
-            <Link style={{ boxShadow: "none" }} to={post.node.fields.slug}>
+            <Link style={{ boxShadow: "none" }} to={post.node.frontmatter.path}>
               {post.node.frontmatter.title}
             </Link>
           </li>
@@ -50,23 +49,23 @@ BlogIndex.propTypes = {
 export default BlogIndex
 
 export const pageQuery = graphql`
-query IndexQuery {
-  site {
-    siteMetadata {
-      title
+  query IndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
     }
-  }
-  allMarkdownRemark {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            path
+          }
+          frontmatter {
+            title
+          }
         }
       }
     }
   }
-}
 `
