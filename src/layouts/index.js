@@ -66,7 +66,7 @@ class Template extends React.Component {
 }
 
 Template.propTypes = {
-  children: React.PropTypes.function,
+  children: React.PropTypes.func,
   location: React.PropTypes.object,
   route: React.PropTypes.object,
 }
