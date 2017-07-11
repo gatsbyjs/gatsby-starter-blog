@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
         const title = get(post, "node.frontmatter.title") || post.node.path
         pageLinks.push(
           <li
-            key={post.node.path}
+            key={post.node.frontmatter.path}
             style={{
               marginBottom: rhythm(1 / 4),
             }}
