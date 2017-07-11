@@ -1,6 +1,5 @@
 import React from "react"
 import { TypographyStyle } from "react-typography"
-import Helmet from "react-helmet"
 
 import typography from "./utils/typography"
 
@@ -15,7 +14,6 @@ if (process.env.NODE_ENV === `production`) {
 
 export default class HTML extends React.Component {
   render() {
-    const head = Helmet.rewind()
     let css
     if (process.env.NODE_ENV === `production`) {
       css = (
