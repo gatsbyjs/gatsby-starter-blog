@@ -1,7 +1,7 @@
-import React from "react"
-import { TypographyStyle } from "react-typography"
+import React from 'react'
+import { TypographyStyle } from 'react-typography'
 
-import typography from "./utils/typography"
+import typography from './utils/typography'
 
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
