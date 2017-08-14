@@ -27,7 +27,7 @@
     "lodash": "^4.15.0",
     "react-responsive-grid": "^0.3.3",
     "typeface-merriweather": "^0.0.35",
-    "typeface-montserrat": "^0.0.35",
+    "typeface-montserrat": "^0.0.37",
     "typography-theme-wordpress-2016": "^0.15.1"
   },
   "devDependencies": {

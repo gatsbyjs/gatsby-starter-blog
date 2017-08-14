@@ -6824,7 +6824,7 @@ react-router-dom@^4.1.1:
     prop-types "^15.5.4"
     react-router "^4.1.1"
 
-"react-router-scroll@github:ytase/react-router-scroll#build":
+react-router-scroll@ytase/react-router-scroll#build:
   version "0.4.1"
   resolved "https://codeload.github.com/ytase/react-router-scroll/tar.gz/991ecddb08885e1fb80ec1e9dbf3a35844b7d4cd"
   dependencies:
@@ -8373,9 +8373,9 @@ typeface-merriweather@^0.0.35:
   version "0.0.35"
   resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.35.tgz#2539221f5519c93c2b93902103c6605c5d3cd2f3"
 
-typeface-montserrat@^0.0.35:
-  version "0.0.35"
-  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.35.tgz#2f5c3928081ad41a1838ac85c88ec959f584a538"
+typeface-montserrat@^0.0.37:
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.37.tgz#e4c7b457e7a4083df2460a7b7bdd06c5d776a113"
 
 typography-breakpoint-constants@^0.15.10:
   version "0.15.10"
