@@ -1946,7 +1946,7 @@ core-js@^1.0.0, core-js@^1.2.6:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
 
-core-js@^2.4.0:
+core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.0.tgz#569c050918be6486b3837552028ae0466b717086"
 
@@ -2389,6 +2389,10 @@ domhandler@^2.3.0:
   resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.4.1.tgz#892e47000a99be55bbf3774ffea0561d8879c259"
   dependencies:
     domelementtype "1"
+
+domready@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/domready/-/domready-1.0.8.tgz#91f252e597b65af77e745ae24dd0185d5e26d58c"
 
 domutils@1.1:
   version "1.1.6"
@@ -3146,26 +3150,26 @@ function-bind@^1.0.2:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.0.tgz#16176714c801798e4e8f2cf7f7529467bb4a5771"
 
-gatsby-link@^1.6.5:
-  version "1.6.6"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.6.tgz#96dd366d2923dd9946b8287fe6b55448c9d6c1a2"
+gatsby-link@^1.6.7:
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.7.tgz#d84bd096f5c41ffaaeb293220024f305e8200845"
   dependencies:
     prop-types "^15.5.8"
     ric "^1.3.0"
 
-gatsby-plugin-google-analytics@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.2.tgz#7b00316c22608248642053bb14f3e360b5207bf2"
+gatsby-plugin-google-analytics@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-1.0.3.tgz#591348c1cd356d3ed31e6f9324b3beb3cd632c14"
 
-gatsby-plugin-manifest@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.2.tgz#8dc7eff6346ec5467f5d1e9112db0057ab63f2c7"
+gatsby-plugin-manifest@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-1.0.3.tgz#d6402b44b52ca89b08dceb695e271b754a349d76"
   dependencies:
     bluebird "^3.5.0"
 
-gatsby-plugin-offline@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-1.0.2.tgz#5e382d3a7fe14cd19ca25e531cb588ad3ef41737"
+gatsby-plugin-offline@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-1.0.3.tgz#1db212606f4bd68afdbb564f07426a4b9b6cbd81"
   dependencies:
     sw-precache "^5.0.0"
 
@@ -3176,13 +3180,13 @@ gatsby-plugin-preact@^1.0.0:
     preact "^8.1.0"
     preact-compat "^3.16.0"
 
-gatsby-plugin-react-helmet@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-1.0.1.tgz#98d60ed796f9115dc08daba89ac6a622c94e1897"
+gatsby-plugin-react-helmet@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-1.0.2.tgz#bc5b87ecd2f1f25a32ef4b460e10582c1d6c2259"
   dependencies:
     react-helmet "^5.1.3"
 
-gatsby-plugin-sharp@^1.6.0:
+gatsby-plugin-sharp@^1.6.0, gatsby-plugin-sharp@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-1.6.1.tgz#102da228e0f13fcf6bed4ed71d8be3d29d9d8a48"
   dependencies:
@@ -3195,9 +3199,9 @@ gatsby-plugin-sharp@^1.6.0:
     progress "^1.1.8"
     sharp "^0.17.3"
 
-gatsby-plugin-typography@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-1.7.2.tgz#4e30a6a8ce1a87f761cfea4fc605fcf7588362bf"
+gatsby-plugin-typography@^1.7.5:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-1.7.5.tgz#26e128e11efecd247a76391d7964c3465ddc9abe"
   dependencies:
     react-typography "^0.16.1"
     typography "^0.16.0"
@@ -3212,11 +3216,12 @@ gatsby-remark-copy-linked-files@^1.5.0:
     lodash "^4.17.4"
     unist-util-visit "^1.1.1"
 
-gatsby-remark-images@^1.5.0:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.2.tgz#1c533602febe9c8cd1a496f80d083b1720686fab"
+gatsby-remark-images@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.3.tgz#f574b961c0f6a85629767b74ea789bbdd695751b"
   dependencies:
     cheerio "^1.0.0-rc.2"
+    gatsby-plugin-sharp "^1.6.1"
     image-size "^0.5.1"
     is-relative-url "^2.0.0"
     lodash "^4.17.4"
@@ -3284,9 +3289,9 @@ gatsby-transformer-sharp@^1.6.0:
     fs-extra "^4.0.0"
     image-size "^0.6.0"
 
-gatsby@^1.6.5:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.8.3.tgz#932188bce1afa221f8eb8625fd64cc31d191e46b"
+gatsby@^1.8.7:
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.8.7.tgz#1415ba2e21a9643e4e8822f05bf856a7bc9d7ba9"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -3312,9 +3317,11 @@ gatsby@^1.6.5:
     common-tags "^1.4.0"
     convert-hrtime "^2.0.0"
     copyfiles "^1.2.0"
+    core-js "^2.5.0"
     css-loader "^0.26.1"
     debug "^2.6.0"
     detect-port "^1.2.1"
+    domready "^1.0.8"
     dotenv "^4.0.0"
     eventemitter2 "^4.1.0"
     express "^4.14.0"
@@ -3380,7 +3387,7 @@ gatsby@^1.6.5:
     sift "^3.2.6"
     slash "^1.0.0"
     socket.io "^2.0.3"
-    static-site-generator-webpack-plugin "^3.1.0"
+    static-site-generator-webpack-plugin "^3.4.1"
     string-similarity "^1.2.0"
     style-loader "^0.13.0"
     tracer "^0.8.7"
@@ -7825,7 +7832,7 @@ statehood@2.x.x:
     items "1.x.x"
     joi "6.x.x"
 
-static-site-generator-webpack-plugin@^3.1.0:
+static-site-generator-webpack-plugin@^3.4.1:
   version "3.4.1"
   resolved "https://registry.yarnpkg.com/static-site-generator-webpack-plugin/-/static-site-generator-webpack-plugin-3.4.1.tgz#6ee22468830bc546798a37e0fca6fd699cc93b81"
   dependencies:
@@ -8362,13 +8369,13 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typeface-merriweather@0.0.25:
-  version "0.0.25"
-  resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.25.tgz#fe6f87778af6cd52ce87391204550b3afb710241"
+typeface-merriweather@^0.0.35:
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.35.tgz#2539221f5519c93c2b93902103c6605c5d3cd2f3"
 
-typeface-montserrat@0.0.24:
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.24.tgz#dc819a5a8e7e89af4107671c56b7b9e1ab2ceea2"
+typeface-montserrat@^0.0.35:
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.35.tgz#2f5c3928081ad41a1838ac85c88ec959f584a538"
 
 typography-breakpoint-constants@^0.15.10:
   version "0.15.10"
