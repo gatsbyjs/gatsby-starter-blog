@@ -3289,9 +3289,9 @@ gatsby-transformer-sharp@^1.6.0:
     fs-extra "^4.0.0"
     image-size "^0.6.0"
 
-gatsby@^1.8.7:
-  version "1.8.7"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.8.7.tgz#1415ba2e21a9643e4e8822f05bf856a7bc9d7ba9"
+gatsby@^1.8.10:
+  version "1.8.10"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.8.10.tgz#7acd034ca9c3101cc51e8c7aaebe39c9cd315ce0"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -6824,7 +6824,7 @@ react-router-dom@^4.1.1:
     prop-types "^15.5.4"
     react-router "^4.1.1"
 
-react-router-scroll@ytase/react-router-scroll#build:
+"react-router-scroll@github:ytase/react-router-scroll#build":
   version "0.4.1"
   resolved "https://codeload.github.com/ytase/react-router-scroll/tar.gz/991ecddb08885e1fb80ec1e9dbf3a35844b7d4cd"
   dependencies:
