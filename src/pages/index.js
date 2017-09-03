@@ -19,9 +19,10 @@ class BlogIndex extends React.Component {
           if (post.node.path !== "/404/") {
             const title = get(post, "node.frontmatter.title") || post.node.path
             return (
-              <div>
+              <div
+                key={post.node.frontmatter.path}
+              >
                 <h3
-                  key={post.node.frontmatter.path}
                   style={{
                     marginBottom: rhythm(1 / 4),
                   }}
