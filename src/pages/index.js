@@ -13,10 +13,10 @@ class BlogIndex extends React.Component {
 
     return (
       <div>
-        <Helmet title={get(this, 'props.data.site.siteMetadata.title')} />
+        <Helmet title={siteTitle} />
         <Bio />
         {posts.map(post => {
-          if (post.node.path !== '/404/') {
+          if (post.node.frontmatter.path !== '/404/') {
             const title = get(post, 'node.frontmatter.title') || post.node.path
             return (
               <div key={post.node.frontmatter.path}>
@@ -29,7 +29,7 @@ class BlogIndex extends React.Component {
                     style={{ boxShadow: 'none' }}
                     to={post.node.frontmatter.path}
                   >
-                    {post.node.frontmatter.title}
+                    {title}
                   </Link>
                 </h3>
                 <small>{post.node.frontmatter.date}</small>
