@@ -71,10 +71,4 @@ class Template extends React.Component {
   }
 }
 
-Template.propTypes = {
-  children: React.PropTypes.func,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object,
-}
-
 export default Template
