@@ -7,20 +7,20 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
-    "gatsby": "^1.9.99",
+    "gatsby": "^1.9.102",
     "gatsby-link": "^1.6.24",
-    "gatsby-plugin-google-analytics": "^1.0.11",
+    "gatsby-plugin-google-analytics": "^1.0.12",
     "gatsby-plugin-offline": "^1.0.10",
     "gatsby-plugin-react-helmet": "^1.0.8",
-    "gatsby-plugin-sharp": "^1.6.19",
+    "gatsby-plugin-sharp": "^1.6.20",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-remark-copy-linked-files": "^1.5.16",
-    "gatsby-remark-images": "^1.5.30",
+    "gatsby-remark-images": "^1.5.31",
     "gatsby-remark-prismjs": "^1.2.9",
-    "gatsby-remark-responsive-iframe": "^1.4.13",
+    "gatsby-remark-responsive-iframe": "^1.4.14",
     "gatsby-remark-smartypants": "^1.4.8",
-    "gatsby-source-filesystem": "^1.5.7",
-    "gatsby-transformer-remark": "^1.7.19",
+    "gatsby-source-filesystem": "^1.5.8",
+    "gatsby-transformer-remark": "^1.7.20",
     "gatsby-transformer-sharp": "^1.6.13",
     "lodash": "^4.15.0",
     "react-responsive-grid": "^0.3.3",
@@ -32,7 +32,7 @@
     "eslint": "^4.9.0",
     "eslint-plugin-react": "^7.4.0",
     "gh-pages": "^0.12.0",
-    "prettier": "^1.7.4"
+    "prettier": "^1.8.1"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
