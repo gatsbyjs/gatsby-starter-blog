@@ -8,7 +8,6 @@ const prompt = require('prompt');
 const now = new Date();
 
 let title = '';
-let tags = [];
 let newdirtitle = '';
 let newdirectory = '';
 
@@ -23,9 +22,6 @@ function promptForTitle() {
         title: {
           message: 'Title of the new post',
           required: true
-        },
-        tags: {
-          message: 'Comma separated tags'
         }
       }
     };
@@ -35,7 +31,6 @@ function promptForTitle() {
         reject(err);
       } else {
         title = result.title;
-        tags = result.tags;
         resolve();
       }
     });
@@ -62,11 +57,9 @@ function writeFile() {
   const data = `---
 title: ${title}
 date: ${getLocalISO(now)}
-tags: ${tags.length > 0 && yamlizeTags()}
-layout: post
 ---
 
-type something smart here
+Type something amazing here!
 `
 
   return new Promise((resolve, reject) => {
@@ -106,15 +99,6 @@ function hyphenate() {
   return title.split(' ').map(word => {
     return word.toLowerCase()
   }).join('-');
-}
-
-function yamlizeTags() {
-  const sep = `\n  - `;
-  const list = tags.split(',').map(tag => {
-    return tag.replace(/\s/g,'');
-  })
-  .join(sep);
-  return `${sep}${list}`;
 }
 
 promptForTitle()
