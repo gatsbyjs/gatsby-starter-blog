@@ -6,3 +6,8 @@ Install this starter (assuming Gatsby is installed) by running from your CLI:
 
 ## Running in development
 `gatsby develop`
+
+## Creating a new post with a date
+`yarn new-post` will prompt for a post title. It generates a new `index.md`
+markdown file with the title and date in the frontmatter, in a folder that
+follows the format of `src/pages/YYYYMMDD-title-hyphenated/`.
