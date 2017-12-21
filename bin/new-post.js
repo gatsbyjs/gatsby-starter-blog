@@ -38,7 +38,7 @@ function promptForTitle() {
 }
 
 function buildDirectory() {
-  const date = `${now.getFullYear()}${now.getMonth()}${now.getDate()}`;
+  const date = `${now.getFullYear()}${twoDigitPad(now.getMonth()+1)}${twoDigitPad(now.getDate())}`;
   newdirtitle = `${date}-${hyphenate(title)}`;
   newdirectory = directory(newdirtitle);
 
@@ -78,21 +78,23 @@ function directory(newdir) {
 }
 
 // credit https://goo.gl/Ss9T1v
+function twoDigitPad(num) {
+  const norm = Math.floor(Math.abs(num));
+  return (norm < 10 ? '0' : '') + norm;
+}
+
+// credit https://goo.gl/Ss9T1v
 function getLocalISO(date) {
-  var tzo = -date.getTimezoneOffset(),
-      dif = tzo >= 0 ? '+' : '-',
-      pad = function(num) {
-          var norm = Math.floor(Math.abs(num));
-          return (norm < 10 ? '0' : '') + norm;
-      };
+  const tzo = -date.getTimezoneOffset();
+  const dif = tzo >= 0 ? '+' : '-';
   return date.getFullYear() +
-      '-' + pad(date.getMonth() + 1) +
-      '-' + pad(date.getDate()) +
-      'T' + pad(date.getHours()) +
-      ':' + pad(date.getMinutes()) +
-      ':' + pad(date.getSeconds()) +
-      dif + pad(tzo / 60) +
-      ':' + pad(tzo % 60);
+    '-' + twoDigitPad(date.getMonth() + 1) +
+    '-' + twoDigitPad(date.getDate()) +
+    'T' + twoDigitPad(date.getHours()) +
+    ':' + twoDigitPad(date.getMinutes()) +
+    ':' + twoDigitPad(date.getSeconds()) +
+    dif + twoDigitPad(tzo / 60) +
+    ':' + twoDigitPad(tzo % 60);
 }
 
 function hyphenate() {
