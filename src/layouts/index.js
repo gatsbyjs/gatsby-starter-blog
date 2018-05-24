@@ -6,6 +6,7 @@ import { rhythm, scale } from '../utils/typography'
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
+    const { title } = this.props.data.site.siteMetadata
     let header
 
     let rootPath = `/`
@@ -30,7 +31,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {title}
           </Link>
         </h1>
       )
@@ -51,7 +52,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {title}
           </Link>
         </h3>
       )
@@ -73,3 +74,13 @@ class Template extends React.Component {
 }
 
 export default Template
+
+export const query = graphql`
+  query LayoutIndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
