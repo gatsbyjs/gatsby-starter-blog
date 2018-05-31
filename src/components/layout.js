@@ -9,8 +9,11 @@ class Template extends React.Component {
     let header
 
     let rootPath = `/`
-    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`
+    if (
+      typeof window.__PREFIX_PATHS__ !== `undefined` &&
+      window.__PREFIX_PATHS__
+    ) {
+      rootPath = window.__PATH_PREFIX__ + `/`
     }
 
     if (location.pathname === rootPath) {
@@ -66,7 +69,7 @@ class Template extends React.Component {
         }}
       >
         {header}
-        {children()}
+        {children}
       </div>
     )
   }

@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
+import Layout from '../components/layout'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
@@ -12,7 +13,7 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <div>
+      <Layout location={this.props.location}>
         <Helmet title={siteTitle} />
         <Bio />
         {posts.map(({ node }) => {
@@ -33,7 +34,7 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
-      </div>
+      </Layout>
     )
   }
 }
