@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "gatsby": "next",
-    "gatsby-link": "next",
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-offline": "next",
