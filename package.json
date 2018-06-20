@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "gatsby": "next",
-    "gatsby-link": "next",
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-google-analytics": "next",
     "gatsby-plugin-offline": "next",
@@ -24,6 +23,7 @@
     "gatsby-transformer-remark": "next",
     "gatsby-transformer-sharp": "next",
     "lodash": "^4.17.5",
+    "prismjs": "^1.15.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-helmet": "^5.2.0",
