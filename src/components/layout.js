@@ -6,15 +6,8 @@ import { rhythm, scale } from '../utils/typography'
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
+    const rootPath = `${__PATH_PREFIX__}/`
     let header
-
-    let rootPath = `/`
-    if (
-      typeof window.__PREFIX_PATHS__ !== `undefined` &&
-      window.__PREFIX_PATHS__
-    ) {
-      rootPath = window.__PATH_PREFIX__ + `/`
-    }
 
     if (location.pathname === rootPath) {
       header = (
