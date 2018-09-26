@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
 
-class Template extends React.Component {
+class Layout extends React.Component {
   render() {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -68,4 +68,4 @@ class Template extends React.Component {
   }
 }
 
-export default Template
+export default Layout
