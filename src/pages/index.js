@@ -17,7 +17,7 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} title={siteTitle}>
         <Helmet
           htmlAttributes={{ lang: 'en' }}
           meta={[{ name: 'description', content: siteDescription }]}
