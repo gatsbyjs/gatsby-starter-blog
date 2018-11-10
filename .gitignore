@@ -1,7 +1,31 @@
-node_modules/
-public
-.gatsby-context.js
-.DS_Store
-.intermediate-representation/
+jspm_packages/
+
+# Typescript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
 .cache/
-yarn.lock
+public
+yarn-error.log
+
+# Yarn PnP
+.pnp/
+.pnp.js
+
