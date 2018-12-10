@@ -11,3 +11,12 @@ egg yolk will be less rich."?
 ([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
 
 Yeah, I didn't either.
+
+## Random Bird Code
+
+```javascript
+const bird = Math.random() > 0.5 ? new Chicken() : new Duck()
+
+const egg = bird.lay()
+const duckEgg = SaltFactory(egg)
+```
