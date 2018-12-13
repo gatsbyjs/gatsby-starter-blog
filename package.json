@@ -1,7 +1,8 @@
 {
   "name": "gatsby-starter-blog",
+  "private": true,
   "description": "Starter Gatsby Blog",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
@@ -34,11 +35,6 @@
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
-  "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.2"
-  },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
   "keywords": [
     "gatsby"
@@ -50,13 +46,9 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "dev": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   }
 }
