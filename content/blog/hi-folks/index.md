@@ -1,6 +1,7 @@
 ---
 title: New Beginnings
 date: "2015-05-28T22:40:32.169Z"
+description: This a custom description for SEO and Open Graph purposes, rather than a generated excerpt. Simply add a description variable to the frontmatter.
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and
