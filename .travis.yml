@@ -5,10 +5,10 @@ os:
   - osx
 
 node_js:
-  - "node"
-  - "lts/*"
-  - "7"
-  - "8"
+  - 'node'
+  - 'lts/*'
+  - '7'
+  - '8'
 
 script:
   - npm install

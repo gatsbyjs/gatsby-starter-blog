@@ -20,11 +20,11 @@ class Layout extends React.Component {
         >
           <Link
             style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
             }}
-            to={'/'}
+            to={`/`}
           >
             {title}
           </Link>
@@ -34,18 +34,18 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: 'Montserrat, sans-serif',
+            fontFamily: `Montserrat, sans-serif`,
             marginTop: 0,
             marginBottom: rhythm(-1),
           }}
         >
           <Link
             style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`,
             }}
-            to={'/'}
+            to={`/`}
           >
             {title}
           </Link>
@@ -55,8 +55,8 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
+          marginLeft: `auto`,
+          marginRight: `auto`,
           maxWidth: rhythm(24),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
