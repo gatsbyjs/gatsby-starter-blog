@@ -29,7 +29,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```sh
     cd my-blog-starter/
-    gatsby develop
+    npx gatsby develop
     ```
 
 1.  **Open the source code and start editing!**
