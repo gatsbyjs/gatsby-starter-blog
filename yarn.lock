@@ -777,6 +777,13 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@featurepeek/ping@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@featurepeek/ping/-/ping-0.0.2.tgz#f3a9053116b52f0b43c5383dc63b06559ad5db76"
+  integrity sha512-ijGsiT0IJBEF6/X2t0G6D02+Xx/DAOQJ/OjQC1qOBG58gU8z681k0r5NdMXiqjIJ1cg8TuqvT+s342967kZ/eA==
+  dependencies:
+    request "^2.88.0"
+
 "@moocar/lokijs@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@moocar/lokijs/-/lokijs-1.0.1.tgz#545227c173030dd0e6b1e6bdcef528012a6c325c"
@@ -10102,7 +10109,7 @@ replace-ext@1.0.0, replace-ext@^1.0.0:
   resolved "https://registry.yarnpkg.com/replace-ext/-/replace-ext-1.0.0.tgz#de63128373fcbf7c3ccfa4de5a480c45a67958eb"
   integrity sha1-3mMSg3P8v3w8z6TeWkgMRaZ5WOs=
 
-request@^2.65.0, request@^2.83.0, request@^2.85.0:
+request@^2.65.0, request@^2.83.0, request@^2.85.0, request@^2.88.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   integrity sha512-NAqBSrijGLZdM0WZNsInLJpkJokL72XYjUpnB0iwsRgxh7dB6COrHnTBNwN0E+lHDAJzu7kLAkDeY08z2/A0hg==

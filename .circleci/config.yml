@@ -1,0 +1,53 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:10.14.1
+      
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/example-circleci-static
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "yarn.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      # install dependencies
+      - run: 
+          name: Installing dependencies
+          command: yarn install
+
+      # save to cache
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
+
+      # build
+      - run: 
+          name: Building
+          command: yarn build
+
+      # store artifacts
+      - store_artifacts:
+          path: public
+
+      # notify featurepeek! 
+      - run:
+          name: Pinging FeaturePeek
+          command: yarn fp-ping "https://740ff752.ngrok.io/ci" "$CIRCLE_PULL_REQUEST" "$CIRCLE_BUILD_NUM"
+
