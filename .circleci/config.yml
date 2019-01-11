@@ -49,5 +49,5 @@ jobs:
       # notify featurepeek! 
       - run:
           name: Pinging FeaturePeek
-          command: yarn fp-ping "https://740ff752.ngrok.io/ci" "$CIRCLE_PULL_REQUEST" "$CIRCLE_BUILD_NUM"
+          command: yarn fp-ping "https://featurepeek-commenter-pwkpfyjelb.now.sh/ci" "$CIRCLE_PULL_REQUEST" "$CIRCLE_BUILD_NUM"
 
