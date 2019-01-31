@@ -11550,7 +11550,7 @@ typography-theme-wordpress-2016@^0.15.10:
     gray-percentage "^2.0.0"
     typography-breakpoint-constants "^0.15.10"
 
-typography@^0.16.17:
+typography@^0.16.18:
   version "0.16.18"
   resolved "https://registry.yarnpkg.com/typography/-/typography-0.16.18.tgz#bdd2dc7297682339e8ded5fcb6783b9ae3c71b76"
   integrity sha512-bYpxtDptzesYMy4pzwb0fYZuzms+65RckONH9+miHi2WSeOF9P/nNjprqbsn50ClhUa4zK6RBAe75tNVVE785g==
