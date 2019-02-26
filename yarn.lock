@@ -4623,10 +4623,10 @@ gatsby-link@^2.0.12:
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
 
-gatsby-plugin-feed@^2.0.13:
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.13.tgz#4a457a81d28cbe1ebb6d944272711b0a0671bbd3"
-  integrity sha512-wipPT35r+siQih+rZnKUxGFpA30RstnqtB/2JVuXeTX9ivkIjD697MOEqZTgM/8Y2IiQvr667pmDLukPPcwwuQ==
+gatsby-plugin-feed@^2.0.14:
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.14.tgz#e2f0b0df85bc3532ead7a37b2eadb2752f3b8d4f"
+  integrity sha512-ubj4Vk+Qfp79xpw1RZrgPHkDkD8ikqcnF9YnR2NIB06Fs40U3gY1jCZhHzBlTBxOnDY6atXQZ8akGbCmzSebNA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     lodash.merge "^4.6.0"
@@ -4799,10 +4799,10 @@ gatsby-source-filesystem@^2.0.23:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-transformer-remark@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.2.6.tgz#6f310ebc72e7182d6181904a7a6d7ae59995cad7"
-  integrity sha512-Cb90xsOVhH8T6phxgtUFWzmaKjaKbLJe17bSg1EXQz95ro5PevTO9Z7My05nZ3rHTrS2bnJkPEJb19d7d0tOVA==
+gatsby-transformer-remark@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.3.0.tgz#4caa1194a78ce2470c2d0b2ea0e0f9351487e7d9"
+  integrity sha512-m5yInZ02Bii/SqoUwL4KDtNHKR5LQ/fcQKBI8jqBCl14O/0F8UejWpzelb5FJyiVZyUKaECONVdQh9CbHowFOA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
@@ -8126,9 +8126,9 @@ parse-english@^4.0.0:
     unist-util-visit-children "^1.0.0"
 
 parse-entities@^1.0.2, parse-entities@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/parse-entities/-/parse-entities-1.2.0.tgz#9deac087661b2e36814153cb78d7e54a4c5fd6f4"
-  integrity sha512-XXtDdOPLSB0sHecbEapQi6/58U/ODj/KWfIXmmMCJF/eRn8laX6LZbOyioMoETOOJoWRW8/qTSl5VQkUIfKM5g==
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/parse-entities/-/parse-entities-1.2.1.tgz#2c761ced065ba7dc68148580b5a225e4918cdd69"
+  integrity sha512-NBWYLQm1KSoDKk7GAHyioLTvCZ5QjdH/ASBBQTD3iLiAWJXS5bg1jEWI8nIJ+vgVvsceBVBcDGRWSo0KVQBvvg==
   dependencies:
     character-entities "^1.0.0"
     character-entities-legacy "^1.0.0"
