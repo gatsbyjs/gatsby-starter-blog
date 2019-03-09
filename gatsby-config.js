@@ -3,9 +3,9 @@ module.exports = {
     title: `Gatsby Starter Blog`,
     author: `Jorge Osto`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://jorge-osto-journal.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      facebook: `Jorge Osto`,
     },
   },
   plugins: [

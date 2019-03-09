@@ -4,10 +4,7 @@ date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 ---
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+This will be an overview of my journey in my first experience with Lambda Labs, I will try to cover all important actions I took individually and all team related actions as well. This is a living document, so if I remember later something new I'll keep adding stuffs here from time to time.
 
 ## On deer horse aboard tritely yikes and much
 
