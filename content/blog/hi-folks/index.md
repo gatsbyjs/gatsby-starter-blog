@@ -1,7 +1,7 @@
 ---
 title: New Beginnings
 date: "2015-05-28T22:40:32.169Z"
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+description: Lambda Labs's Jorge Osto's Journey!.
 ---
 
 This will be an overview of my journey in my first experience with Lambda Labs, I will try to cover all important actions I took individually and all team related actions as well. This is a living document, so if I remember later something new I'll keep adding stuffs here from time to time.
