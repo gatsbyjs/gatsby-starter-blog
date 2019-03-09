@@ -1,6 +1,6 @@
 ---
 title: New Beginnings
-date: "2019-03-29T22:40:32.169Z"
+date: "2019-03-09T22:40:32.169Z"
 description: Lambda Labs's Jorge Osto's Journey!.
 ---
 
@@ -16,11 +16,15 @@ When we were approved our Team and assigned the app we wanted to work on, at tha
 - Node.js and express Backend or Java Backend?
 - Relational Database or non-Relational Database?
 
-When she reached the first hills of the **Italic Mountains**, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
-[Alphabet Village](http://google.com) and the subline of her own road, the Line
-Lane. Pityful a rethoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
+During this discussion phase i could realize that some team mebers weren't too convinced about all those new stacks, and I could understand their thoughts so even when I was about to try everything new I had to slow down a bit and find some balance between new stacks and known stacks, mainly because they were right about one thing, **This is a tims esensitive project** and if we run into any issues we don't have the expertise to debug the problem as we would have in debugging known issues and if we want to finish a high quality product on time we can't take too many risks. This was the first big lesson to me about working in a team, that my opinion is not the only valueble one and is not the one that matters most, the team will always come first, and this prepared me for the next days.
+
+At the end of this discussion we agreed to split the team in 2 groups, backend and frontend, I ended up in the backend team, mainly because there we will be implementing new stacks and i was eagle to learn and willing to accept the challenge. We decided the stack we will finally be using.
+
+- React: Because the heavy work will be on front end and this will allow us as a team to move faster in order to meet milestones and have some time left to work on some stretch goals that we decided to go for.
+- IOS & Android apps: Joseph and I accepted this challenge, because we wanted to learn react-native and because we thought it would be a good way to showcase what we were able to acomplish. We decided to work on this on our own time without affecting our time working with the team in the main app.
+- Material UI as the front end components library: This will help us to prototype the app faster and have some goodlooking components following the Material Design idea that Google proposes.
+- Node.js & Express Backend & GraphQL: We decided that learning Java in so short timeframe wouldn't be wise, We decided to add GraphQL to the ecuation because we thought it would save us time and add a lot of flexibility, also its a new tech for us that is widely used in the industry.
+- non-Relational Database(MongoDB and mongoose): We decided that MongoDB would fit better in the way we wanted to structure our data and will play really well with GraphQL, also it was something that all backend group members wanted to learn so we went for it.
 
 ### Overlaid the jeepers uselessly much excluding
 
