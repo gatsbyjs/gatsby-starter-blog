@@ -1,22 +1,20 @@
 ---
 title: New Beginnings
-date: "2015-05-28T22:40:32.169Z"
+date: "2019-03-29T22:40:32.169Z"
 description: Lambda Labs's Jorge Osto's Journey!.
 ---
 
 This will be an overview of my journey in my first experience with Lambda Labs, I will try to cover all important actions I took individually and all team related actions as well. This is a living document, so if I remember later something new I'll keep adding stuffs here from time to time.
 
-## On deer horse aboard tritely yikes and much
+## Planning out our App
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+When we were approved our Team and assigned the app we wanted to work on, at that point we have discussed a lot about our app is goal. Who is gonna be our audience, what kind of features they will more likely need, etc... so we had a bit of advantage on this. So our main focused was the stack we were using to acomplish this goal. We as team decided that our main goal is to get out of labs with a good portfolio piece where we can showcase our skills to future employers, an this brought to the topic that the best way to do this was by using new technologies that we weren't taught at Lambda School. So this brought the following ideas to the table:
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+- React or Angular?
+- Mobile apps?
+- UI Framework
+- Node.js and express Backend or Java Backend?
+- Relational Database or non-Relational Database?
 
 When she reached the first hills of the **Italic Mountains**, she had a last
 view back on the skyline of her hometown _Bookmarksgrove_, the headline of
