@@ -1,6 +1,9 @@
 import Typography from "typography"
 import githubTheme from "typography-theme-github"
 
+githubTheme.headerFontFamily = ["Montserrat", "sans-serif"]
+githubTheme.bodyFontFamily = ["Montserrat", "sans-serif"]
+
 const typography = new Typography(githubTheme)
 
 // Hot reload typography in development.
