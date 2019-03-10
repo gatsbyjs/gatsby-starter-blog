@@ -8,8 +8,20 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import styled from "styled-components"
 
 import { rhythm } from "../utils/typography"
+
+const Container = styled.div`
+  display: flex;
+  margin-bottom: ${rhythm(2.5)};
+`
+const Avatar = styled(Image)`
+  margin-right: ${rhythm(1 / 2)};
+  margin-bottom: 0;
+  min-width: 50px;
+  border-radius: 50%;
+`
 
 function Bio() {
   return (
@@ -18,25 +30,8 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <div
-            style={{
-              display: `flex`,
-              marginBottom: rhythm(2.5),
-            }}
-          >
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
+          <Container>
+            <Avatar fixed={data.avatar.childImageSharp.fixed} alt={author} />
             <p>
               Written by <strong>{author}</strong> who lives and works in San
               Francisco building useful things.
@@ -45,7 +40,7 @@ function Bio() {
                 You should follow him on Twitter
               </a>
             </p>
-          </div>
+          </Container>
         )
       }}
     />

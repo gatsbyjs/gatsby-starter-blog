@@ -1,7 +1,31 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
+
+const BigTitle = styled.h1`
+  margin-bottom: ${rhythm(1.5)};
+  margin-top: 0;
+`
+
+const SmallTitle = styled.h3`
+  font-family: "Montserrat", sans-serif;
+  margin-top: 0;
+`
+
+const TitleLink = styled(Link)`
+  box-shadow: none;
+  text-decoration: none;
+  color: inherit;
+`
+
+const Container = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${rhythm(24)};
+  padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
+`
 
 class Layout extends React.Component {
   render() {
@@ -9,57 +33,22 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
+    // TODO get scale spread into styled-components
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
+        <BigTitle style={{ ...scale(1.5) }}>
+          <TitleLink to={`/`}>{title}</TitleLink>
+        </BigTitle>
       )
     } else {
       header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
+        <SmallTitle>
+          <TitleLink to={`/`}>{title}</TitleLink>
+        </SmallTitle>
       )
     }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+      <Container>
         <header>{header}</header>
         <main>{children}</main>
         <footer>
@@ -67,7 +56,7 @@ class Layout extends React.Component {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </Container>
     )
   }
 }
