@@ -33,8 +33,8 @@ function Bio() {
           <Container>
             <Avatar fixed={data.avatar.childImageSharp.fixed} alt={author} />
             <p>
-              Written by <strong>{author}</strong> who lives and works in San
-              Francisco building useful things.
+              Fork of Gatsby's blog starter by <strong>{author}</strong> who loves Gatsby
+              and styled-components.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter
@@ -49,7 +49,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
