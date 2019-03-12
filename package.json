@@ -30,6 +30,7 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-typography": "^0.16.19",
+    "styled-components": "^4.1.3",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typography": "^0.16.19",
