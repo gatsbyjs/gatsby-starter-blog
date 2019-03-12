@@ -8,20 +8,8 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-import styled from "styled-components"
 
 import { rhythm } from "../utils/typography"
-
-const Container = styled.div`
-  display: flex;
-  margin-bottom: ${rhythm(2.5)};
-`
-const Avatar = styled(Image)`
-  margin-right: ${rhythm(1 / 2)};
-  margin-bottom: 0;
-  min-width: 50px;
-  border-radius: 50%;
-`
 
 function Bio() {
   return (
@@ -30,17 +18,34 @@ function Bio() {
       render={data => {
         const { author, social } = data.site.siteMetadata
         return (
-          <Container>
-            <Avatar fixed={data.avatar.childImageSharp.fixed} alt={author} />
+          <div
+            style={{
+              display: `flex`,
+              marginBottom: rhythm(2.5),
+            }}
+          >
+            <Image
+              fixed={data.avatar.childImageSharp.fixed}
+              alt={author}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                minWidth: 50,
+                borderRadius: `100%`,
+              }}
+              imgStyle={{
+                borderRadius: `50%`,
+              }}
+            />
             <p>
-              Fork of Gatsby's blog starter by <strong>{author}</strong> who loves Gatsby
-              and styled-components.
+              Written by <strong>{author}</strong> who lives and works in San
+              Francisco building useful things.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 You should follow him on Twitter
               </a>
             </p>
-          </Container>
+          </div>
         )
       }}
     />
@@ -49,7 +54,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
