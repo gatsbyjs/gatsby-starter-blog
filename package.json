@@ -1,7 +1,7 @@
 {
-  "name": "raae.codes",
+  "name": "raaecodes",
   "private": true,
-  "description": "@raae's code blog",
+  "description": "A starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
@@ -39,7 +39,9 @@
     "prettier": "^1.16.4"
   },
   "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsbyjs"
+  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
