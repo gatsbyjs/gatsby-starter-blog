@@ -1,11 +1,11 @@
 {
   "name": "raaecodes",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "@raae's code blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Benedicte Raae <raae@raae.codes>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/raae/raae.codes/issues"
   },
   "dependencies": {
     "gatsby": "^2.1.37",
@@ -38,15 +38,13 @@
   "devDependencies": {
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsbyjs"
-  ],
+  "homepage": "https://raae.codes",
+  "keywords": ["gatsbyjs"],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/raae/raae.codes.git"
   },
   "scripts": {
     "build": "gatsby build",
