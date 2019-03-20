@@ -8,6 +8,7 @@
     "url": "https://github.com/raae/raae.codes/issues"
   },
   "dependencies": {
+    "classnames": "2.2.6",
     "gatsby": "^2.1.37",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-feed": "^2.0.15",
@@ -16,10 +17,10 @@
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.10",
     "gatsby-plugin-sharp": "^2.0.29",
-    "gatsby-plugin-typography": "^2.2.10",
     "gatsby-remark-copy-linked-files": "^2.0.11",
     "gatsby-remark-images": "^2.0.6",
     "gatsby-remark-prismjs": "^3.2.5",
+    "gatsby-remark-reading-time": "1.0.1",
     "gatsby-remark-responsive-iframe": "^2.1.1",
     "gatsby-remark-smartypants": "^2.0.9",
     "gatsby-source-filesystem": "^2.0.27",
@@ -39,7 +40,9 @@
     "prettier": "^1.16.4"
   },
   "homepage": "https://raae.codes",
-  "keywords": ["gatsbyjs"],
+  "keywords": [
+    "gatsbyjs"
+  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {

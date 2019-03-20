@@ -8,8 +8,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
-
-import { rhythm, scale } from "../utils/typography"
+import classNames from "classnames"
 
 function Logo({ variant }) {
   return (
@@ -18,33 +17,16 @@ function Logo({ variant }) {
       render={data => {
         const { author, title } = data.site.siteMetadata
         return (
-          <h1
-            style={{
-              ...scale(variant !== `small` ? 1 : 0.5),
-              display: `inline-flex`,
-              margin: `${rhythm(1.5)} 0`,
-            }}
-          >
-            {variant !== `small` && (
+          <div className={classNames("Logo", { isSmall: variant === "small" })}>
+            {variant !== "small" && (
               <Image
+                className="avatar"
                 fixed={data.avatar.childImageSharp.fixed}
                 alt={author}
-                style={{
-                  minWidth: 50,
-                  outline: `5px solid orangered`,
-                }}
               />
             )}
-            <span
-              style={{
-                padding: `0 ${rhythm(1)}`,
-                border: `5px solid orangered`,
-                lineHeight: 1.5,
-              }}
-            >
-              {title}
-            </span>
-          </h1>
+            <h1 className="text">{title}</h1>
+          </div>
         )
       }}
     />

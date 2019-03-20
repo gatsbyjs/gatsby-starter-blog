@@ -1,36 +1,30 @@
 import React from "react"
 import { Link } from "gatsby"
+import classNames from "classnames"
 import Logo from "./logo"
-import { rhythm } from "../utils/typography"
+import Bio from "./bio"
 
 class Layout extends React.Component {
   render() {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    let header = (
-      <Link
-        style={{
-          boxShadow: `none`,
-          textDecoration: `none`,
-          color: `inherit`,
-        }}
-        to={`/`}
-      >
-        {location.pathname === rootPath ? <Logo /> : <Logo variant="small" />}
-      </Link>
+    const isIndexPage = location.pathname === rootPath
+
+    const header = (
+      <Link to={`/`}>{isIndexPage ? <Logo /> : <Logo variant="small" />}</Link>
     )
+    const aside = <Bio />
 
     return (
       <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
+        className={classNames("Layout", {
+          isIndexPage,
+        })}
       >
         <header>{header}</header>
+        {isIndexPage && <aside>{aside}</aside>}
         <main>{children}</main>
+        {!isIndexPage && <aside>{aside}</aside>}
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}

@@ -1,6 +1,7 @@
 ---
-title: My Second Post!
+title: Introducing gatsby-remark-oembed for embedding tweets, videos, code pens and more
 date: "2015-05-06T23:46:37.121Z"
+tags: Gatsby
 ---
 
 Wow! I love blogging so much already.

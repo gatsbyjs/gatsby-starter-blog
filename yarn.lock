@@ -2279,6 +2279,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
+  integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
+
 cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
@@ -4696,13 +4701,6 @@ gatsby-plugin-sharp@^2.0.29:
     sharp "^0.21.3"
     svgo "^0.7.2"
 
-gatsby-plugin-typography@^2.2.10:
-  version "2.2.10"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-2.2.10.tgz#bef9c3bfc360c2679ed92ecfd84b6c704a359217"
-  integrity sha512-sg9UkDrn3C3EN+yBSrUNzbGIlw1k1Qc6rYZWuXeqNEuQfdWJfqJMVzVhhriBDz2sC2bU6Wh/NnQ2vXVkRs4bKw==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-
 gatsby-react-router-scroll@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.0.6.tgz#b04a8fe6ee77db5ca8f804b7ef476fd205dc4a40"
@@ -4747,6 +4745,13 @@ gatsby-remark-prismjs@^3.2.5:
     "@babel/runtime" "^7.0.0"
     parse-numeric-range "^0.0.2"
     unist-util-visit "^1.3.0"
+
+gatsby-remark-reading-time@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-reading-time/-/gatsby-remark-reading-time-1.0.1.tgz#188fbe19bc7bc6f62d4e32397b18b5540f92f033"
+  integrity sha512-ug/WIiMVCf6I41nm0DkH2sGWg9hZ/nWliliU17K3MAwJ+vIJWjn+O1vS5djVRHkDa/vYt/lqRuDWzq4J4LJhkQ==
+  dependencies:
+    reading-time "^1.1.3"
 
 gatsby-remark-responsive-iframe@^2.1.1:
   version "2.1.1"
@@ -9281,6 +9286,11 @@ readdirp@^2.2.1:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
+
+reading-time@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/reading-time/-/reading-time-1.1.3.tgz#47de143074245be6f65e2b3c9b63b78d9ab8ec7a"
+  integrity sha512-SYy+cuoGy1MTLjIbgwTZ+DkDiDq/dE1OnqBQFYytXgNWRZROuqtBdu7HoJ+HbGMnoAinOHnHnqbEUYnpSho5aA==
 
 recursive-readdir@2.2.1:
   version "2.2.1"

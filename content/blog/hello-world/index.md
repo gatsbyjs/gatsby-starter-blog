@@ -1,6 +1,7 @@
 ---
-title: Hello World
+title: Why embedding a tweet is not as easy as you might think
 date: "2015-05-01T22:12:03.284Z"
+tags: Gatsby, Test
 ---
 
 This is my first post on my new fake blog! How exciting!
