@@ -2119,9 +2119,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000947, caniuse-lite@^1.0.30000951:
-  version "1.0.30000951"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000951.tgz#c7c2fd4d71080284c8677dd410368df8d83688fe"
-  integrity sha512-eRhP+nQ6YUkIcNQ6hnvdhMkdc7n3zadog0KXNRxAZTT2kHjUb1yGn71OrPhSn8MOvlX97g5CR97kGVj8fMsXWg==
+  version "1.0.30000953"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000953.tgz#8054c4e5c4aa69dc3269353a4a5e102909759dbb"
+  integrity sha512-2stdF/q5MZTDhQ6uC65HWbSgI9UMKbc7+HKvlwH5JBIslKoD/J9dvabP4J4Uiifu3NljbHj3iMpfYflLSNt09A==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -4816,10 +4816,10 @@ gatsby-transformer-sharp@^2.1.17:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@^2.2.11:
-  version "2.2.11"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.2.11.tgz#057f002c987973169cb9821f086199a08530515f"
-  integrity sha512-112c4RyUhxePTZaxUqJByyC9IINHE7D2I0HqoAX+LDmUCEM4G/cCxMdpc/+pdvpPvD9Y7xENnnmFptywaKHuyA==
+gatsby@^2.2.13:
+  version "2.2.13"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.2.13.tgz#67237199e4498bccad239a83fe1464387f6c6034"
+  integrity sha512-A9mLjI9f62GR3HnILt0EtwQ/2lc+emZ65ceCOCz4oFxQVja1bN3EYNPDHVXultBAPttGn0uknZreyG0qOveUPA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -4942,6 +4942,7 @@ gatsby@^2.2.11:
     webpack-hot-middleware "^2.21.0"
     webpack-merge "^4.1.0"
     webpack-stats-plugin "^0.1.5"
+    xstate "^4.3.2"
     yaml-loader "^0.5.0"
 
 gauge@~2.7.3:
@@ -11822,6 +11823,11 @@ xstate@^3.1.0:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/xstate/-/xstate-3.3.3.tgz#64177cd4473d4c2424b3df7d2434d835404b09a9"
   integrity sha512-p0ZYDPWxZZZRAJyD3jaGO9/MYioHuxZp6sjcLhPfBZHAprl4EDrZRGDqRVH9VvK8oa6Nrbpf+U5eNmn8KFwO3g==
+
+xstate@^4.3.2:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.3.3.tgz#e7712aa48285c8900cd62020953313a0aac8d82e"
+  integrity sha512-63os3bXeN0oaEsYwtHuqR6N71m6Ro/dZpVNgef9vez7skeabbaVh5hOCVLXPwZqQ9QLUlxAQuc38wlsIibdFkw==
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.1"
