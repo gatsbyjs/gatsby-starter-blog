@@ -16,9 +16,9 @@ When we were approved our Team and assigned the app we wanted to work on, at tha
 - Node.js and express Backend or Java Backend?
 - Relational Database or non-Relational Database?
 
-During this discussion phase i could realize that some team mebers weren't too convinced about all those new stacks, and I could understand their thoughts so even when I was about to try everything new I had to slow down a bit and find some balance between new stacks and known stacks, mainly because they were right about one thing, **This is a time sensitive project** and if we run into any issues we don't have the expertise to debug the problem as we would have in debugging known issues and if we want to finish a high quality product on time we can't take too many risks. This was the first big lesson to me about working in a team, that my opinion is not the only valueble one and is not the one that matters most, the team will always come first, and this prepared me for the next days.
+During this discussion phase I could realize that some team mebers weren't too convinced about all those new stack, and I could understand their thoughts so even when I was about to try everything new I had to slow down a bit and find some balance between new stack and known stack, mainly because they were right about one thing, **This is a time sensitive project** and if we run into any issues we don't have the expertise to debug the problem as we would have in debugging known issues and if we want to finish a high quality product on time we can't take too many risks. This was the first big lesson to me about working in a team, that my opinion is not the only valueble one and is not the one that matters most, the team will always come first, and this prepared me for the next days.
 
-At the end of this discussion we agreed to split the team in 2 groups, backend and frontend, I ended up in the backend team, mainly because there we will be implementing new stacks and i was eagle to learn and willing to accept the challenge. We decided the stack we will finally be using.
+At the end of this discussion we agreed to split the team in 2 groups, backend and frontend, I ended up in the backend team, mainly because there we will be implementing new stack and I was eager to learn and willing to accept the challenge. We decided the stack we will finally be using.
 
 - React: Because the heavy work will be on front end and this will allow us as a team to move faster in order to meet milestones and have some time left to work on some stretch goals that we decided to go for.
 - IOS & Android apps: Joseph and I accepted this challenge, because we wanted to learn react-native and because we thought it would be a good way to showcase what we were able to acomplish. We decided to work on this on our own time without affecting our time working with the team in the main app.
@@ -48,12 +48,13 @@ After we decided the stack we will use, that left me with the challenge of learn
 
 Besides these challenges other struggles I have had has been merge conflicts with github, I have ran into a couple of these and it's been good learning experiences, its new to most of us so we are learning together how to deal with them.
 
-### This will be my next Sprint Challenge.
+### Lambda School Labs Sprint 2
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+During this second Sprint our focus needed to be getting working all APIs and Authentication. I decided to work on Authentication using passport.js strategies and let my teammates working on the existing GraphQL queries and mutations, as well as schemas. I started implementing Google, then moved onto Facebook, then we thought Stripe might be useful for our app and finally worked on a local strategy based on JWT, all using passport.js strategies. When I first looked at the docs I thought that the harder part would be getting the first one working and then all the others would be pretty much the same thing but I couldn't be more wrong about it, I found different challenges on each one of them and spent way more time than expected on this. By the end of the fist week I was done with my first mission....'Authentication'. Working with passport was something that I was looking forward to learn and I got it, so I was happy with my work, eventhough I knew It wasn't complete, because we needed a lot of info from front end before we can complete all the logic, but the barebones were done and working.
+
+After this I decided to work on the payment process with the Stripe API, I had heard it was difficult and challenging so i definitely wanted to be the one working on it, so I started researching about it and eventually I got it done, but we still need to connect it with the front end, but I did learn a lot during this second week, about payments, security issues, handling sensitive data, and best practices asociated with all of this.
+
+At the end of this Sprint I feel like our backend Team is pretty solid and we are getting closer to each other, I had a lot of support from my teammates and often times I got help from them. I'm geting a really good experience of working with a team and also i feel like I'm getting some good friends in the processs. Looking forward for new challenges on Sprint 3 and the opportunity of working closer with the front end Team.
 
 1.  So baboon this
 2.  Mounted militant weasel gregariously admonishingly straightly hey
