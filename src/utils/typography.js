@@ -1,23 +1,46 @@
 import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import deYoungTheme from 'typography-theme-de-young'
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
+deYoungTheme.baseFontSize = '16px'
+deYoungTheme.headerFontFamily = ['IBM Plex Serif', 'serif']
+deYoungTheme.bodyFontFamily = ['IBM Plex Sans', 'sans-serif']
+deYoungTheme.googleFonts = [
+  {
+    name: 'IBM Plex Mono',
+    styles: [
+      '300',
+      '400',
+      '500',
+      '600',
+      '700'
+    ],
+  },
+  {
+    name: 'IBM Plex Sans',
+    styles: [
+      '300',
+      '400',
+      '500',
+      '600',
+      '700'
+    ]
+  },
+  {
+    name: 'IBM Plex Serif',
+    styles: [
+      '300',
+      '400',
+      '500',
+      '600',
+      '700'
+    ]
   }
-}
+]
 
-delete Wordpress2016.googleFonts
+const typography = new Typography(deYoungTheme)
 
-const typography = new Typography(Wordpress2016)
-
-// Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
   typography.injectStyles()
 }
 
 export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
