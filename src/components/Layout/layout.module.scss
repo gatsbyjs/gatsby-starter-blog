@@ -1,0 +1,61 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins/breakpoints";
+
+.wrapper {
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 90%;
+  padding: 1rem;
+  padding-bottom: 2rem;
+
+  .title {
+    text-align: center;
+    a {
+      color: $color-base;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+  .subtitle {
+    text-align: right;
+    font-family: 'IBM Plex Mono', monospace;
+    font-style: italic;
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  aside {
+    // width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+  }
+}
+
+@include breakpoint-md {
+  .wrapper {
+    height: 100vh;
+
+    .title {
+      text-align: right;
+    }
+  }
+
+  .container {
+    flex-flow: row nowrap;
+
+    aside {
+      align-self: center;
+      margin-top: 5rem;
+    }
+
+    main {
+      width: 50rem;
+      margin-left: 5rem;
+    }
+  }
+}

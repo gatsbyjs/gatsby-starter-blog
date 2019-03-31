@@ -1,0 +1,18 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins/breakpoints";
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-left: 0;
+  text-transform: uppercase;
+  font-family: $typographic-font-family-heading;
+}
+
+@include breakpoint-md {
+  .nav-list {
+    flex-direction: column;
+    text-align: center;
+  }
+}
