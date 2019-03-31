@@ -1,0 +1,139 @@
+/** 
+ * Generic
+ */
+
+html {
+  font-size: $typographic-root-font-size;
+}
+
+body {
+  margin: 0;
+  font-family: $typographic-font-family-body;
+  color: $typographic-base-font-color;
+  line-height: $typographic-base-line-height;
+  font-size: $typographic-base-font-size;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $typographic-font-family-heading;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: $typographic-base-font-size * 2.5;
+}
+
+h2 {
+  font-size: $typographic-base-font-size * 1.6875;
+}
+
+h3 {
+  font-size: $typographic-base-font-size * 1.375;
+}
+
+h4 {
+  font-size: $typographic-base-font-size * 1.2;
+}
+
+h5 {
+  font-size: $typographic-base-font-size;
+}
+
+h6 {
+  font-size: $typographic-base-font-size;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+  margin: inherit auto;
+}
+
+hr {
+  margin-top: 52px;
+  margin-bottom: 52px;
+  border: 0;
+  color: $color-base;
+  display: block;
+  height: 26px;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 100% 26px;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, $color-base 11px, $color-base 15px, transparent 15px, transparent 26px);
+  width: 100px;
+}
+
+a {
+  color: $typographic-link-p-font-color;
+  text-decoration: none;
+  font-weight: 800;
+  // font-family: 'IBM Plex Mono', monospace;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $typographic-link-s-font-color;
+  }
+
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+ul {
+  list-style: square;
+
+  & li {
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
+
+}
+
+blockquote {
+  padding: 0;
+  font-style: italic;
+  text-align: center;
+}
+
+figure {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  color: $color-base;
+  font-size: $typographic-small-font-size;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2rem;
+  padding: .2rem;
+  background-color: #cda4da;
+  text-align: center;
+  a {
+    color: black;
+  }
+}
