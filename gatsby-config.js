@@ -1,14 +1,41 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
+    title: `👑 Her Majesty`,
+    subtitle: `is a pretty nice girl`,
+    author: `Angie Gonzalez`,
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    icon: `content/assets/laptop.png`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `angieg0nzalez`,
+      github: `agonzalez0515`
     },
+    menu: [
+      {
+        label: 'Blog',
+        path: '/'
+      },
+      {
+        label: 'About',
+        path: '/about'
+      },
+      {
+        label: 'Work',
+        path: '/work'
+      },
+      {
+        label: 'Contact',
+        path: '/contact'
+      }
+    ]
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+          component: require.resolve(`./src/components/Layout/layout.js`)
+      }
+  },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -42,6 +69,7 @@ module.exports = {
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-plugin-sass`
         ],
       },
     },
@@ -57,13 +85,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Angie Gonzalez`,
+        short_name: `AngieDev`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/laptop.png`,
       },
     },
     `gatsby-plugin-offline`,
