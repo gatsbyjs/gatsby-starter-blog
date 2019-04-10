@@ -56,11 +56,13 @@ After this I decided to work on the payment process with the Stripe API, I had h
 
 At the end of this Sprint I feel like our backend Team is pretty solid and we are getting closer to each other, I had a lot of support from my teammates and often times I got help from them. I'm geting a really good experience of working with a team and also i feel like I'm getting some good friends in the processs. Looking forward for new challenges on Sprint 3 and the opportunity of working closer with the front end Team.
 
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
+### Lambda School Labs Sprint 3
+
+This was for sure a very Challenging Sprint. We had to overcome different challenges, the bigger of them losing a teammate who got hired, while I'm very happy for him it had a negative effect in the team and left a lot of work and doubtsin the team, but we overcome that with a lot of extra hours and comunication between us. 
+
+At some point I had to jump to the front end to work in the Billings page which involved the Stripe work I did in the backend, so working through the frontend files was quite challenging, I found lots of useless components and methods writen for no reason, and the file structure, well, that was the cherry on the top for me, it was really hard to find a component, where it was written, where it was being used, and stuffs like that. I was also in the middle of some personal issues that attempted against my time to work on the project so at the end of the week I had to put lots of hours to catch up and give the team what it needed.
+
+So, this was a challenging Sprint but full of learing experiences and opportunities to get used to what it feels like to work in the real world. Looking forward for next challenges.
 
 When she reached the first hills of the Italic Mountains, she had a last view
 back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
