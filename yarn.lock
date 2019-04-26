@@ -4913,10 +4913,10 @@ gatsby-transformer-sharp@^2.1.18:
     probe-image-size "^4.0.0"
     sharp "^0.21.3"
 
-gatsby@^2.3.30:
-  version "2.3.30"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.30.tgz#758d13a10f396eb75d480250cb911e75fd40fe5a"
-  integrity sha512-66ZPcbyFhrPa1pJVfG3Xz6z+lJ8IjMxajoFA6yb8aEBKIjw1IN10D25bnUB79XppydNp+3C4EadGMXVWcFFUhg==
+gatsby@^2.3.31:
+  version "2.3.31"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.3.31.tgz#9ec87eea5ac02e74e96748aabffea9c268a45382"
+  integrity sha512-kUkwhkDgPYJX+huwue6kpW8eaERFN6lL8Cym/POeNSqC7O+oUFtxS30Xg1L2JDax8WYVaGP9Wq427Zd7/u9SOQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -7350,7 +7350,7 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
-"mime-db@>= 1.40.0 < 2":
+mime-db@1.40.0, "mime-db@>= 1.40.0 < 2":
   version "1.40.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.40.0.tgz#a65057e998db090f732a68f6c276d387d4126c32"
   integrity sha512-jYdeOMPy9vnxEqFRRo6ZvTZ8d9oPb+k18PKoYNYUe2stVEBPPwsln/qWzdbmaIvnhZ9v2P+CuecK+fpUfsV2mA==
@@ -7378,6 +7378,13 @@ mime-types@^2.1.12, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.19:
   integrity sha512-aGl6TZGnhm/li6F7yx82bJiBZwgiEa4Hf6CNr8YO+r5UHr53tSTYZb102zyU50DOWWKeOv0uQLRL0/9EiKWCog==
   dependencies:
     mime-db "~1.38.0"
+
+mime-types@~2.1.24:
+  version "2.1.24"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.24.tgz#b6f8d0b3e951efb77dedeca194cff6d16f676f81"
+  integrity sha512-WaFHS3MCl5fapm3oLxU4eYDw77IQM2ACcxQ9RIxfaC3ooc6PFuBMGZZsYpvoXS5D5QTWPieo1jjLdAm3TBP3cQ==
+  dependencies:
+    mime-db "1.40.0"
 
 mime@1.4.1:
   version "1.4.1"
@@ -11139,12 +11146,12 @@ type-fest@^0.3.0:
   integrity sha512-cUGJnCdr4STbePCgqNFbpVNCepa+kAVohJs1sLhxzdH+gnEoOd8VhbYa7pD3zZYGiURWM2xzEII3fQcRizDkYQ==
 
 type-is@~1.6.16:
-  version "1.6.16"
-  resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.16.tgz#f89ce341541c672b25ee7ae3c73dee3b2be50194"
-  integrity sha512-HRkVv/5qY2G6I8iab9cI7v1bOIdhm94dVjQCPFElW9W+3GeDOSHmy2EBYe4VTApuzolPcmgFTN3ftVJRKR2J9Q==
+  version "1.6.17"
+  resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.17.tgz#9ef72233f08ffbe83b8fa3c93f4f93ecbc330bc2"
+  integrity sha512-jYZzkOoAPVyQ9vlZ4xEJ4BBbHC4a7hbY1xqyCPe6AiQVVqfbZEulJm0VpqK4B+096O1VQi0l6OBGH210ejx/bA==
   dependencies:
     media-typer "0.3.0"
-    mime-types "~2.1.18"
+    mime-types "~2.1.24"
 
 type-of@^2.0.1:
   version "2.0.1"
@@ -11676,9 +11683,9 @@ webpack-dev-server@^3.1.14:
     yargs "12.0.5"
 
 webpack-hot-middleware@^2.21.0:
-  version "2.24.3"
-  resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.24.3.tgz#5bb76259a8fc0d97463ab517640ba91d3382d4a6"
-  integrity sha512-pPlmcdoR2Fn6UhYjAhp1g/IJy1Yc9hD+T6O9mjRcWV2pFbBjIFoJXhP0CoD0xPOhWJuWXuZXGBga9ybbOdzXpg==
+  version "2.24.4"
+  resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.24.4.tgz#0ae1eeca000c6ffdcb22eb574d0e6d7717672b0f"
+  integrity sha512-YFA4j2tg9WPkcQKcyHMZn6787QngWf/ahXvAJRZ1ripySa+4ihjzDcYBsfC4ihOucTd02IJ12v+VTGMsEGxq0w==
   dependencies:
     ansi-html "0.0.7"
     html-entities "^1.2.0"
