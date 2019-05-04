@@ -28,13 +28,13 @@ At the end of this discussion we agreed to split the team in 2 groups, backend a
 
 ### Some challenges I had to overcome
 
-After we decided the stack we will use, that left me with the challenge of learning the new stacks I will have to work with, so I spent the first 2 days learning React Native while we were working on the TDD. After that I spent the next 3 days studying GraphQL and MongoDB, and at the same time we as a team were planing the data modeling for our backend app. 5 days were gone and we havent written a single line of code so even when I felt stil a bit confused about GraphQL and MongoDB, I went ahead and started the barebones of our Express App and step by step connecting the basic boilerplate to get  created an account on MongoDB Atlas, created a database there and then connected it to the Express App.
+After we decided the stack we will use, that left me with the challenge of learning the new stacks I will have to work with, so I spent the first 2 days learning React Native while we were working on the TDD. After that I spent the next 3 days studying GraphQL and MongoDB, and at the same time we as a team were planing the data modeling for our backend app. 5 days were gone and we havent written a single line of code so even when I felt stil a bit confused about GraphQL and MongoDB, I went ahead and started the barebones of our Express App and step by step connecting the basic boilerplate to get created an account on MongoDB Atlas, created a database there and then connected it to the Express App.
 
 > At this point the team was able to start working on different tasks. The file structure was clear and everything was ready to go.
-> I had to take care of the Company Model, GraphQL types and resolvers. 
-> While working on one of the resolvers i realized we needed some dynamism in this ones, 
+> I had to take care of the Company Model, GraphQL types and resolvers.
+> While working on one of the resolvers i realized we needed some dynamism in this ones,
 > so I started by creating one resolver that take data dinamically on the flight and this was my first big acomplishment.
-> When I got it working i realized that this would be useful for my teammates in their own schemas and resolvers 
+> When I got it working i realized that this would be useful for my teammates in their own schemas and resolvers
 > if they just changed some variables and the context where they would use it so i thought in sharing my function with them
 > After I told them so, I realized that if i write that function in a way they can reuse it just passing those variables as arguments that would be even
 > easier and cleaner, since we can reuse this functions in other places of the project.
@@ -58,29 +58,23 @@ At the end of this Sprint I feel like our backend Team is pretty solid and we ar
 
 ### Lambda School Labs Sprint 3
 
-This was for sure a very Challenging Sprint. We had to overcome different challenges, the bigger of them losing a teammate who got hired, while I'm very happy for him it had a negative effect in the team and left a lot of work and doubtsin the team, but we overcome that with a lot of extra hours and comunication between us. 
+This was for sure a very Challenging Sprint. We had to overcome different challenges, the bigger of them losing a teammate who got hired, while I'm very happy for him it had a negative effect in the team and left a lot of work and doubts in the team, but we overcome that with a lot of extra hours and comunication between us.
 
 At some point I had to jump to the front end to work in the Billings page which involved the Stripe work I did in the backend, so working through the frontend files was quite challenging, I found lots of useless components and methods writen for no reason, and the file structure, well, that was the cherry on the top for me, it was really hard to find a component, where it was written, where it was being used, and stuffs like that. I was also in the middle of some personal issues that attempted against my time to work on the project so at the end of the week I had to put lots of hours to catch up and give the team what it needed.
 
 So, this was a challenging Sprint but full of learing experiences and opportunities to get used to what it feels like to work in the real world. Looking forward for next challenges.
 
-When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rethoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.
+### Lambda School Labs Sprint 4
 
-> The copy warned the Little Blind Text, that where it came from it would have
-> been rewritten a thousand times and everything that was left from its origin
-> would be the word "and" and the Little Blind Text should turn around and
-> return to its own, safe country.
+This 4th Sprint was harder than expected, as we were more involved with the front end work we decided to refactor the whole app because it was not looking good enough, at the beginning of this Sprint the only component that looked good was the billing form that I worked on. Besides the styling we decide we need to add other components to improve the user experience, so basically we started the front end from scratch, 90% of the work was done on the front end was bad and we need a good app aut of labs to showcase and be proud of.
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.
+> I took the challenge of building a dashboard, this will be the home page of our users
+> and here we wanted to show them some information related to their business using beautiful charts
+> I also added some shortcuts so the user can get some advantage from being in the home page.
+
+The Dashboard has been the greatest challenge for me, I thought the charts will be hard to implement, well, they weren't. The hardest part of the dashboard was deciding what information to show them since we didn't have a lot of data to work with, and also deciding how to show them all that information in a meaningful/user-friendly way and overall end up with a professional looking dashboard.
+
+I started the dashboard over and over 4 times because I wasn't convinced about it's quality, but I believe it was worth the challenge. I end up with a product that I could work with, I was proud of my work even when I know it still needs some polishment. The rest of the team focused on different componentsand the whole app changed a lot, its looking way better but its still far from being good enough so we realized we won't have enough time to finish the app with the quality most of us wanted.
 
 #### Silent delightfully including because before one up barring chameleon
 
