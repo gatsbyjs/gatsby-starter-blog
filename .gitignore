@@ -55,7 +55,10 @@ typings/
 .env
 
 # gatsby files
-.cache/
+
+
+
+https://travis-ci.org/isaacs/minimatch.svg?branch=master cache/
 public
 
 # Mac files
