@@ -4670,10 +4670,10 @@ gatsby-cli@^2.5.14:
     yargs "^12.0.5"
     yurnalist "^1.0.2"
 
-gatsby-image@^2.0.41:
-  version "2.0.41"
-  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.0.41.tgz#d2f41b13013c7294123c341799d3645bb1a6dbe7"
-  integrity sha512-FeR9DkTZAfHJf7jF4nduDPMEOElpjouzKi7aHblmKyBPBTxT3wt57AQIdwjdg5RoUznjVlDfRnmemJPPGWCNLA==
+gatsby-image@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.1.0.tgz#81a68c619f1cc2f23d153899a84c048764fa73ac"
+  integrity sha512-AK0jFWkK/vG8/Ce2COwuNho/3XSV2Zn0y+FUweDj+Tvffjs+lGOhiVxDUODY8flKCO+Bz1UCfO0HcpkVH9Sg0Q==
   dependencies:
     "@babel/runtime" "^7.0.0"
     object-fit-images "^3.2.4"
@@ -4841,10 +4841,10 @@ gatsby-remark-smartypants@^2.0.9:
     retext-smartypants "^3.0.0"
     unist-util-visit "^1.3.0"
 
-gatsby-source-filesystem@^2.0.35:
-  version "2.0.35"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.35.tgz#6f4d5d39cb79c9234572eda945ddf603efbc85fd"
-  integrity sha512-eQsSBM7HLYaG8RCtggsQkq4iDOcT05zyj1BOuKSAIvHC1sGSBRkmsCh7oZkU7BBjGOq9gB09Dl3xv9JvUHnKLw==
+gatsby-source-filesystem@^2.0.36:
+  version "2.0.36"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.36.tgz#7f8930fdd5b90f524b3a0ef12044a54005abc1b3"
+  integrity sha512-nyCJAxPW+DG88dWO34mK+E2jQlY84g3UflISa+hnBcuH8qOxc7y0F+2zzSJE5vTMXqyFBQwxHLqSnBIZts2eVg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
