@@ -4,9 +4,6 @@ module.exports = {
     author: `Jaewon Seo(ENvironmentSet)`,
     description: `I believe that knowledge must be free for all. Learn things in here, and spread them to others.`,
     siteUrl: `https://overcurried.netlify.com`,
-    social: {
-      twitter: `NvironmentE`,
-    },
   },
   plugins: [
     {
