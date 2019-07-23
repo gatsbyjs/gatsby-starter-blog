@@ -35,9 +35,6 @@
     "typography": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19"
   },
-  "devDependencies": {
-    "prettier": "^1.18.2"
-  },
   "homepage": "https://github.com/ENvironmentSet/overcurried#readme",
   "keywords": [
     "gatsby"
@@ -50,7 +47,6 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve"
   }
