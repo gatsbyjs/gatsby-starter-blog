@@ -54,13 +54,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Gatsby Starter Blog',
-        short_name: 'GatsbyJS',
+        name: 'overcurried',
+        short_name: 'overcurried',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'content/assets/gatsby-icon.png'
+        icon: 'content/assets/gatsby-icon.png' // TODO: Replace this icon
       },
     },
     'gatsby-plugin-offline',
