@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `overcurried`,
-    author: `Jaewon Seo(ENvironmentSet)`,
+    author: `Jaewon Seo`,
     description: `I believe that knowledge must be free for all. Learn things in here, and spread them to others.`,
     siteUrl: `https://overcurried.netlify.com`,
   },
