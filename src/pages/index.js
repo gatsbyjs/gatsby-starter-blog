@@ -21,7 +21,7 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
       const StyledLink = useConstant(() => styled(Link)`
         box-shadow: none;
       `);
-      
+
       return (
         <StyledTitle>
           <StyledLink to={post.slug}>
