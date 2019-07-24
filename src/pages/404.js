@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SEO from 'components/seo';
-import BaseLayout from 'components/templates/BaseLayout';
+import BaseLayout from 'templates/BaseLayout';
 
 export default function NotFoundPage() {
   function NotFoundMessage() {
