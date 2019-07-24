@@ -3922,9 +3922,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.191, electron-to-chromium@^1.3.47:
-  version "1.3.199"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.199.tgz#f9a62a74cda77854310a2abffde8b75591ea09a1"
-  integrity sha512-gachlDdHSK47s0N2e58GH9HMC6Z4ip0SfmYUa5iEbE50AKaOUXysaJnXMfKj0xB245jWbYcyFSH+th3rqsF8hA==
+  version "1.3.200"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.200.tgz#78fb858b466269e8eb46d31a52562f00c865127f"
+  integrity sha512-PUurrpyDA74MuAjJRD+79ss5BqJlU3mdArRbuu4wO/dt6jc3Ic/6BDmFJxkdwbfq39cHf/XKm2vW98XSvut9Dg==
 
 elliptic@^6.0.0:
   version "6.5.0"
@@ -4984,10 +4984,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.7.18:
-  version "2.7.18"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.18.tgz#dbb1cc71a75ccb58524c07bc376c17632745200c"
-  integrity sha512-fBZBO8y8qeXB5ou1Wz/vF9yK3smHp/Q35HJpYvfOUnJf2pITa3NDrtjreMIQvAT+17vsqpBZIIlH1nhloJyHSw==
+gatsby-cli@^2.7.19:
+  version "2.7.19"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.19.tgz#a4b3e0f74041c591e88a4ae0ddb2f871a0a9a29c"
+  integrity sha512-M9bmVG/L97j6bklZI1VZhPm36kvSicqyJ8a5n7CUwqPZXa5mliE5E550D/ug3sUGg9SrHth/0dBiflDv/rW5zw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5005,7 +5005,7 @@ gatsby-cli@^2.7.18:
     execa "^0.8.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.1"
-    gatsby-telemetry "^1.1.6"
+    gatsby-telemetry "^1.1.7"
     hosted-git-info "^2.6.0"
     is-valid-path "^0.1.1"
     lodash "^4.17.14"
@@ -5255,10 +5255,10 @@ gatsby-source-filesystem@^2.1.6:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-telemetry@^1.1.6:
-  version "1.1.6"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.6.tgz#957c95e1eefcfdfb5a82b4cb85d13e88e429bdd7"
-  integrity sha512-b0uIxlz8mjW/x45VbzDL3Rs5mrVVmJGMko87ldhCgFhrj2CyyxljUBC+C2daVfyrMhvHIWagFSygZ4BrijLjlA==
+gatsby-telemetry@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.7.tgz#dd2a363852ce87990249586e75189e7b05d1f561"
+  integrity sha512-mVJwkg4kdHGBt1OKlpcDO1gKoRd5oiJHKYR1jGrShXbB8FE4c52Z2Geg0xMKNXCeUbMUEZB78IPGlJ94nnPAag==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -5318,10 +5318,10 @@ gatsby-transformer-sharp@^2.2.4:
     semver "^5.6.0"
     sharp "^0.22.1"
 
-gatsby@^2.13.36:
-  version "2.13.36"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.36.tgz#996106d3274565962141654fc1937ee888d6cf9b"
-  integrity sha512-47GfFN6ZWSNfCSv4ocOsH44y3JEFeFFC1pEn+QBwtycQGbV+JdzTXMWUo/7QViaMXjyKcmsx54+FgbkhV3fWNw==
+gatsby@^2.13.39:
+  version "2.13.39"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.39.tgz#fc48d25607b69bec469b456e70b47711cc4ab99f"
+  integrity sha512-J8lWFD0mEoUwiDURzRQXHlyvyLgZtzVskg19SGifJ/U3S4/VVm6U2udELxpFfOz5bMT4ir2WQJ3ZEBew+fu8Rw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -5379,13 +5379,13 @@ gatsby@^2.13.36:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.7.18"
+    gatsby-cli "^2.7.19"
     gatsby-core-utils "^1.0.3"
     gatsby-graphiql-explorer "^0.2.3"
     gatsby-link "^2.2.2"
     gatsby-plugin-page-creator "^2.1.5"
     gatsby-react-router-scroll "^2.1.3"
-    gatsby-telemetry "^1.1.6"
+    gatsby-telemetry "^1.1.7"
     glob "^7.1.1"
     got "8.0.0"
     graphql "^14.1.1"
@@ -8181,9 +8181,9 @@ node-pre-gyp@^0.12.0:
     tar "^4"
 
 node-releases@^1.1.25:
-  version "1.1.25"
-  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.25.tgz#0c2d7dbc7fed30fbe02a9ee3007b8c90bf0133d3"
-  integrity sha512-fI5BXuk83lKEoZDdH3gRhtsNgh05/wZacuXkgbiYkceE7+QIMXOg98n9ZV7mz27B+kFHnqHcUpscZZlGRSmTpQ==
+  version "1.1.26"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.26.tgz#f30563edc5c7dc20cf524cc8652ffa7be0762937"
+  integrity sha512-fZPsuhhUHMTlfkhDLGtfY80DSJTjOcx+qD1j5pqPkuhUHVS7xHZIg9EE4DHK8O3f0zTxXHX5VIkDG8pu98/wfQ==
   dependencies:
     semver "^5.3.0"
 
