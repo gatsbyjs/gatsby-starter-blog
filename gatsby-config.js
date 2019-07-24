@@ -2,8 +2,12 @@ module.exports = {
   siteMetadata: {
     title: 'overcurried',
     author: 'Jaewon Seo',
-    description: 'I believe that knowledge must be free for all. Learn things in here, and spread them to others.',
+    description: 'Personal Blog of Jaewon Seo, who loves computer programming.',
     siteUrl: 'https://overcurried.netlify.com',
+    social: {
+      github: 'https://github.com/ENvironmentSet',
+      twitter: 'https://twitter.com/NvironmentE',
+    }
   },
   plugins: [
     {

@@ -2,7 +2,7 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-  const blogPost = path.resolve('./src/templates/blog-post.js');
+  const blogPost = path.resolve('./src/templates/blogPost.js');
   const result = await graphql(
     `
       {
@@ -59,8 +59,8 @@ exports.onCreateNode = ({ node, actions: { createNodeField }, getNode }) => {
   }
 };
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
+exports.onCreateWebpackConfig = ({ actions: { setWebpackConfig } }) => {
+  setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
