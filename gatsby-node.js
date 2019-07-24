@@ -59,8 +59,8 @@ exports.onCreateNode = ({ node, actions: { createNodeField }, getNode }) => {
   }
 };
 
-exports.onCreateWebpackConfig = ({ actions }) => {
-  actions.setWebpackConfig({
+exports.onCreateWebpackConfig = ({ actions: { setWebpackConfig } }) => {
+  setWebpackConfig({
     resolve: {
       modules: [path.resolve(__dirname, 'src'), 'node_modules'],
     },
