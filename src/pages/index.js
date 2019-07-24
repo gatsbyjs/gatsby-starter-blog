@@ -1,61 +1,72 @@
 import React from 'react';
+import styled from '@emotion/styled';
+
 import { Link, graphql } from 'gatsby';
-
-import Bio from 'components/bio';
-import Layout from 'components/layout';
+import Bio from 'components/molecules/bio';
+import BaseLayout from 'templates/BaseLayout';
 import SEO from 'components/seo';
-import { rhythm } from 'utils/typography';
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props;
-    const siteTitle = data.site.siteMetadata.title;
-    const posts = data.allMarkdownRemark.edges;
+import { rhythm } from 'utils/typography';
+import useConstant from 'utils/useConstant';
+import useSiteMetadata from 'utils/useSiteMetadata';
+
+export default function Index({ data: { allMarkdownRemark: { edges } } }) {
+  const posts = edges.map(({ node: { fields, frontmatter } }) => ({ ...fields, ...frontmatter }));
+  const { title } = useSiteMetadata();
+  function PostPreview({ post }) {
+    function PostTitlePreview() {
+      const StyledTitle = useConstant(() => styled.h3`
+        margin-bottom: ${rhythm(1/4)};
+      `);
+      const StyledLink = useConstant(() => styled(Link)`
+        box-shadow: none;
+      `);
+      
+      return (
+        <StyledTitle>
+          <StyledLink to={post.slug}>
+            {post.title}
+          </StyledLink>
+        </StyledTitle>
+      );
+    }
+    function PostDatePreview() {
+      return (
+        <small>{post.date}</small>
+      );
+    }
+    function PostDescriptionPreview() {
+      return (
+        <p>{post.description}</p>
+      );
+    }
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title='All posts' />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })}
-      </Layout>
+      <>
+        <PostTitlePreview />
+        <PostDatePreview />
+        <PostDescriptionPreview />
+      </>
     );
   }
-}
+  function PostPreviewList({ posts }) {
+    return posts.map(post => <PostPreview key={post.slug} post={post} />);
+  }
 
-export default BlogIndex;
+  return (
+    <BaseLayout>
+      <SEO title={title} />
+      <Bio />
+      <PostPreviewList posts={posts} />
+    </BaseLayout>
+  );
+};
 
 export const pageQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt
           fields {
             slug
           }
