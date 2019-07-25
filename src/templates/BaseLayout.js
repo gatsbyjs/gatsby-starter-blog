@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import HyperLink from 'components/molecules/HyperLink';
+import Linear from 'templates/Linear';
 
 import useSiteMetadata from 'utils/useSiteMetadata';
 import useConstant from 'utils/useConstant';
@@ -43,11 +44,10 @@ export default function BaseLayout({ children }) {
     const { social: { github, twitter } } = useSiteMetadata();
 
     return (
-      <footer>
+      <Linear>
         <HyperLink to={github}>Github</HyperLink>
-        <span>{' / '}</span>
         <HyperLink to={twitter}>Twitter</HyperLink>
-      </footer>
+      </Linear>
     );
   }
 

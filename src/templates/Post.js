@@ -6,6 +6,7 @@ import Bio from 'components/molecules/bio';
 import SEO from 'components/seo';
 import BaseLayout from 'templates/BaseLayout';
 import Markdown from 'components/atoms/Markdown';
+import Linear from 'templates/Linear';
 
 import useConstant from 'utils/useConstant';
 
@@ -35,9 +36,6 @@ export default function Post(
       margin-bottom: 0;
     `);
     function PostAdditionalInformation() {
-      const PostAdditionalInformationDiv = styled.div`
-        display: flex;
-      `;
       const PostDate = useConstant(() => styled.p`
         display: block;
         margin-bottom: ${rhythm(1)};
@@ -50,12 +48,12 @@ export default function Post(
       }
 
       return (
-        <PostAdditionalInformationDiv>
+        <Linear>
           <PostDate>
             {date}
           </PostDate>
           <PostCurries />
-        </PostAdditionalInformationDiv>
+        </Linear>
       );
     }
 
