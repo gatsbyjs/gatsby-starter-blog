@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SEO from 'components/seo';
+import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
 import HyperLink from 'components/molecules/HyperLink';
 

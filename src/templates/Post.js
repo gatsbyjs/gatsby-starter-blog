@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import HyperLink from 'components/molecules/HyperLink';
 import Bio from 'components/molecules/bio';
-import SEO from 'components/seo';
+import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
 import Markdown from 'components/atoms/Markdown';
 import Linear from 'templates/Linear';

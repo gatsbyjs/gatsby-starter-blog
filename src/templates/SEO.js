@@ -51,7 +51,8 @@ export default function SEO({ description, lang = 'en', meta = [], title }) {
             name: 'twitter:description',
             content: metaDescription,
           },
-        ].concat(meta)
+          ...meta
+        ]
       }
     />
   );
