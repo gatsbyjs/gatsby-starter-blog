@@ -17,7 +17,7 @@ export default function Row({ children }) {
       {
         childList
           .slice(1)
-          .reduce((acc, child) => [...acc, <Separator />, child], [childList[0]])
+          .reduce((acc, child, i) => [...acc, <Separator key={i} />, child], [childList[0]])
       }
     </ChildrenWrapper>
   );
