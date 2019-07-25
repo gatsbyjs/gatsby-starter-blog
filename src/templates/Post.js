@@ -19,7 +19,8 @@ export default function Post(
           frontmatter: {
             title,
             date,
-            description
+            description,
+            curries
           }
         }
     },
@@ -33,20 +34,37 @@ export default function Post(
       margin-top: ${rhythm(1)};
       margin-bottom: 0;
     `);
-    const PostDate = useConstant(() => styled.p`
-      display: block;
-      margin-bottom: ${rhythm(1)};
-      ${scale(-1/5)};
-    `);
+    function PostAdditionalInformation() {
+      const PostAdditionalInformationDiv = styled.div`
+        display: flex;
+      `;
+      const PostDate = useConstant(() => styled.p`
+        display: block;
+        margin-bottom: ${rhythm(1)};
+        ${scale(-1/5)};
+      `);
+      function PostCurries() {
+        return (
+          <p>{'🍛'.repeat(parseInt(curries))}</p>
+        );
+      }
+
+      return (
+        <PostAdditionalInformationDiv>
+          <PostDate>
+            {date}
+          </PostDate>
+          <PostCurries />
+        </PostAdditionalInformationDiv>
+      );
+    }
 
     return (
       <>
         <PostTitle>
           {title}
         </PostTitle>
-        <PostDate>
-          {date}
-        </PostDate>
+        <PostAdditionalInformation />
       </>
     );
   }
@@ -128,6 +146,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        curries
       }
     }
   }

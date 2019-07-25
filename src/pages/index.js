@@ -27,9 +27,28 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
         </StyledTitle>
       );
     }
-    function PostDatePreview() {
+    function PostAdditionalInformationPreview() {
+      const PostAdditionalInformationDiv = styled.div`
+        display: flex;
+      `;
+      function PostDatePreview() {
+        return (
+          <small>{post.date}</small>
+        );
+      }
+      function PostCurriesPreview() {
+        const curries = parseInt(post.curries);
+
+        return (
+          <p>{'🍛'.repeat(curries)}</p>
+        );
+      }
+
       return (
-        <small>{post.date}</small>
+        <PostAdditionalInformationDiv>
+          <PostDatePreview />
+          <PostCurriesPreview />
+        </PostAdditionalInformationDiv>
       );
     }
     function PostDescriptionPreview() {
@@ -41,7 +60,7 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
     return (
       <>
         <PostTitlePreview />
-        <PostDatePreview />
+        <PostAdditionalInformationPreview />
         <PostDescriptionPreview />
       </>
     );
@@ -71,6 +90,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            curries
           }
         }
       }
