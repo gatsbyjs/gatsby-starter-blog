@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { Link, graphql } from 'gatsby';
 import Bio from 'components/molecules/bio';
 import BaseLayout from 'templates/BaseLayout';
 import SEO from 'components/seo';
+import HyperLink from 'components/molecules/HyperLink';
 
 import { rhythm } from 'utils/typography';
 import useConstant from 'utils/useConstant';
@@ -18,15 +18,12 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
       const StyledTitle = useConstant(() => styled.h3`
         margin-bottom: ${rhythm(1/4)};
       `);
-      const StyledLink = useConstant(() => styled(Link)`
-        box-shadow: none;
-      `);
 
       return (
         <StyledTitle>
-          <StyledLink to={post.slug}>
+          <HyperLink to={post.slug}>
             {post.title}
-          </StyledLink>
+          </HyperLink>
         </StyledTitle>
       );
     }

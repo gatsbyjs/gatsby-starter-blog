@@ -2,6 +2,7 @@ import React from 'react';
 
 import SEO from 'components/seo';
 import BaseLayout from 'templates/BaseLayout';
+import HyperLink from 'components/molecules/HyperLink';
 
 export default function NotFoundPage() {
   function NotFoundMessage() {
@@ -12,7 +13,7 @@ export default function NotFoundPage() {
           Oops, My router function has produced
           {' '}
           <strong>
-            <a href='https://wiki.haskell.org/Bottom'>⊥</a>
+            <HyperLink to='https://wiki.haskell.org/Bottom'>⊥</HyperLink>
           </strong>,
           You should check your URI parameters.
         </p>

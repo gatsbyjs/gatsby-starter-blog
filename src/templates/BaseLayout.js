@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { Link } from 'gatsby';
+import HyperLink from 'components/molecules/HyperLink';
 
 import useSiteMetadata from 'utils/useSiteMetadata';
 import useConstant from 'utils/useConstant';
@@ -23,17 +23,12 @@ export default function BaseLayout({ children }) {
       margin-top: 0;
       ${scale(1.5)};
     `);
-    const StyledLink = useConstant(() => styled(Link)`
-      box-shadow: none;
-      text-decoration: none;
-      color: inherit;
-    `);
 
     return (
       <SiteTitle>
-        <StyledLink to='/'>
+        <HyperLink to='/'>
           {title}
-        </StyledLink>
+        </HyperLink>
       </SiteTitle>
     );
   }
@@ -49,9 +44,9 @@ export default function BaseLayout({ children }) {
 
     return (
       <footer>
-        <a href={github}>Github</a>
+        <HyperLink to={github}>Github</HyperLink>
         /
-        <a href={twitter}>Twitter</a>
+        <HyperLink to={twitter}>Twitter</HyperLink>
       </footer>
     );
   }

@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { Link, graphql } from 'gatsby';
+import HyperLink from 'components/molecules/HyperLink';
 import Bio from 'components/molecules/bio';
 import SEO from 'components/seo';
 import BaseLayout from 'templates/BaseLayout';
+import Markdown from 'components/atoms/Markdown';
+
 import useConstant from 'utils/useConstant';
 
 import { rhythm, scale } from 'utils/typography';
@@ -13,7 +15,7 @@ export default function Post(
   {
     data: {
         markdownRemark: {
-          html,
+          html: content,
           frontmatter: {
             title,
             date,
@@ -50,7 +52,9 @@ export default function Post(
   }
   function PostContent() {
     return (
-      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Markdown>
+        {content}
+      </Markdown>
     );
   }
   function PostFooter({ previous, next }) {
@@ -67,13 +71,13 @@ export default function Post(
     function PostNavigator({ destinationPost, rel }) {
       return (
         <li>
-          <Link to={destinationPost.fields.slug} rel={rel}>
+          <HyperLink to={destinationPost.fields.slug} rel={rel}>
             {
               rel === 'prev' ?
                 `← ${destinationPost.frontmatter.title}` :
                 `${destinationPost.frontmatter.title} →`
             }
-          </Link>
+          </HyperLink>
         </li>
       );
     }
