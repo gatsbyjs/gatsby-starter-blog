@@ -6,7 +6,7 @@ import Bio from 'components/molecules/bio';
 import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
 import Markdown from 'components/atoms/Markdown';
-import Linear from 'templates/Linear';
+import Row from 'templates/Row';
 
 import useConstant from 'utils/useConstant';
 
@@ -48,12 +48,12 @@ export default function Post(
       }
 
       return (
-        <Linear>
+        <Row>
           <PostDate>
             {date}
           </PostDate>
           <PostCurries />
-        </Linear>
+        </Row>
       );
     }
 

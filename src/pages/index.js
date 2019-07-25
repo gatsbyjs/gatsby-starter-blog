@@ -9,7 +9,7 @@ import HyperLink from 'components/molecules/HyperLink';
 import { rhythm } from 'utils/typography';
 import useConstant from 'utils/useConstant';
 import useSiteMetadata from 'utils/useSiteMetadata';
-import Linear from 'templates/Linear';
+import Row from 'templates/Row';
 
 export default function Index({ data: { allMarkdownRemark: { edges } } }) {
   const posts = edges.map(({ node: { fields, frontmatter } }) => ({ ...fields, ...frontmatter }));
@@ -43,10 +43,10 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
       }
 
       return (
-        <Linear>
+        <Row>
           <PostDatePreview />
           <PostCurriesPreview />
-        </Linear>
+        </Row>
       );
     }
     function PostDescriptionPreview() {
