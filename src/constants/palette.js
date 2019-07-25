@@ -1,3 +1,3 @@
-export const hyperLinkColor = '#FF652F';
-export const backgroundColor = '#272727';
-export const textColor = '#FFF0F5';
+export const hyperLinkColor = '#FF9800';
+export const backgroundColor = '#212121';
+export const textColor = '#727272';
