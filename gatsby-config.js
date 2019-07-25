@@ -59,9 +59,10 @@ module.exports = {
       options: {
         name: 'overcurried',
         short_name: 'overcurried',
+        description: 'Personal Blog of ENvironmentSet',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#663399',
+        background_color: '#272727',
+        theme_color: '#FFE400',
         display: 'minimal-ui',
         icon: 'content/assets/overcurried.png'
       },
