@@ -5,18 +5,19 @@ import { Link as GatsbyLink } from 'gatsby';
 
 import { hyperLinkColor } from 'constants/palette'
 
-export default function HyperLink({ to, children }) { // TODO: remove duplication of style
+export default function HyperLink({ to, children }) {
+  const LinkStyle = styled.div`
+     box-shadow: none;
+     text-decoration: none;
+     color: ${hyperLinkColor};
+   `;
   function isInternalLink(link) {
     const regexp = /^\/(?!\/)/;
 
     return regexp.test(link);
   }
   function ExternalLink() {
-    const StyledA = styled.a`
-      box-shadow: none;
-      text-decoration: none;
-      color: ${hyperLinkColor};
-    `;
+    const StyledA = LinkStyle.withComponent('a');
 
     return (
       <StyledA href={to}>
@@ -25,11 +26,7 @@ export default function HyperLink({ to, children }) { // TODO: remove duplicatio
     );
   }
   function InternalLink() {
-    const StyledGatsbyLink = styled(GatsbyLink)`
-      box-shadow: none;
-      text-decoration: none;
-      ${hyperLinkColor}
-    `;
+    const StyledGatsbyLink = LinkStyle.withComponent(GatsbyLink);
 
     return (
       <StyledGatsbyLink to={to}>
