@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 
 import { Link as GatsbyLink } from 'gatsby';
 
-import { hyperLink as hyperLinkColor } from 'constants/palette'
+import { hyperLinkColor } from 'constants/palette'
 
 export default function HyperLink({ to, children }) { // TODO: remove duplication of style
   function isInternalLink(link) {
@@ -15,7 +15,7 @@ export default function HyperLink({ to, children }) { // TODO: remove duplicatio
     const StyledA = styled.a`
       box-shadow: none;
       text-decoration: none;
-      ${hyperLinkColor}
+      color: ${hyperLinkColor};
     `;
 
     return (
