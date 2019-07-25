@@ -64,7 +64,7 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'content/assets/gatsby-icon.png' // TODO: Replace this icon
+        icon: 'content/assets/overcurried.png'
       },
     },
     'gatsby-plugin-offline',
