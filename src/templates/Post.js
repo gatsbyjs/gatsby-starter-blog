@@ -11,6 +11,7 @@ import Row from 'templates/Row';
 import useConstant from 'utils/useConstant';
 
 import { rhythm, scale } from 'utils/typography';
+import { graphql } from 'gatsby';
 
 export default function Post(
   {

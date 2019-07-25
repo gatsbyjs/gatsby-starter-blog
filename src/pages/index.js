@@ -5,11 +5,13 @@ import Bio from 'components/molecules/bio';
 import BaseLayout from 'templates/BaseLayout';
 import SEO from 'templates/SEO';
 import HyperLink from 'components/molecules/HyperLink';
+import Row from 'templates/Row';
 
 import { rhythm } from 'utils/typography';
 import useConstant from 'utils/useConstant';
 import useSiteMetadata from 'utils/useSiteMetadata';
-import Row from 'templates/Row';
+
+import { graphql } from 'gatsby';
 
 export default function Index({ data: { allMarkdownRemark: { edges } } }) {
   const posts = edges.map(({ node: { fields, frontmatter } }) => ({ ...fields, ...frontmatter }));
