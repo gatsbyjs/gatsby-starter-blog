@@ -9,7 +9,7 @@ export default function AppEnvironment({ children }) {
       <Global
         styles={
           css`
-            html {
+           :root {
               ${backgroundColor}
             }
             p, span, small, h1, h2, h3, h4, h5, h6 {
