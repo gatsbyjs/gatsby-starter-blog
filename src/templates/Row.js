@@ -6,8 +6,13 @@ export default function Row({ children }) {
     display: flex;
   `;
   function Separator() {
+    const StyledSmall = styled.small`
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    `;
+
     return (
-      <small>/</small>
+      <StyledSmall>/</StyledSmall>
     );
   }
   const childList = React.Children.toArray(children);
