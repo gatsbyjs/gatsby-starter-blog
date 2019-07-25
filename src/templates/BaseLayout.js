@@ -45,7 +45,7 @@ export default function BaseLayout({ children }) {
     return (
       <footer>
         <HyperLink to={github}>Github</HyperLink>
-        /
+        <span>{' / '}</span>
         <HyperLink to={twitter}>Twitter</HyperLink>
       </footer>
     );
