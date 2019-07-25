@@ -40,7 +40,7 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
         const curries = parseInt(post.curries);
 
         return (
-          <p>{'🍛'.repeat(curries)}</p>
+          <small>{'🍛'.repeat(curries)}</small>
         );
       }
 
