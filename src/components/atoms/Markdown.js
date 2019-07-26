@@ -15,6 +15,9 @@ export default function Markdown({ children }) {
       & strong {
         color: ${accentColor}
       }
+      & hr {
+        background-color: ${textColor};
+      }
   `;
 
   return (
