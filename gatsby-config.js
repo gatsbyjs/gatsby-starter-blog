@@ -7,6 +7,7 @@ module.exports = {
     social: {
       github: 'https://github.com/ENvironmentSet',
       twitter: 'https://twitter.com/NvironmentE',
+      facebook: 'https://www.facebook.com/ENvironmentSet',
     }
   },
   plugins: [
@@ -54,17 +55,17 @@ module.exports = {
         trackingId: 'UA-131792068-2',
       },
     },
-    'gatsby-plugin-feed',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'overcurried',
         short_name: 'overcurried',
+        description: 'Personal Blog of ENvironmentSet',
         start_url: '/',
-        background_color: '#ffffff',
-        theme_color: '#663399',
+        background_color: '#212121',
+        theme_color: '#FF9800',
         display: 'minimal-ui',
-        icon: 'content/assets/gatsby-icon.png' // TODO: Replace this icon
+        icon: 'content/assets/overcurried.png'
       },
     },
     'gatsby-plugin-offline',

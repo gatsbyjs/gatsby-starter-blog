@@ -1,50 +1,72 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { Link, graphql } from 'gatsby';
 import Bio from 'components/molecules/bio';
 import BaseLayout from 'templates/BaseLayout';
-import SEO from 'components/seo';
+import SEO from 'templates/SEO';
+import HyperLink from 'components/molecules/HyperLink';
+import Row from 'templates/Row';
+import { Text, SmallText, H3Text } from 'components/atoms/Text';
+import Accent from 'components/atoms/Accent';
 
 import { rhythm } from 'utils/typography';
 import useConstant from 'utils/useConstant';
 import useSiteMetadata from 'utils/useSiteMetadata';
+
+import { graphql } from 'gatsby';
+
+import curry from 'constants/curry';
 
 export default function Index({ data: { allMarkdownRemark: { edges } } }) {
   const posts = edges.map(({ node: { fields, frontmatter } }) => ({ ...fields, ...frontmatter }));
   const { title } = useSiteMetadata();
   function PostPreview({ post }) {
     function PostTitlePreview() {
-      const StyledTitle = useConstant(() => styled.h3`
+      const StyledTitle = useConstant(() => styled(H3Text)`
         margin-bottom: ${rhythm(1/4)};
-      `);
-      const StyledLink = useConstant(() => styled(Link)`
-        box-shadow: none;
       `);
 
       return (
-        <StyledTitle>
-          <StyledLink to={post.slug}>
-            {post.title}
-          </StyledLink>
-        </StyledTitle>
+        <HyperLink to={post.slug}>
+          <StyledTitle>
+            <Accent>
+              {post.title}
+            </Accent>
+          </StyledTitle>
+        </HyperLink>
       );
     }
-    function PostDatePreview() {
+    function PostAdditionalInformationPreview() {
+      function PostDatePreview() {
+        return (
+          <SmallText>{post.date}</SmallText>
+        );
+      }
+      function PostCurriesPreview() {
+        const curries = parseInt(post.curries);
+
+        return (
+          <SmallText>{curry.repeat(curries)}</SmallText>
+        );
+      }
+
       return (
-        <small>{post.date}</small>
+        <Row>
+          <PostDatePreview />
+          <PostCurriesPreview />
+        </Row>
       );
     }
     function PostDescriptionPreview() {
       return (
-        <p>{post.description}</p>
+        <Text>{post.description}</Text>
       );
     }
 
     return (
       <>
         <PostTitlePreview />
-        <PostDatePreview />
+        <PostAdditionalInformationPreview />
         <PostDescriptionPreview />
       </>
     );
@@ -74,6 +96,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            curries
           }
         }
       }

@@ -2,7 +2,7 @@
   "name": "overcurried",
   "private": true,
   "description": "Personal Blog of ENvironmentSet",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Jaewon Seo <herryseo1@gmail.com>",
   "bugs": {
     "url": "https://github.com/ENvironmentSet/overcurried/issues"
@@ -12,7 +12,6 @@
     "@emotion/styled": "^10.0.14",
     "gatsby": "^2.13.31",
     "gatsby-image": "^2.2.6",
-    "gatsby-plugin-feed": "^2.3.4",
     "gatsby-plugin-google-analytics": "^2.1.4",
     "gatsby-plugin-manifest": "^2.2.3",
     "gatsby-plugin-offline": "^2.2.4",

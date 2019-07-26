@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import Image from 'gatsby-image';
+import Text from 'components/atoms/Text';
+import Accent from 'components/atoms/Accent';
 
 import { useStaticQuery, graphql } from 'gatsby';
 import useSiteMetadata from 'utils/useSiteMetadata';
@@ -24,24 +26,27 @@ export default function Bio() {
   const { author } = useSiteMetadata();
   const BioDiv = useConstant(() => styled.div`
     display: flex;
-    margin-bottom: ${rhythm(2.5)};
+    margin-bottom: ${rhythm(1)};
+    @media (min-width: 420px) {
+      margin-bottom: ${rhythm(2.5)};
+    }
   `);
   const ProfileImage = useConstant(() => styled(Image)`
     margin-right: ${rhythm(1/2)};
     margin-bottom: 0;
     min-width: 50px;
     border-radius: 100%;
-    & > img {
+    > img {
       border-radius: 50%;
     }
   `);
   function BioIntroduction() {
     return (
-      <p>
-        Personal blog of <strong>{author}</strong>.
+      <Text>
+        Personal blog of <Accent>{author}</Accent>.
         <br />
         I believe that knowledge becomes valuable when we share it with others.
-      </p>
+      </Text>
     );
   }
 

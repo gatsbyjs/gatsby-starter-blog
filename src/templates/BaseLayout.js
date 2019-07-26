@@ -1,7 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { Link } from 'gatsby';
+import HyperLink from 'components/molecules/HyperLink';
+import Row from 'templates/Row';
+import Accent from 'components/atoms/Accent';
+import { H1Text } from 'components/atoms/Text';
 
 import useSiteMetadata from 'utils/useSiteMetadata';
 import useConstant from 'utils/useConstant';
@@ -14,27 +17,30 @@ export default function BaseLayout({ children }) {
     margin-right: auto;
     max-width: ${rhythm(24)};
     padding-top: ${rhythm(1.5)};
-    padding-bottom: ${rhythm(3 / 4)};
+    padding-bottom: ${rhythm(3/4)};
+    padding-left: ${rhythm(3/4)};
+    padding-right: ${rhythm(3/4)};
   `);
   function BaseHeader() {
     const { title } = useSiteMetadata();
-    const SiteTitle = useConstant(() => styled.h1`
-      margin-bottom: ${rhythm(1.5)};
+    const SiteTitle = useConstant(() => styled(H1Text)`
       margin-top: 0;
-      ${scale(1.5)};
-    `);
-    const StyledLink = useConstant(() => styled(Link)`
-      box-shadow: none;
-      text-decoration: none;
-      color: inherit;
+      margin-bottom: ${rhythm(1.0)};
+      ${scale(1)};
+      @media (min-width: 420px) {
+        margin-bottom: ${rhythm(1.5)};
+        ${scale(1.5)};
+      }
     `);
 
     return (
-      <SiteTitle>
-        <StyledLink to='/'>
-          {title}
-        </StyledLink>
-      </SiteTitle>
+      <HyperLink to='/'>
+        <SiteTitle>
+          <Accent>
+            {title}
+          </Accent>
+        </SiteTitle>
+      </HyperLink>
     );
   }
   function BaseMain({ children }) {
@@ -45,14 +51,14 @@ export default function BaseLayout({ children }) {
     );
   }
   function BaseFooter() {
-    const { social: { github, twitter } } = useSiteMetadata();
+    const { social: { github, twitter, facebook } } = useSiteMetadata();
 
     return (
-      <footer>
-        <a href={github}>Github</a>
-        /
-        <a href={twitter}>Twitter</a>
-      </footer>
+      <Row>
+        <HyperLink to={github}>Github</HyperLink>
+        <HyperLink to={twitter}>Twitter</HyperLink>
+        <HyperLink to={facebook}>Facebook</HyperLink>
+      </Row>
     );
   }
 

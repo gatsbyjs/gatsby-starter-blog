@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import useSiteMetadata from 'utils/useSiteMetadata';
 
 export default function SEO({ description, lang = 'en', meta = [], title }) {
-  const { description: siteDescription, author } = useSiteMetadata();
+  const { description: siteDescription, author, title: siteTitle } = useSiteMetadata();
   const metaDescription = description || siteDescription;
 
   return (
@@ -16,7 +16,7 @@ export default function SEO({ description, lang = 'en', meta = [], title }) {
         }
       }
       title={title}
-      titleTemplate={`%s | ${title}`}
+      titleTemplate={`%s | ${siteTitle}`}
       meta={
         [
           {
@@ -51,7 +51,8 @@ export default function SEO({ description, lang = 'en', meta = [], title }) {
             name: 'twitter:description',
             content: metaDescription,
           },
-        ].concat(meta)
+          ...meta
+        ]
       }
     />
   );

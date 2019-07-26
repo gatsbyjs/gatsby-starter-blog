@@ -1,21 +1,24 @@
 import React from 'react';
 
-import SEO from 'components/seo';
+import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
+import HyperLink from 'components/molecules/HyperLink';
+import { Text, H1Text } from 'components/atoms/Text';
+import Accent from 'components/atoms/Accent';
 
 export default function NotFoundPage() {
   function NotFoundMessage() {
     return (
       <>
-        <h1>Not Found</h1>
-        <p>
+        <H1Text>Not Found</H1Text>
+        <Text>
           Oops, My router function has produced
           {' '}
-          <strong>
-            <a href='https://wiki.haskell.org/Bottom'>⊥</a>
-          </strong>,
+          <Accent>
+            <HyperLink to='https://wiki.haskell.org/Bottom'>⊥</HyperLink>
+          </Accent>,
           You should check your URI parameters.
-        </p>
+        </Text>
       </>
     );
   }
