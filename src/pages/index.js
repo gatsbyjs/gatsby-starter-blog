@@ -14,6 +14,8 @@ import useSiteMetadata from 'utils/useSiteMetadata';
 
 import { graphql } from 'gatsby';
 
+import curry from 'constants/curry';
+
 export default function Index({ data: { allMarkdownRemark: { edges } } }) {
   const posts = edges.map(({ node: { fields, frontmatter } }) => ({ ...fields, ...frontmatter }));
   const { title } = useSiteMetadata();
@@ -41,7 +43,7 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
         const curries = parseInt(post.curries);
 
         return (
-          <SmallText>{'🍛'.repeat(curries)}</SmallText>
+          <SmallText>{curry.repeat(curries)}</SmallText>
         );
       }
 

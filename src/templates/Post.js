@@ -14,6 +14,8 @@ import useConstant from 'utils/useConstant';
 import { rhythm, scale } from 'utils/typography';
 import { graphql } from 'gatsby';
 
+import curry from 'constants/curry';
+
 export default function Post(
   {
     data: {
@@ -45,7 +47,7 @@ export default function Post(
       `);
       function PostCurries() {
         return (
-          <Text>{'🍛'.repeat(parseInt(curries))}</Text>
+          <Text>{curry.repeat(parseInt(curries))}</Text>
         );
       }
 
