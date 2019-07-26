@@ -36,7 +36,7 @@ export default function Bio() {
     margin-bottom: 0;
     min-width: 50px;
     border-radius: 100%;
-    & > img {
+    > img {
       border-radius: 50%;
     }
   `);

@@ -6,16 +6,16 @@ import { accentColor } from 'constants/palette';
 
 export default function Markdown({ children }) {
   const MarkdownContainer = styled.div`
-      & a {
+      a {
         color: ${hyperLinkColor};
       }
-      & p, span, small, h1, h2, h3, h4, h5, h6 {
+      p, span, small, h1, h2, h3, h4, h5, h6 {
         color: ${textColor};
       }
-      & strong {
+      strong {
         color: ${accentColor}
       }
-      & hr {
+      hr {
         background-color: ${textColor};
       }
   `;
