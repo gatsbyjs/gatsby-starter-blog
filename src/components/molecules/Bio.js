@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import Image from 'gatsby-image';
 import Text from 'components/atoms/Text';
+import Accent from 'components/atoms/Accent';
 
 import { useStaticQuery, graphql } from 'gatsby';
 import useSiteMetadata from 'utils/useSiteMetadata';
@@ -39,7 +40,7 @@ export default function Bio() {
   function BioIntroduction() {
     return (
       <Text>
-        Personal blog of <strong>{author}</strong>.
+        Personal blog of <Accent>{author}</Accent>.
         <br />
         I believe that knowledge becomes valuable when we share it with others.
       </Text>

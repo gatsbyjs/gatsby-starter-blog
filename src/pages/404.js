@@ -4,6 +4,7 @@ import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
 import HyperLink from 'components/molecules/HyperLink';
 import { Text, H1Text } from 'components/atoms/Text';
+import Accent from 'components/atoms/Accent';
 
 export default function NotFoundPage() {
   function NotFoundMessage() {
@@ -15,9 +16,9 @@ export default function NotFoundPage() {
         <Text>
           Oops, My router function has produced
           {' '}
-          <strong>
+          <Accent>
             <HyperLink to='https://wiki.haskell.org/Bottom'>⊥</HyperLink>
-          </strong>,
+          </Accent>,
           You should check your URI parameters.
         </Text>
       </>

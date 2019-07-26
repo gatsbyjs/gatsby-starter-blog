@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import HyperLink from 'components/molecules/HyperLink';
 import Row from 'templates/Row';
+import Accent from 'components/atoms/Accent';
 
 import useSiteMetadata from 'utils/useSiteMetadata';
 import useConstant from 'utils/useConstant';
@@ -28,7 +29,9 @@ export default function BaseLayout({ children }) {
     return (
       <SiteTitle>
         <HyperLink to='/'>
-          {title}
+          <Accent>
+            {title}
+          </Accent>
         </HyperLink>
       </SiteTitle>
     );

@@ -7,6 +7,7 @@ import SEO from 'templates/SEO';
 import HyperLink from 'components/molecules/HyperLink';
 import Row from 'templates/Row';
 import { Text, SmallText, H3Text } from 'components/atoms/Text';
+import Accent from 'components/atoms/Accent';
 
 import { rhythm } from 'utils/typography';
 import useConstant from 'utils/useConstant';
@@ -28,7 +29,9 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
       return (
         <StyledTitle>
           <HyperLink to={post.slug}>
-            {post.title}
+            <Accent>
+              {post.title}
+            </Accent>
           </HyperLink>
         </StyledTitle>
       );
