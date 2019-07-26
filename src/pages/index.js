@@ -27,13 +27,13 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
       `);
 
       return (
-        <StyledTitle>
-          <HyperLink to={post.slug}>
+        <HyperLink to={post.slug}>
+          <StyledTitle>
             <Accent>
               {post.title}
             </Accent>
-          </HyperLink>
-        </StyledTitle>
+          </StyledTitle>
+        </HyperLink>
       );
     }
     function PostAdditionalInformationPreview() {

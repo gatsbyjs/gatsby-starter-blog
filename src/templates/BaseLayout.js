@@ -27,13 +27,13 @@ export default function BaseLayout({ children }) {
     `);
 
     return (
-      <SiteTitle>
-        <HyperLink to='/'>
+      <HyperLink to='/'>
+        <SiteTitle>
           <Accent>
             {title}
           </Accent>
-        </HyperLink>
-      </SiteTitle>
+        </SiteTitle>
+      </HyperLink>
     );
   }
   function BaseMain({ children }) {
