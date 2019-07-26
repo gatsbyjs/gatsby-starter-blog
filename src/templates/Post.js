@@ -15,6 +15,7 @@ import { rhythm, scale } from 'utils/typography';
 import { graphql } from 'gatsby';
 
 import curry from 'constants/curry';
+import ThematicBreak from 'components/atoms/ThematicBreak';
 
 export default function Post(
   {
@@ -78,7 +79,7 @@ export default function Post(
     );
   }
   function PostFooter({ previous, next }) {
-    const StyledHr = useConstant(() => styled.hr`
+    const StyledHr = useConstant(() => styled(ThematicBreak)`
       margin-bottom: ${rhythm(1)};
     `);
     const PostNavigatorDiv = styled.ul`

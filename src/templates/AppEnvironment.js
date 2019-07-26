@@ -1,7 +1,7 @@
 import React from 'react';
 import { Global, css } from '@emotion/core';
 
-import { backgroundColor, textColor } from 'constants/palette';
+import { backgroundColor } from 'constants/palette';
 
 export default function AppEnvironment({ children }) {
   return (
@@ -11,9 +11,6 @@ export default function AppEnvironment({ children }) {
           css`
            :root {
               background-color: ${backgroundColor};
-            }
-            hr {
-              background-color: ${textColor};
             }
           `
         }
