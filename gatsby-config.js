@@ -7,6 +7,7 @@ module.exports = {
     social: {
       github: 'https://github.com/ENvironmentSet',
       twitter: 'https://twitter.com/NvironmentE',
+      facebook: 'https://www.facebook.com/ENvironmentSet',
     }
   },
   plugins: [
