@@ -6,6 +6,7 @@ import BaseLayout from 'templates/BaseLayout';
 import SEO from 'templates/SEO';
 import HyperLink from 'components/molecules/HyperLink';
 import Row from 'templates/Row';
+import { Text, SmallText, H3Text } from 'components/atoms/Text';
 
 import { rhythm } from 'utils/typography';
 import useConstant from 'utils/useConstant';
@@ -18,7 +19,7 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
   const { title } = useSiteMetadata();
   function PostPreview({ post }) {
     function PostTitlePreview() {
-      const StyledTitle = useConstant(() => styled.h3`
+      const StyledTitle = useConstant(() => styled(H3Text)`
         margin-bottom: ${rhythm(1/4)};
       `);
 
@@ -33,14 +34,14 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
     function PostAdditionalInformationPreview() {
       function PostDatePreview() {
         return (
-          <small>{post.date}</small>
+          <SmallText>{post.date}</SmallText>
         );
       }
       function PostCurriesPreview() {
         const curries = parseInt(post.curries);
 
         return (
-          <small>{'🍛'.repeat(curries)}</small>
+          <SmallText>{'🍛'.repeat(curries)}</SmallText>
         );
       }
 
@@ -53,7 +54,7 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
     }
     function PostDescriptionPreview() {
       return (
-        <p>{post.description}</p>
+        <Text>{post.description}</Text>
       );
     }
 

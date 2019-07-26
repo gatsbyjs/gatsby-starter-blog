@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
+import { SmallText } from 'components/atoms/Text';
+
 export default function Row({ children }) {
   const ChildrenWrapper = styled.div`
     display: flex;
   `;
   function Separator() {
-    const StyledSmall = styled.small`
+    const StyledSmall = styled(SmallText)`
       margin-left: 0.25rem;
       margin-right: 0.25rem;
     `;

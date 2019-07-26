@@ -3,20 +3,23 @@ import React from 'react';
 import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
 import HyperLink from 'components/molecules/HyperLink';
+import { Text, H1Text } from 'components/atoms/Text';
 
 export default function NotFoundPage() {
   function NotFoundMessage() {
+    const H1Text = Text.withComponent('h1');
+
     return (
       <>
-        <h1>Not Found</h1>
-        <p>
+        <H1Text>Not Found</H1Text>
+        <Text>
           Oops, My router function has produced
           {' '}
           <strong>
             <HyperLink to='https://wiki.haskell.org/Bottom'>⊥</HyperLink>
           </strong>,
           You should check your URI parameters.
-        </p>
+        </Text>
       </>
     );
   }

@@ -7,6 +7,7 @@ import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
 import Markdown from 'components/atoms/Markdown';
 import Row from 'templates/Row';
+import { Text, H1Text } from 'components/atoms/Text';
 
 import useConstant from 'utils/useConstant';
 
@@ -32,19 +33,19 @@ export default function Post(
     }
   }) {
   function PostHeader() {
-    const PostTitle = useConstant(() => styled.h1`
+    const PostTitle = useConstant(() => styled(H1Text)`
       margin-top: ${rhythm(1)};
       margin-bottom: 0;
     `);
     function PostAdditionalInformation() {
-      const PostDate = useConstant(() => styled.p`
+      const PostDate = useConstant(() => styled(Text)`
         display: block;
         margin-bottom: ${rhythm(1)};
         ${scale(-1/5)};
       `);
       function PostCurries() {
         return (
-          <p>{'🍛'.repeat(parseInt(curries))}</p>
+          <Text>{'🍛'.repeat(parseInt(curries))}</Text>
         );
       }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import Image from 'gatsby-image';
+import Text from 'components/atoms/Text';
 
 import { useStaticQuery, graphql } from 'gatsby';
 import useSiteMetadata from 'utils/useSiteMetadata';
@@ -37,11 +38,11 @@ export default function Bio() {
   `);
   function BioIntroduction() {
     return (
-      <p>
+      <Text>
         Personal blog of <strong>{author}</strong>.
         <br />
         I believe that knowledge becomes valuable when we share it with others.
-      </p>
+      </Text>
     );
   }
 
