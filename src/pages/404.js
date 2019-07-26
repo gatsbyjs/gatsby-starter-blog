@@ -8,8 +8,6 @@ import Accent from 'components/atoms/Accent';
 
 export default function NotFoundPage() {
   function NotFoundMessage() {
-    const H1Text = Text.withComponent('h1');
-
     return (
       <>
         <H1Text>Not Found</H1Text>
