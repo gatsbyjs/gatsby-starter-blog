@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import HyperLink from 'components/molecules/HyperLink';
 import Row from 'templates/Row';
 import Accent from 'components/atoms/Accent';
+import { H1Text } from 'components/atoms/Text';
 
 import useSiteMetadata from 'utils/useSiteMetadata';
 import useConstant from 'utils/useConstant';
@@ -20,7 +21,7 @@ export default function BaseLayout({ children }) {
   `);
   function BaseHeader() {
     const { title } = useSiteMetadata();
-    const SiteTitle = useConstant(() => styled.h1`
+    const SiteTitle = useConstant(() => styled(H1Text)`
       margin-bottom: ${rhythm(1.5)};
       margin-top: 0;
       ${scale(1.5)};
