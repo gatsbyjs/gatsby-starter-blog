@@ -2,7 +2,7 @@
   "name": "overcurried",
   "private": true,
   "description": "Personal Blog of ENvironmentSet",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Jaewon Seo <herryseo1@gmail.com>",
   "bugs": {
     "url": "https://github.com/ENvironmentSet/overcurried/issues"
