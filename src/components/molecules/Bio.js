@@ -26,7 +26,10 @@ export default function Bio() {
   const { author } = useSiteMetadata();
   const BioDiv = useConstant(() => styled.div`
     display: flex;
-    margin-bottom: ${rhythm(2.5)};
+    margin-bottom: ${rhythm(1)};
+    @media (min-width: 420px) {
+      margin-bottom: ${rhythm(2.5)};
+    }
   `);
   const ProfileImage = useConstant(() => styled(Image)`
     margin-right: ${rhythm(1/2)};

@@ -17,14 +17,20 @@ export default function BaseLayout({ children }) {
     margin-right: auto;
     max-width: ${rhythm(24)};
     padding-top: ${rhythm(1.5)};
-    padding-bottom: ${rhythm(3 / 4)};
+    padding-bottom: ${rhythm(3/4)};
+    padding-left: ${rhythm(3/4)};
+    padding-right: ${rhythm(3/4)};
   `);
   function BaseHeader() {
     const { title } = useSiteMetadata();
     const SiteTitle = useConstant(() => styled(H1Text)`
-      margin-bottom: ${rhythm(1.5)};
       margin-top: 0;
-      ${scale(1.5)};
+      margin-bottom: ${rhythm(1.0)};
+      ${scale(1)};
+      @media (min-width: 420px) {
+        margin-bottom: ${rhythm(1.5)};
+        ${scale(1.5)};
+      }
     `);
 
     return (
