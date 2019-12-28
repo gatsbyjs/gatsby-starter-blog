@@ -33,7 +33,7 @@
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75",
     "typography": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "typography-theme-fairy-gates": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
@@ -49,7 +49,6 @@
     "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
   "scripts": {
-    "deploy": "firebase deploy",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",

@@ -32,6 +32,7 @@ class BlogPostTemplate extends React.Component {
               style={{
                 ...scale(-1 / 5),
                 display: `block`,
+                color: "#ddd",
                 marginBottom: rhythm(1),
               }}
             >
@@ -57,19 +58,53 @@ class BlogPostTemplate extends React.Component {
               justifyContent: `space-between`,
               listStyle: `none`,
               padding: 0,
+              marginLeft: 0,
             }}
           >
             <li>
               {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  ← {previous.frontmatter.title}
+                <Link
+                  to={previous.fields.slug}
+                  rel="prev"
+                  style={{ color: "#ddd" }}
+                >
+                  <svg
+                    style={{ verticalAlign: "middle" }}
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path
+                      fill="#ddd"
+                      d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
+                    />
+                  </svg>{" "}
+                  {previous.frontmatter.title}
                 </Link>
               )}
             </li>
             <li>
               {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} →
+                <Link
+                  to={next.fields.slug}
+                  rel="next"
+                  style={{ color: "#ddd" }}
+                >
+                  {next.frontmatter.title}{" "}
+                  <svg
+                    style={{ verticalAlign: "middle" }}
+                    width={24}
+                    height={24}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M0 0h24v24H0z" fill="none" />
+
+                    <path
+                      fill="#ddd"
+                      d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                    />
+                  </svg>
                 </Link>
               )}
             </li>
