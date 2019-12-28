@@ -1,16 +1,16 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
+    const post = this.props.data.markdownRemark;
+    const siteTitle = this.props.data.site.siteMetadata.title;
+    const { previous, next } = this.props.pageContext;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -24,6 +24,7 @@ class BlogPostTemplate extends React.Component {
               style={{
                 marginTop: rhythm(1),
                 marginBottom: 0,
+                color: '#e0a80d'
               }}
             >
               {post.frontmatter.title}
@@ -32,8 +33,8 @@ class BlogPostTemplate extends React.Component {
               style={{
                 ...scale(-1 / 5),
                 display: `block`,
-                color: "#ddd",
-                marginBottom: rhythm(1),
+                color: '#ddd',
+                marginBottom: rhythm(1)
               }}
             >
               {post.frontmatter.date}
@@ -42,7 +43,7 @@ class BlogPostTemplate extends React.Component {
           <section dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
-              marginBottom: rhythm(1),
+              marginBottom: rhythm(1)
             }}
           />
           <footer>
@@ -58,7 +59,7 @@ class BlogPostTemplate extends React.Component {
               justifyContent: `space-between`,
               listStyle: `none`,
               padding: 0,
-              marginLeft: 0,
+              marginLeft: 0
             }}
           >
             <li>
@@ -66,10 +67,10 @@ class BlogPostTemplate extends React.Component {
                 <Link
                   to={previous.fields.slug}
                   rel="prev"
-                  style={{ color: "#ddd" }}
+                  style={{ color: '#ddd' }}
                 >
                   <svg
-                    style={{ verticalAlign: "middle" }}
+                    style={{ verticalAlign: 'middle' }}
                     width={24}
                     height={24}
                     viewBox="0 0 24 24"
@@ -79,7 +80,7 @@ class BlogPostTemplate extends React.Component {
                       fill="#ddd"
                       d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"
                     />
-                  </svg>{" "}
+                  </svg>{' '}
                   {previous.frontmatter.title}
                 </Link>
               )}
@@ -89,11 +90,11 @@ class BlogPostTemplate extends React.Component {
                 <Link
                   to={next.fields.slug}
                   rel="next"
-                  style={{ color: "#ddd" }}
+                  style={{ color: '#ddd' }}
                 >
-                  {next.frontmatter.title}{" "}
+                  {next.frontmatter.title}{' '}
                   <svg
-                    style={{ verticalAlign: "middle" }}
+                    style={{ verticalAlign: 'middle' }}
                     width={24}
                     height={24}
                     viewBox="0 0 24 24"
@@ -111,11 +112,11 @@ class BlogPostTemplate extends React.Component {
           </ul>
         </nav>
       </Layout>
-    )
+    );
   }
 }
 
-export default BlogPostTemplate
+export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
@@ -135,4 +136,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
