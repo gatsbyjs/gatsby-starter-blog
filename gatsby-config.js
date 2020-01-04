@@ -3,7 +3,6 @@ module.exports = {
     title: `jesse's gatsby`,
     author: `jesse`,
     description: `lulu lala`,
-    siteUrl: ``,
     social: {
       twitter: ``,
     },
