@@ -1,4 +1,7 @@
-/* ordered and unordered lists */
+/**
+ * Indent ordered and unordered lists
+ */
+
 ol, ul {
     margin-left: 40px;
-  }
+}
