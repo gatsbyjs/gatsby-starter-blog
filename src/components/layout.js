@@ -6,7 +6,11 @@ import Bio from "./bio";
 
 class Layout extends React.Component {
     render() {
-        const { location, title, children } = this.props
+        const { location, title, children, description } = this.props
+        console.log(description);
+        console.log(title);
+
+
         const rootPath = `${__PATH_PREFIX__}/`
         let header
 
@@ -16,7 +20,7 @@ class Layout extends React.Component {
                     <h1
                         style={{
                             ...scale(1.8),
-                            marginBottom: rhythm(1.5),
+                            marginBottom:0,
                             marginTop: 0,
                         }}
                     >
@@ -30,8 +34,18 @@ class Layout extends React.Component {
                             to={`/`}
                         >
                             {title}
+
                         </Link>
                     </h1>
+                    <p
+                        style={{
+                            marginTop:`0`,
+                            paddingTop:`0`,
+                            marginBottom: rhythm(1.5),
+                        }}
+                    >
+                        {description}
+                    </p>
                     <Bio/>
 
                 </>

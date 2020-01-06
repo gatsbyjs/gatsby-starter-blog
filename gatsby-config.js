@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Hama Develop`,
     author: `Jesse Cha`,
-    description: `Let's use Gatsby`,
+    description: `하마터면 개발 안할 뻔 했지 뭐야...`,
     //URL이 URL의 형태를 가지지 않으면 config.js 벨리데이션에 실패한다. 반드시 url 처럼 생긴 주소를 써야 한다.
     siteUrl: `https://abc.com/`,
     social: {

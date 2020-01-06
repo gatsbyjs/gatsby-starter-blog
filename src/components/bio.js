@@ -14,7 +14,7 @@ import { rhythm } from "../utils/typography"
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/hippo-black.png/" }) {
+      avatar: file(absolutePath: { regex: "/gatsby-icon.png/" }) {
         childImageSharp {
           fixed(width: 50, height: 50) {
             ...GatsbyImageSharpFixed
@@ -53,7 +53,8 @@ const Bio = () => {
           borderRadius: `50%`,
         }}
       />
-      <p>하마 개발은 <strong> '하마터면 개발 안할뻔 했다' </strong> 의 줄임말 입니다. 이 블로그는 비전공 개발자 차씨가 개발자로 성장하며 만들어 나가는 나이테 입니다.  </p>
+        <p>하마 개발은  '<strong>하마</strong> 터면 <strong>개발 </strong>안할뻔 했다' 의 줄임말 입니다. 이 블로그는 비전공 개발자 차씨가 개발자로 성장하며 만들어 나가는 소소한 이야기와 개발 지식들을 다룹니다. </p>
+
     </div>
   )
 }
