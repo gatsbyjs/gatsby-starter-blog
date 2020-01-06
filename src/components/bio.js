@@ -46,12 +46,9 @@ const Bio = () => {
         style={{
           marginRight: rhythm(1 / 2),
           marginBottom: 0,
-          minWidth: 50,
-          borderRadius: `100%`,
+          minWidth: 50
         }}
-        imgStyle={{
-          borderRadius: `50%`,
-        }}
+
       />
         <p>하마 개발은  '<strong>하마</strong> 터면 <strong>개발 </strong>안할뻔 했다' 의 줄임말 입니다. 이 블로그는 비전공 개발자 차씨가 개발자로 성장하며 만들어 나가는 소소한 이야기와 개발 지식들을 다룹니다. </p>
 
