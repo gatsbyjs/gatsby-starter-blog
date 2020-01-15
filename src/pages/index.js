@@ -15,6 +15,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle} description={description}>
+        <script data-ad-client="ca-pub-3733948010849819" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <SEO title="All posts" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
