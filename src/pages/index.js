@@ -21,6 +21,7 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <article key={node.fields.slug}>
+              <script data-ad-client="ca-pub-3733948010849819" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
               <header>
                 <h3
                   style={{
