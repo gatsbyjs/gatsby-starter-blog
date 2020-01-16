@@ -6,6 +6,9 @@ fairyGatesTheme.overrideThemeStyles = () => {
     'a.gatsby-resp-image-link': {
       boxShadow: `none`
     },
+    '.gatsby-highlight': {
+      overflowX: 'auto'
+    },
     '*': {
       backgroundColor: '#2d2e2e',
       color: '#979899'
@@ -20,14 +23,14 @@ fairyGatesTheme.overrideThemeStyles = () => {
     },
     blockquote: {
       fontSize: 'unset',
-      borderColor: `#e0a80d`
+      borderLeft: '0.27187rem solid #e0a80d !important'
     }
   };
 };
 
-// fairyGatesTheme.overrideStyles = () => ({})
+// fairyGatesTheme.overrideStyles = () => ({});
 
-// delete fairyGatesTheme.googleFonts
+// delete fairyGatesTheme.googleFonts;
 
 const typography = new Typography(fairyGatesTheme);
 

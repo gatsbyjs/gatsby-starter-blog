@@ -72,7 +72,7 @@ class Layout extends React.Component {
           >
             GitHub
           </a>
-          {' | '}
+          {' . '}
           <a
             href="https://twitter.com/vnoitkumar"
             target="_blank"
@@ -81,7 +81,7 @@ class Layout extends React.Component {
           >
             Twitter
           </a>
-          {' | '}
+          {' . '}
           <a
             href="https://stackoverflow.com/users/5154807/vnoitkumar/"
             target="_blank"
