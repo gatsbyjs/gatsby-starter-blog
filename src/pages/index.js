@@ -23,11 +23,6 @@ class BlogIndex extends React.Component {
           })(window,document,'script','dataLayer','GTM-5NDTS7D');</script>
           <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NDTS7D"
                             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-
-
-
-
           <script data-ad-client="ca-pub-3733948010849819" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
           <SEO title="All posts" />
           {posts.map(({ node }) => {
