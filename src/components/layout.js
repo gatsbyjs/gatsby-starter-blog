@@ -6,13 +6,13 @@ import Bio from "./bio";
 
 class Layout extends React.Component {
     render() {
-        const { location, title, children, description } = this.props
+        const { location, title, children, description } = this.props;
         console.log(description);
         console.log(title);
 
 
-        const rootPath = `${__PATH_PREFIX__}/`
-        let header
+        const rootPath = `${__PATH_PREFIX__}/`;
+        let header;
 
         if (location.pathname === rootPath) {
             header = (
