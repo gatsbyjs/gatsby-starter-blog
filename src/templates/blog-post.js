@@ -1,4 +1,5 @@
 import React from "react"
+import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,6 +13,11 @@ class BlogPostTemplate extends React.Component {
     const { previous, next } = this.props.pageContext;
     const { ogimage } = post.frontmatter;
     const ogImagePath = ogimage && ogimage.childImageSharp.fixed.src;
+    const disqusConfig = {
+      url: `${this.props.data.site.siteMetadata.siteUrl}${post.fields.slug}`,
+      identifier: post.fields.slug,
+      title: post.frontmatter.title,
+    };
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -46,6 +52,8 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1),
             }}
           />
+          <CommentCount config={disqusConfig} placeholder={''} />
+          <Disqus config={disqusConfig} />
           <footer>
 
           </footer>
@@ -89,12 +97,16 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
