@@ -1,7 +1,8 @@
 ---
 title: 서버 사이드 렌더링(SSR)과 클라이언트 사이드 렌더링(CSR)
 date: "2020-01-13T12:40:32.169Z"
-description: 렌더링을 서버 사이드에서 하는 것과 클라이언트 사이드에서 하는 것의 차이는 무엇일까? 
+description: 렌더링을 서버 사이드에서 하는 것과 클라이언트 사이드에서 하는 것의 차이는 무엇일까?
+tags: ["knowledge", "browser"] 
 ---
 
 ![조삼모사](http://cfs3.tistory.com/upload_control/download.blog?fhandle=YmxvZzEwNzUzNkBmczMudGlzdG9yeS5jb206L2F0dGFjaC8wLzE0MDAwMDAwMDAwMi5ibXA%3D)

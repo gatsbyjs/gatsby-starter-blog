@@ -3,6 +3,7 @@ title: 하마개발을 시작한 이유
 date: "2020-01-06T22:40:32.169Z"
 description: 좋은 일만 하고 살 수 없는 세상이지만 그렇다고 안 좋은 일만 하고 살 수는 없다.
 ogimage: './jobs.jpg'
+tags: ["thought", "essay","motivation" ]
 ---
 
 ![jobs](https://i.ytimg.com/vi/D1R-jKKp3NA/hqdefault.jpg)

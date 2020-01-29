@@ -1,7 +1,8 @@
 ---
 title: CSS 클래스에 이름을 붙여 보자! (OOCSS, BEM이란 무엇인가)
 date: "2020-01-15T12:40:32.169Z"
-description: 내가 클래스의 이름을 불러주기 전까지 클래스는 하나의 몸짓에 지나지 않았다. 
+description: 내가 클래스의 이름을 불러주기 전까지 클래스는 하나의 몸짓에 지나지 않았다.
+tags: ["knowledge", "css"] 
 ---
 
 ![김춘수 꽃](https://pbs.twimg.com/media/BzQIu0pCIAA04OF.jpg)
