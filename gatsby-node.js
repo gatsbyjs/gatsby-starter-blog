@@ -1,12 +1,14 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require('lodash');
+const path = require(`path`);
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const blogPost = path.resolve(`./src/templates/blog-post.js`);
+  const tagTemplate = path.resolve(`src/templates/tags.js`);
   const result = await graphql(
-    `
+      `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
@@ -19,6 +21,7 @@ exports.createPages = async ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
               }
             }
           }
@@ -49,17 +52,38 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
-}
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+    let tags = [];
 
-  if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
+    _.each(posts, edge => {
+      if (_.get(edge, 'node.frontmatter.tags')){
+        tags = tags.concat(edge.node.frontmatter.tags);
+      }
+    });
+
+    tags = _.uniq(tags);
+
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag)}/`,
+        component: tagTemplate,
+        context: {
+          tag,
+        },
+      });
     })
   }
-}
+
+
+  exports.onCreateNode = ({ node, actions, getNode }) => {
+    const { createNodeField } = actions
+
+    if (node.internal.type === `MarkdownRemark`) {
+      const value = createFilePath({ node, getNode })
+      createNodeField({
+        name: `slug`,
+        node,
+        value,
+      })
+    }
+  }

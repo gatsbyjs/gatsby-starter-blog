@@ -19,6 +19,8 @@ class BlogPostTemplate extends React.Component {
       title: post.frontmatter.title,
     };
 
+
+
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
@@ -111,6 +113,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
         ogimage { 
              childImageSharp {
                fixed {
