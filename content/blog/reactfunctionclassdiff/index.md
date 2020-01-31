@@ -9,7 +9,7 @@ tags: ["knowledge", "React", "Hook", "translation"]
 **이 글은 
 [How Are Function Components Different from Classes?](https://overreacted.io/how-are-function-components-different-from-classes/)를 번역한 글 입니다. 의역 및 오역이 있을 수 있는 점 참고해 주시길 바랍니다. 리액트를 더 올바르게 쓰고자 하시는 분들은 꾸준히 Dan Abramov의 다른글도 읽어 보신다면 좋은 인사이트를 많이 얻어 가실 수 있습니다.**
 
-————
+---
 
 리액트의 function component와 class component는 어떻게 다른 걸까? 
 
@@ -27,11 +27,11 @@ tags: ["knowledge", "React", "Hook", "translation"]
 
 이게 무슨 의미인지 뜯어보자 
 
-—————————————————————————— 
+---
 
 메모: 이 포스트는 function component나 class component에 대한 가치 평가를 하고 있지 않다. 나는 여기서 두 프로그래밍 모델의 차이를 설명할 뿐이다. function에 대한 이해를 더 넓히기 위해서는 [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html#adoption-strategy)를 참고하면 좋다.
  
-—————————————————————————— 
+---
 
 이 component를 생각해 보자 
 
@@ -80,13 +80,13 @@ class ProfilePage extends React.Component {
 
 스포일러가 있으니 스스로 정답을 알아내고자 한다면, [데모](https://codesandbox.io/s/pjqnl16lm7)를 다뤄 보면서 시도해 보길 바란다. 이제 둘간의 차이를 설명하고 왜 이차이가 중요한지 설명하도록 하겠다. 
 
-———————————————————
+---
 
 시작하기 전에 여기서 설명하는 차이는 리액트 Hook과는 관련이 없음을 알려드리고 싶다. 위의 예에서는 심지어 Hook을 사용하지도 않았다. 
 
 이글은 리액트에서 function과 class의 차이점을 다룬다. 만약 당신의 리액트 앱에서 function을 사용하고자 한다면 당신은 이것을 이해할 필요가 있을 것이다.
  
-—————————————————————
+---
 
 **리액트 어플리케이션에서 흔히 일어나는 버그 상황과 함께 차이를 들여다 볼 것이다.**
 
@@ -105,11 +105,11 @@ class로 만들어진 버튼을 눌렀을 때는 profile을 변화 시킨 뒤의
 
 ![버튼비교](https://overreacted.io/386a449110202d5140d67336a0ade5a0/bug.gif)
 
-——————————————————————
+---
 
 이 예제 에서는 첫번째 작동 방식이 옳은 방식이다.  **만약 내가 누군가를 팔로우 한 뒤 다른 사람의 프로필로 이동했다면 리액트 component는 내가 팔로우한 대상을 헛갈려서는 안된다.** class의 이러한 작동 방식은 분명히 버그다.
  
-——————————————————————
+---
 
 그렇다면 왜 class는 이렇게 움직이는 것일까? 
 
@@ -133,7 +133,7 @@ UI는 개념적으로 현재 어플리케이션의 상태를 나타내야 한다
 하지만 setTimeout이 this.props를 불러오도록 하는것은 그 관계를 무너뜨린다. 우리의 showMessage 콜백은 어떠한 렌더에도 묶여 있지 않다. 그래서 올바른 props를 놓쳐 버린다. this로부터 정보를 읽어 오는 행위가 그 연결고리를 끊어 놓았다. 
 
 
-—————————————————— 
+---
 
 **function component가 존재하지 않는다고 하면 우리는 이 문제를 어떻게 해결 할 수 있을까?**
 
@@ -224,7 +224,7 @@ class ProfilePage extends React.Component {
 
 **우리는 어떠한 function이라도 이 코드 안에 추가할 수 있다. 이 함수들은 잘저장된 props와 state를 이용할 것이다.** closure가 우리를 구원했다. 
 
-——————————————————————
+---
 
 위의 [예시](https://codesandbox.io/s/oqxy9m7om5)는 옳다. 하지만 이상한 부분이 있다. 위처럼 코드를 쓸꺼면 왜 class를 써야하는 걸까? render안에서 function을 정의해서 사용하는데 말이다. 
 
@@ -273,7 +273,7 @@ function ProfilePage({ user }) {
 ![팔로우 이미지](https://overreacted.io/84396c4b3982827bead96912a947904e/fix.gif)
 
 이렇게 동작하는 것이 옳다.
-——————————————————————
+---
 
 이제 우리는 리액트에서 function과 class의 차이를 이해하게 되었다. 
 
@@ -312,7 +312,7 @@ function MessageThread() {
 
 이 메시지 앱이 그렇게 좋은 UI를 가지고 있지는 않지만, 이 예시는 앞서 다룬것과 같은 포인트를 짚어준다. 만약 내가 특정 메시지를 보낸다면 component는 그 메시지에 대해서 헛갈려 하면 안된다. 이 function component에서 message는 클릭이벤트가 브라우져에서 일어난시점의 render에 속하는 state를 사용한다. 따라서 message는 내가 Send를 누른 시점의 입력값으로 정해진다. 
 
-————————————————————————
+---
 
 우리는 리액트에서 function이 props와 state를 잘 캡쳐 한다는 것을 한다. **하지만, 우리가 특정 렌더에 속한 props나 state가 아니라 최신의 값을 사용하고 싶으면 어떻게 될까?**  우리가 [“미래로부터 값을 읽고 싶다면”](https://dev.to/scastiel/react-hooks-get-the-current-state-back-to-the-future-3op2) 어떻게 될까?
 
