@@ -28,7 +28,9 @@ tags: ["knowledge", "React", "Hook", "translation"]
 이게 무슨 의미인지 뜯어보자 
 
 —————————————————————————— 
-메모: 이 포스트는 function component나 class component에 대한 가치 평가를 하고 있지 않다. 나는 여기서 두 프로그래밍 모델의 차이를 설명할 뿐이다. function에 대한 이해를 더 넓히기 위해서는 [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html#adoption-strategy)를 참고하면 좋다. 
+
+메모: 이 포스트는 function component나 class component에 대한 가치 평가를 하고 있지 않다. 나는 여기서 두 프로그래밍 모델의 차이를 설명할 뿐이다. function에 대한 이해를 더 넓히기 위해서는 [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html#adoption-strategy)를 참고하면 좋다.
+ 
 —————————————————————————— 
 
 이 component를 생각해 보자 
