@@ -21,10 +21,11 @@ tags: ["knowledge", "css"]
 CSS는 우리가 만들어 놓은 엘리먼트 들을 화면상에 배치하는 방법을 정의할 수 있는 언어다. 웹에 문서를 나타내기 위해 우리는 HTML 태그로 문서를 작성하고 태그 안에 class를 집어 넣어 CSS 스타일을 부여 한다. 
 
 예를 들어, css 없이 아래와 같은 코드를 작성하면 화면상에 아무것도 없는 Test라는 글씨가 하나 나타날 것이다. 
-``` <div>Test</div>
+```html
+ <div>Test</div>
 ```
 여기에 아래와 같이 클래스를 부여해 주고 스타일을 부여해 주면 
-```
+```html
 <style>
 .background-yellow{
         Background-color:yellow;
@@ -64,7 +65,7 @@ OOCSS 작성 원칙은 딱 두가지다.
 
 파란색 버튼 스타일을 지정 싶다고 하자. 
 
-```
+```html
 <style>
 .blueButton{
 	background-color: blue;
@@ -101,7 +102,8 @@ width: 20px;
 #### 콘테이너와 콘텐츠의 분리 
 
 CSS는 하위 요소 선택을 할 수 있는 문법이 있다.  예를들어 header 클래스를 가진 엘리먼트안에 있는 h1에 스타일을 적요하고 싶을 때 아래와 같은 코드를 작성할 수 있다. 
-```.header h1{
+```css
+.header h1{
 // 스타일 적용 
 }
  ```
@@ -132,7 +134,7 @@ Modifier는 해당 Block이나 Element의 각기 다른 모양새를 말한다.
 
 header 클래스로 설정된 블록 안에 타이틀 엘리먼트에 파란색을 넣고 싶다면 아래 처럼 설정을 한다. 
 
-```
+```html
 <header class=“header”>
 
 <h1 class=“header__title header__title—blue”  > Blue Title </h1>
