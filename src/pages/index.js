@@ -32,19 +32,6 @@ class BlogIndex extends React.Component {
                                     </Link>
                                 </h3>
                                 <small>{node.frontmatter.date}</small>
-                                {node.frontmatter.tags? (
-                                    <div>
-                                        <ul>
-                                            {node.frontmatter.tags.map(tag =>(
-                                                    <li key={tag + `tag`}>
-                                                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                                                    </li>
-                                                )
-                                            )}
-                                        </ul>
-                                    </div>
-
-                                ):null}
                             </header>
                             <section>
                                 <p
