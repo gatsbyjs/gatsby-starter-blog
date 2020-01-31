@@ -2,6 +2,7 @@
 title: 리액트 function component와 사용과 class component는 어떻게 다를까? 
 date: "2020-01-31T12:40:32.169Z"
 description: 리액트 function 과 class의 차이를 다룬 글 번역
+ogimage: './mathgirl.png'
 tags: ["knowledge", "React", "Hook", "translation"]  
 ---
 
@@ -73,7 +74,7 @@ class ProfilePage extends React.Component {
 
 일반적으로 사람들은 종종 각각이 의미하는바를 인지 하지 못하고 둘을 같은 것처럼 사용한다. 
 
-**하지만, 이 두가지 코드는 미묘하게 다르다 ** 둘을 자세히 살펴보자. 다른점이 보이는가? 개인적으로 나는 이 차이를 알아내는 데에 오랜 시간이 걸렸다. 
+**하지만, 이 두가지 코드는 미묘하게 다르다.** 둘을 자세히 살펴보자. 다른점이 보이는가? 개인적으로 나는 이 차이를 알아내는 데에 오랜 시간이 걸렸다. 
 
 스포일러가 있으니 스스로 정답을 알아내고자 한다면, [데모](https://codesandbox.io/s/pjqnl16lm7)를 다뤄 보면서 시도해 보길 바란다. 이제 둘간의 차이를 설명하고 왜 이차이가 중요한지 설명하도록 하겠다. 
 
@@ -85,7 +86,7 @@ class ProfilePage extends React.Component {
  
 —————————————————————
 
-** 리액트 어플리케이션에서 흔히 일어나는 버그 상황과 함께 차이를 들여다 볼 것이다. **
+**리액트 어플리케이션에서 흔히 일어나는 버그 상황과 함께 차이를 들여다 볼 것이다.**
 
 이 [예제](https://codesandbox.io/s/pjqnl16lm7)를 열면 두개의 ProfilePage가 보일 것이다. 각각은 하나의 버튼을 랜더 한다. 
 
@@ -382,7 +383,7 @@ Ref를 이처럼 사용해야 할 상황이 흔하지는 않다. props나 state�
 
 위에서 우리가 보았듯이 closure는 알아차리기 어려운 미묘한 문제를 해결할 수 있도록 돕는다. 비슷하게, [Concurrent Mode](https://reactjs.org/blog/2018/03/01/sneak-peek-beyond-react-16.html)에서도 정확하게 작동하는 코드를 더 쉽게 쓸 수 있도록 도와준다. 이것이 가능한 이유는 component 안의 로직이 렌더되는 시점의 정확한 props와 state 를 닫기 때문이다.
 
-모든 부분에서 **“지저분한” closure 문제는 function은 변하지 않는다거나 props는 항상 같다는 잘못된 가정에서 비롯되는 것 같다. ** 내가 이번 글에서 설명한 것 처럼 이는 옳지 않은 말이다. 
+모든 부분에서 **“지저분한” closure 문제는 function은 변하지 않는다거나 props는 항상 같다는 잘못된 가정에서 비롯되는 것 같다.** 내가 이번 글에서 설명한 것 처럼 이는 옳지 않은 말이다. 
 
 function은 props와 state마다 종결된다. 따라서 그들이 어떤 시점에 실행 되었느냐가 중요하다. 이는 버그가 아니라 function component의 기능이다. function은 useEffect나 useCallback의 의존성 경로에서 제외되어서는 안된다는 말이다. (이를 제대로 고치는 해결책은 보통 useReducer를 쓰거나 useRef를 쓰는것이다. 둘중 어느것을 쓰는것이 좋을지에 대해서는 추후 다루도록 하겠다.)
 
