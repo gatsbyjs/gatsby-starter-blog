@@ -13,7 +13,7 @@ class BlogIndex extends React.Component {
         const siteTitle = data.site.siteMetadata.title
         const description = data.site.siteMetadata.description
         const posts = data.allMarkdownRemark.edges
-//TODO: 인덱스 페이지 태그 이쁘게 넣어야 함
+
         return (
             <Layout location={this.props.location} title={siteTitle} description={description}>
                 <SEO title="All posts" />
