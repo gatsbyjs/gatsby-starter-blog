@@ -58,8 +58,7 @@ const Bio = () => {
             <br/>
             <a href="https://www.facebook.com/cha.jesse">페이스북 둘러보기</a>
         </p>
-
-
+        
     </div>
   )
 }
