@@ -30,8 +30,7 @@ BFS를 사용하는 방식은 간단하다.
 
 최단 거리라는 사고의 함정에 빠져서 한번에 가는 경우만 구하려 한다면, 나처럼 낭패에 빠질수 있으니 주의 하자 
 
-
-## 통과한 코드
+그렇게 풀면 될줄 알았지만... 시간 초과에 걸리고말았다.
 
 
 ```python
@@ -70,5 +69,46 @@ while queue:
 
 print(distance[N-1][M-1])
     
+
+```
+
+시간 초과에 안걸리는 코드는 아래와 같다. 내가 짠거랑 무슨 차이가 있는지 살펴보자 
+
+## 시간초과 안 걸리는 코드
+
+나는 visited에 해당 인덱스가 포함되어 있는지 아닌지를 확인하는 과정을 넣었는데, 그렇게 하면 비교 할때마다 포함 여부를 확인하기 위해 O(n)번의 수행을 하게 된다. 반면 아래의 코드는 False냐 True냐 하나만을 비교하기 때문에, O(1) 번의수행을 하게 된다. 
+
+```python
+from collections import deque
+ 
+# dx[0], dy[0] => 오른쪽
+# dx[1], dy[1] => 왼쪽
+# dx[2], dy[2] => 아래
+# dx[3], dy[3] => 위
+dx = [0, 0, 1, -1]
+dy = [1, -1, 0, 0]
+ 
+n, m = map(int, input().split())
+a = [list(map(int, list(input()))) for _ in range(n)]
+q = deque()
+check = [[False]*m for _ in range(n)] # 차이가 발생한 부분 
+dist = [[0]*m for _ in range(n)] 
+ 
+# 시작점
+q.append((0,0))
+check[0][0] = True
+dist[0][0] = 1
+ 
+while q:
+    x, y = q.popleft()
+    for k in range(4):
+        nx, ny = x+dx[k], y+dy[k]
+        if 0 <= nx < n and 0 <= ny < m:
+            if check[nx][ny] == False and a[nx][ny] == 1:
+                q.append((nx,ny))
+                dist[nx][ny] = dist[x][y] + 1
+                check[nx][ny] = True
+ 
+print(dist[n-1][m-1])
 
 ```
