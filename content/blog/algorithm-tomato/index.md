@@ -63,10 +63,8 @@ bfs를 사용해서 풀어야 하는 문제다.
 의 방식으로 풀면 된다. 
 
 
-
-
-
 ```python
+
 import sys
 from collections import deque
 
