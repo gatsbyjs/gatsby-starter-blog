@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Lindsay Winkler`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Lindsay Winkler`,
+      summary: `looking at the world through my own eyes.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `A blog about structure.`,
+    siteUrl: `https://lindsaywinkler.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `lindsaywinkler`,
+      facebook: `lindsaywinklerwriter`,
     },
   },
   plugins: [
@@ -53,7 +54,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-51730398-3`,
       },
     },
     `gatsby-plugin-feed`,
