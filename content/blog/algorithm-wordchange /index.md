@@ -1,3 +1,10 @@
+---
+title: 프로그래머스-단어 변환, 파이썬
+date: "2020-03-04T12:40:32.169Z"
+description: 알고리즘 문제풀이
+tags: ["algorithm", "level3"] 
+---
+
 ## 문제 설명
 두 개의 단어 begin, target과 단어의 집합 words가 있습니다. 아래와 같은 규칙을 이용하여 begin에서 target으로 변환하는 가장 짧은 변환 과정을 찾으려고 합니다.
 
@@ -43,7 +50,7 @@ BFS는 하나의 층을 내려가면서 모든 노드를 탐색한다.
 ```python
 def solution(begin, target, words):
     q =[] 
-    cnt = 1
+    cnt = 1 # cnt가 층수
     for i in range(len(words)):
         if wordDiff(begin, words[i]):
             q.append(words[i])
