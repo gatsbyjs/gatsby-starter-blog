@@ -2,6 +2,7 @@
 title: 자바스크립트 "this" 완벽 가이드
 date: "2020-03-16T12:40:32.169Z"
 description: Free Code Camp의 "The Complete Guide to this in JavaScript" 번역 및 해설 추가
+ogimage: './hqdefault.jpg'
 tags: ["knowledge", "Java Script"] 
 ---
 
