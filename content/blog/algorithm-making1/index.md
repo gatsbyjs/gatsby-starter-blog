@@ -5,6 +5,7 @@ description: 알고리즘 문제풀이
 tags: ["algorithm", "silver3"] 
 ---
 
+[출처](https://www.acmicpc.net/problem/1463)
 ## 문제
 정수 X에 사용할 수 있는 연산은 다음과 같이 세 가지 이다.
 

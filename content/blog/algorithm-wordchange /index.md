@@ -5,6 +5,8 @@ description: 알고리즘 문제풀이
 tags: ["algorithm", "level3"] 
 ---
 
+[출처](https://programmers.co.kr/learn/courses/30/lessons/43163)
+
 ## 문제 설명
 두 개의 단어 begin, target과 단어의 집합 words가 있습니다. 아래와 같은 규칙을 이용하여 begin에서 target으로 변환하는 가장 짧은 변환 과정을 찾으려고 합니다.
 

@@ -5,6 +5,8 @@ description: 알고리즘 문제풀이
 tags: ["algorithm", "silver 1"] 
 ---
 
+[출처](https://www.acmicpc.net/problem/2178)
+
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FNmHfs%2FbtqzxK4anlq%2FnVjmBpu6VsRocANaM22EXk%2Fimg.png)
 
 ## 문제 풀이 

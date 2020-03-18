@@ -5,7 +5,7 @@ description: 알고리즘 문제풀이
 tags: ["algorithm", "silver 1"] 
 ---
 
-
+[출처](https://www.acmicpc.net/problem/7576)
 ## 문제
 철수의 토마토 농장에서는 토마토를 보관하는 큰 창고를 가지고 있다. 토마토는 아래의 그림과 같이 격자 모양 상자의 칸에 하나씩 넣어서 창고에 보관한다. 
 

@@ -5,6 +5,8 @@ description: 알고리즘 문제풀이
 tags: ["algorithm", "level3"] 
 ---
 
+[출처](https://programmers.co.kr/learn/courses/30/lessons/42898)
+
 ## 문제 설명
 계속되는 폭우로 일부 지역이 물에 잠겼습니다. 물에 잠기지 않은 지역을 통해 학교를 가려고 합니다. 집에서 학교까지 가는 길은 m x n 크기의 격자모양으로 나타낼 수 있습니다.
 
