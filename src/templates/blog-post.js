@@ -53,7 +53,6 @@ class BlogPostTemplate extends React.Component {
                         </p>
 
                     </header>
-                    // auto full width responsive ads
                             <AdSense.Google
                             client='ca-pub-3733948010849819'
                             slot='1442175382'
