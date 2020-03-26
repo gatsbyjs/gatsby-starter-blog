@@ -31,6 +31,7 @@
     "lodash": "^4.17.15",
     "prismjs": "^1.19.0",
     "react": "^16.12.0",
+    "react-adsense": "^0.1.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",

@@ -5,7 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import "./post.css"
-import {kebabCase} from "lodash";
+import {kebabCase} from "lodash"
+import AdSense from 'react-adsense';
+
+
 
 class BlogPostTemplate extends React.Component {
     render() {
@@ -50,6 +53,14 @@ class BlogPostTemplate extends React.Component {
                         </p>
 
                     </header>
+                    // auto full width responsive ads
+                            <AdSense.Google
+                            client='ca-pub-3733948010849819'
+                            slot='1442175382'
+                            style={{ display: 'block' }}
+                            format='auto'
+                            responsive='true'
+                            />
                     <section className="blog-post" dangerouslySetInnerHTML={{ __html: post.html }} />
                      {post.frontmatter.tags? (
                             <div
