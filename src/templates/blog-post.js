@@ -99,6 +99,13 @@ class BlogPostTemplate extends React.Component {
                             marginBottom: rhythm(1),
                         }}
                     />
+                    <AdSense.Google
+                            client='ca-pub-3733948010849819'
+                            slot='1442175382'
+                            style={{ display: 'block' }}
+                            format='auto'
+                            responsive='true'
+                            />
                     <CommentCount config={disqusConfig} placeholder={''} />
                     <Disqus config={disqusConfig} />
                     <footer>
