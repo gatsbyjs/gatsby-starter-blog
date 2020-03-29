@@ -1,32 +1,43 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
+import { rhythm } from "../utils/typography"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
-  } tagged with "${tag}"`;
+  const siteTitle = data.site.siteMetadata.title
+  const description = data.site.siteMetadata.description
+  const posts = data.allMarkdownRemark.edges
   return (
-    <Layout>
-      <div>
-        <h1>{tagHeader}</h1>
-        <ul>
+    <Layout tag ={tag} title={siteTitle} description={description}>
           {edges.map(({ node }) => {
             const { title, date } = node.frontmatter;
             const { slug } = node.fields;
             return (
-              <li key={slug}>
-                <Link to={slug}>
-                  {title} ({date})
-                </Link>
-              </li>
+              <article key={node.fields.slug}>
+                            <header>
+                                <h3
+                                    style={{
+                                        marginBottom: rhythm(1 / 4),
+                                    }}
+                                >
+                                    <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                                        {title}
+                                    </Link>
+                                </h3>
+                                <small>{node.frontmatter.date}</small>
+                            </header>
+                            <section>
+                                <p
+                                    dangerouslySetInnerHTML={{
+                                        __html: node.frontmatter.description || node.excerpt,
+                                    }}
+                                />
+                            </section>
+                        </article>
             );
           })}
-        </ul>
-        <Link to="/tags">All tags</Link>
-      </div>
     </Layout>
   );
 };
@@ -35,6 +46,12 @@ export default Tags;
 
 export const pageQuery = graphql`
   query($tag: String) {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -49,6 +66,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            description
           }
         }
       }

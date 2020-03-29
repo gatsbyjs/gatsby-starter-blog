@@ -1,13 +1,14 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "hanadevelop",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "develop blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jesse Cga <jessecha222@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@material-ui/core": "^4.9.7",
     "gatsby": "^2.18.23",
     "gatsby-image": "^2.2.38",
     "gatsby-plugin-disqus": "^1.1.4",

@@ -1,0 +1,36 @@
+.navWrapper {
+    flex: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.navBox {
+    border: 1px solid rgba(0, 0, 0, 0.3);   
+    padding: 10px;
+    transition: all;
+    min-width: 80px; 
+    height: 50px;
+    text-align: center;
+}
+
+.navBox.navBox-active {
+    border-bottom-color: transparent;   
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;  
+    background-color: #fdf6e3;
+    box-shadow: 1px 0px 1px -1px rgba(0,0,0,0.2)
+}
+.navBox.navBox-active a{
+    color: black;
+}
+
+
+
+.navBox.navBox-end {
+    flex:auto;
+    color: transparent;
+    border-color: transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.3);
+
+
+}

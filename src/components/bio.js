@@ -37,7 +37,7 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
+        marginBottom: rhythm(0.5),
       }}
     >
       <Image
@@ -50,7 +50,12 @@ const Bio = () => {
         }}
 
       />
-        <p>하마 개발은
+        <p
+        style={{
+          marginBottom: 0
+
+        }}
+        >하마 개발은
             '<strong>하마</strong>
             터면
             <strong>개발 </strong>안할뻔 했다' 의 줄임말 입니다.

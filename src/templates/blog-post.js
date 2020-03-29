@@ -77,7 +77,6 @@ class BlogPostTemplate extends React.Component {
                                     }}
 
                                 >
-
                                     {post.frontmatter.tags.map(tag =>(
                                             <li
                                                 key={tag + `tag`}

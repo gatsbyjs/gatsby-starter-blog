@@ -6,9 +6,11 @@ import { kebabCase } from 'lodash';
 import Layout from '../components/layout';
 const TagsPage = ({ data }) => {
   const allTags = data.allMarkdownRemark.group;
+  console.log(allTags)
 
   return (
     <Layout>
+      
       <div>
         <h1>Tags</h1>
         <ul>
