@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { rhythm } from "../utils/typography"
@@ -9,6 +9,7 @@ const Tags = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata.title
   const description = data.site.siteMetadata.description
   const posts = data.allMarkdownRemark.edges
+  
   return (
     <Layout tag ={tag} title={siteTitle} description={description}>
           {edges.map(({ node }) => {

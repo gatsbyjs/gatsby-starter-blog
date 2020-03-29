@@ -5,12 +5,15 @@ import { rhythm, scale } from "../utils/typography"
 import Bio from "./bio"
 import Nav from "./nav"
 
+  
+
+
 class Layout extends React.Component {
     render() {
         const { location, title, children, description, tag } = this.props;
         const rootPath = `${__PATH_PREFIX__}/`;
         let header;
-        console.log(tag)
+    
         if ((location && location.pathname === rootPath) || tag) {
             header = (
                 <>
@@ -80,9 +83,8 @@ class Layout extends React.Component {
                     padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
                 }}
             >
-               
                 <header>{header}</header>
-                {console.log("children", children)}
+                
                 <main>{children}</main>
                 <footer>
                     © {new Date().getFullYear()}, Built with
