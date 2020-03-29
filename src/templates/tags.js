@@ -9,9 +9,10 @@ const Tags = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata.title
   const description = data.site.siteMetadata.description
   const posts = data.allMarkdownRemark.edges
-  const navPosition = document.querySelector('.navWrapper')
-  console.log(navPosition)
-  // useEffect(()=>{window.scrollTo(0,270)},[])
+  
+
+
+ 
 
 
   return (

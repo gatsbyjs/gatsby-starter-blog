@@ -92,7 +92,7 @@ class BlogPostTemplate extends React.Component {
                                                     paddingLeft: rhythm(1),
                                                 }}
                                             >
-                                                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                                                <Link to={`/tags/${kebabCase(tag)}/`} >{tag}</Link>
                                             </li>
                                         )
                                     )}

@@ -11,7 +11,6 @@ const Nav = ({tag, location}) => {
     const navRef = useRef(null)
 
     const scrollToNav = (ref) => {
-        console.log(ref)
         ref && ref.current && window.scrollTo({
                                 top: ref.current.offsetTop,
                                 left: 0,
@@ -39,15 +38,9 @@ const Nav = ({tag, location}) => {
         const navWrapper = document.querySelector('.navWrapper')
         const navPosition = navWrapper.offsetTop
 
-        location && location.pathname != "/" ?
-        window.scrollTo(0, navPosition)
-        : 
-        window.scrollTo(0, 0)
     },[]
     )
     
-    
-
 
   return (
     <div style={{
@@ -57,25 +50,25 @@ const Nav = ({tag, location}) => {
     }}>
 <div className='navWrapper' ref={navRef}>
     <div className="navBox" >
-        <Link id={"all"} to={'/'} onClick={scrollToNav(navRef)} >
+        <Link id={"all"} to={'/'} >
                 all
         </Link>
     </div>
 
     <div className="navBox" >
-         <Link id={'algorithm'} to={'tags/algorithm'} onClick={scrollToNav(navRef)}>
+         <Link id={'algorithm'} to={'tags/algorithm'}>
                 algorithm
                 </Link>
         
     </div>
     <div className="navBox">
-        <Link id={'knowledge'} to={'tags/knowledge'} onClick={scrollToNav(navRef)}>knowledge</Link>
+        <Link id={'knowledge'} to={'tags/knowledge'}>knowledge</Link>
     </div>
 
     <div className="navBox" style={{
         
     }}>
-        <Link id={'Java Script'} to={'tags/java-script'} onClick={scrollToNav(navRef)}>JS</Link>
+        <Link id={'Java Script'} to={'tags/java-script'}>JS</Link>
     </div>
     <div className="navBox navBox-end">
          1
