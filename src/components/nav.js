@@ -10,6 +10,14 @@ const Nav = ({tag, location}) => {
     let current
     const navRef = useRef(null)
 
+    const scrollToNav = () => {
+        window.scrollTo({
+            top: 270,
+            left: 0,
+            behavior: 'smooth'
+          })
+        }
+
     useEffect(()=>{
         
         current = document.getElementById(tag) 
@@ -26,18 +34,11 @@ const Nav = ({tag, location}) => {
         changeFirstCategoryToAll()
         :
         changeFirstCategory()
-        // const scrollToNav = () => {
-        //     window.scrollTo({
-        //         top: 270,
-        //         left: 0,
-        //         behavior: 'smooth'
-        //       })
-        //     }
-        // const navBoxes = document.querySelectorAll(".navBox")
-        // scrollToNav()
-        // scrollToNav(navRef)
+        
+        
     },[]
     )
+    
     
 
 
@@ -49,25 +50,25 @@ const Nav = ({tag, location}) => {
     }}>
 <div className='navWrapper' ref={navRef}>
     <div className="navBox" >
-        <Link id={"all"} to={'/'} >
+        <Link id={"all"} to={'/'} onClick={scrollToNav} >
                 all
         </Link>
     </div>
 
     <div className="navBox" >
-         <Link id={'algorithm'} to={'tags/algorithm'} >
+         <Link id={'algorithm'} to={'tags/algorithm'} onClick={scrollToNav}>
                 algorithm
                 </Link>
         
     </div>
     <div className="navBox">
-        <Link id={'knowledge'} to={'tags/knowledge'}>knowledge</Link>
+        <Link id={'knowledge'} to={'tags/knowledge'} onClick={scrollToNav}>knowledge</Link>
     </div>
 
     <div className="navBox" style={{
         
     }}>
-        <Link id={'Java Script'} to={'tags/java-script'}>JS</Link>
+        <Link id={'Java Script'} to={'tags/java-script'} onClick={scrollToNav}>JS</Link>
     </div>
     <div className="navBox navBox-end">
          1

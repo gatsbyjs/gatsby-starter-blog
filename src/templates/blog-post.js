@@ -11,6 +11,12 @@ import AdSense from 'react-adsense';
 
 
 class BlogPostTemplate extends React.Component {
+
+    componentDidMount(){
+        window.scrollTo(0,0)
+    }
+       
+
     render() {
         const post = this.props.data.markdownRemark;
         const siteTitle = this.props.data.site.siteMetadata.title;

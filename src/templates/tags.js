@@ -9,7 +9,9 @@ const Tags = ({ pageContext, data }) => {
   const siteTitle = data.site.siteMetadata.title
   const description = data.site.siteMetadata.description
   const posts = data.allMarkdownRemark.edges
-  
+  useEffect(()=>{window.scrollTo(0,0)},[])
+
+
   return (
     <Layout tag ={tag} title={siteTitle} description={description}>
           {edges.map(({ node }) => {
