@@ -10,12 +10,13 @@ const Nav = ({tag, location}) => {
     let current
     const navRef = useRef(null)
 
-    const scrollToNav = () => {
-        window.scrollTo({
-            top: 270,
-            left: 0,
-            behavior: 'smooth'
-          })
+    const scrollToNav = (ref) => {
+        console.log(ref)
+        ref && ref.current && window.scrollTo({
+                                top: ref.current.offsetTop,
+                                left: 0,
+                                behavior: 'smooth'
+                            })
         }
 
     useEffect(()=>{
@@ -30,12 +31,18 @@ const Nav = ({tag, location}) => {
         }
         current?
         current.parentElement.classList.add('navBox-active') : 
-        location && location.pathname =="/" ?
+        location && location.pathname === "/" ?
         changeFirstCategoryToAll()
         :
         changeFirstCategory()
-        
-        
+
+        const navWrapper = document.querySelector('.navWrapper')
+        const navPosition = navWrapper.offsetTop
+
+        location && location.pathname != "/" ?
+        window.scrollTo(0, navPosition)
+        : 
+        window.scrollTo(0, 0)
     },[]
     )
     
@@ -50,25 +57,25 @@ const Nav = ({tag, location}) => {
     }}>
 <div className='navWrapper' ref={navRef}>
     <div className="navBox" >
-        <Link id={"all"} to={'/'} onClick={scrollToNav} >
+        <Link id={"all"} to={'/'} onClick={scrollToNav(navRef)} >
                 all
         </Link>
     </div>
 
     <div className="navBox" >
-         <Link id={'algorithm'} to={'tags/algorithm'} onClick={scrollToNav}>
+         <Link id={'algorithm'} to={'tags/algorithm'} onClick={scrollToNav(navRef)}>
                 algorithm
                 </Link>
         
     </div>
     <div className="navBox">
-        <Link id={'knowledge'} to={'tags/knowledge'} onClick={scrollToNav}>knowledge</Link>
+        <Link id={'knowledge'} to={'tags/knowledge'} onClick={scrollToNav(navRef)}>knowledge</Link>
     </div>
 
     <div className="navBox" style={{
         
     }}>
-        <Link id={'Java Script'} to={'tags/java-script'} onClick={scrollToNav}>JS</Link>
+        <Link id={'Java Script'} to={'tags/java-script'} onClick={scrollToNav(navRef)}>JS</Link>
     </div>
     <div className="navBox navBox-end">
          1
