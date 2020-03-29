@@ -44,6 +44,8 @@
     border-color: transparent;
     border-bottom-color: rgba(0, 0, 0, 0.3);
     min-width: 0px;
+}
 
-
+.navBox.navBox-end:hover {
+    background-color: transparent;
 }
