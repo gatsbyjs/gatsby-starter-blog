@@ -9,16 +9,28 @@
     padding: 10px;
     transition: all;
     min-width: 80px; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;  
+    box-shadow: inset 0em -1px rgba(0,0,0,0.2);
     height: 50px;
     text-align: center;
+    transition: all, ease-out;
+    
+    transition-duration: 300ms;
 }
 
+.navBox:hover {
+    background-color: rgba(253, 246, 227, 0.6)
+}
+
+
+
 .navBox.navBox-active {
-    border-bottom-color: transparent;   
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;  
+    border-bottom-color: transparent;
+    box-shadow: 1.5px 0px 0px 0.0px rgba(0,0,0,0.2);   
+    transform: scale(1.1, 1);
     background-color: #fdf6e3;
-    box-shadow: 1px 0px 1px -1px rgba(0,0,0,0.2)
+    
 }
 .navBox.navBox-active a{
     color: black;
