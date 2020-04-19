@@ -68,7 +68,7 @@ const Nav = ({tag, location}) => {
     <div className="navBox" style={{
         
     }}>
-        <Link id={'Java Script'} to={'tags/java-script'}>JS</Link>
+        <Link id={'studylog'} to={'tags/studylog'}>studylog</Link>
     </div>
     <div className="navBox navBox-end">
          1
