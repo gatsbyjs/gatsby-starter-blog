@@ -5,6 +5,8 @@ description: 카카오 2018 블라인드 채용
 tags: ["algorithm", "studylog"] 
 ---
 [출처](https://programmers.co.kr/learn/courses/30/lessons/17683?language=python3)
+
+
 [커밋 로그](https://github.com/Jesscha/algorithmsolutions/commits/master)
 
 ```python
