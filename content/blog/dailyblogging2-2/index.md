@@ -1,6 +1,6 @@
 ---
-title: Daily Study Logiing2 - 프로그래머스 도둑질, 파이썬 
-date: "2020-04-20T12:40:32.169Z"
+title: Daily Study Logiing2.2 - 프로그래머스 도둑질, 파이썬 
+date: "2020-04-20T12:20:32.169Z"
 description: 프로그래머스 DP
 tags: ["algorithm", "studylog"] 
 ---

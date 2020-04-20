@@ -1,6 +1,6 @@
 ---
-title: Daily Study Logiing2 - kakao Blind 2018 방금그곡, 파이썬 
-date: "2020-04-20T12:40:32.169Z"
+title: Daily Study Logiing2 - KAKO BLIND 2018 방금그곡, 파이썬 
+date: "2020-04-20T12:00:32.169Z"
 description: 카카오 2018 블라인드 채용
 tags: ["algorithm", "studylog"] 
 ---
