@@ -1,6 +1,5 @@
 ---
 title: Daily Study Logiing2.3 - 2018 KAKAO BLIND 압축, JS
- 
 date: "2020-04-20T12:40:32.169Z"
 description: 프로그래머스 DP
 tags: ["algorithm", "studylog"] 
@@ -86,7 +85,7 @@ console.log(solution("KAKAO"))
 문자열에 split을 쓰면 해당 기호로 나누 어진 문자를 원소로 하는 배열을 반환한다는 것, indexOf에 해당배열에 없는 원소를 넣으면 -1을 반환 한다는 점, slice(i)는 i 부터 뒤까지를 모두 자른다는 점을 새롭게 배웠다. 
 
 
-
+~
 
 
 
