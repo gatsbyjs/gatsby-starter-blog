@@ -1,7 +1,7 @@
 ---
 title: Daily Study Logiing2.3 - 2018 KAKAO BLIND 압축, JS
 date: "2020-04-20T12:40:32.169Z"
-description: 프로그래머스 DP
+description: 카카오2018 3차 문제
 tags: ["algorithm", "studylog"] 
 ---
 [출처](https://programmers.co.kr/learn/courses/30/lessons/17684)
