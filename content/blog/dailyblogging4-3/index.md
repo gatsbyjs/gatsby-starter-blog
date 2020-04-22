@@ -23,6 +23,7 @@ def solution(jobs):
                 break
         if isNotIn:
             curT += 1 
+            
         else:
             curT += excution[1]
             ansset.append(curT-excution[0])
