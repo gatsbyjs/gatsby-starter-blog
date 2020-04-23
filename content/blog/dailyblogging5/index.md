@@ -2,7 +2,7 @@
 title: Daily Study Logiing5 - react, redux
 date: "2020-04-23T13:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 결제 페이지에서 아이템 빼기
-tags: ["knowledge", "studylog"] 
+tags: ["knowledge", "studylog", "react"] 
 ---
 [커밋로그](https://github.com/Jesscha/react-shoppingmall/commit/df8d3053e298111b870483a29cac18b233f46a45)
 

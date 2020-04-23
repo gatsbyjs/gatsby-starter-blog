@@ -2,7 +2,7 @@
 title: Daily Study Logiing3 - redux, dispatch
 date: "2020-04-21T12:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 카트 상자 자동으로 닫히게 하기
-tags: ["knowledge", "studylog"] 
+tags: ["knowledge", "studylog", "react"] 
 ---
 
 [커밋 내용](https://github.com/Jesscha/react-shoppingmall/commit/a8ea59fdac880bec953d3475ea7c40298f7ba8fa)

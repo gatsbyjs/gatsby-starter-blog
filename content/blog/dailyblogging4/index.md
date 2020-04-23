@@ -2,7 +2,7 @@
 title: Daily Study Logiing4 - react
 date: "2020-04-22T12:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 결제 페이지에 카트 아이템 추가하기
-tags: ["knowledge", "studylog"] 
+tags: ["knowledge", "studylog", "react"] 
 ---
 [커밋로그](https://github.com/Jesscha/react-shoppingmall/commit/d32a9b2631429a8e75393c5a2418d1afb7a3a74b)
 
