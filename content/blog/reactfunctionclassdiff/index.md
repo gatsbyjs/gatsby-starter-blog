@@ -3,7 +3,7 @@ title: 리액트 function component와 class component는 어떻게 다를까?
 date: "2020-01-31T12:40:32.169Z"
 description: 리액트 function 과 class의 차이를 다룬 글 번역
 ogimage: './mathgirl.png'
-tags: ["knowledge", "React", "Hook", "translation"]  
+tags: ["knowledge", "react", "hook", "translation"]  
 ---
 
 **이 글은 
