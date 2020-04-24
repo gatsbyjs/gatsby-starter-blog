@@ -1,7 +1,7 @@
 ---
 title: Daily Study Logiing6 - react, redux
 date: "2020-04-24T13:09:32.169Z"
-description: 리액트로 쇼핑몰 만들기 - 결제 페이지에서 아이템 빼기
+description: 리액트로 쇼핑몰 만들기 - 결제 페이지에서 아이템 수량 조절하기
 tags: ["knowledge", "studylog", "react"] 
 ---
 [커밋로그](https://github.com/Jesscha/react-shoppingmall/commit/6ffa8417473a42bcee01c2fe9b36af94a0de079f)
