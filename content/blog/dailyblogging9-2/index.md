@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing9.2 - 프로그래머스 디스크 컨트롤, 자바스크립트
+title: Daily Study Logiing9.2 - 프로그래머스 도둑질, 자바스크립트
 date: "2020-04-29T12:14:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 
