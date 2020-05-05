@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing1 - redux, selector, reselect
+title: Daily Study Logging1 - redux, selector, reselect
 date: "2020-04-19T12:40:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 계산 페이지 만들기 
 tags: ["knowledge", "studylog", "react"] 

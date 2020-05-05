@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing4.2 - 프로그래머스 베스트 엘범, 파이썬
+title: Daily Study Logging4.2 - 프로그래머스 베스트 엘범, 파이썬
 date: "2020-04-22T12:13:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 

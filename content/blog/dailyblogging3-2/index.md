@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing3.2 - 프로그래머스, 줄 서는 방법
+title: Daily Study Logging3.2 - 프로그래머스, 줄 서는 방법
 date: "2020-04-21T21:40:32.169Z"
 description: 카카오2018 3차 문제
 tags: ["algorithm", "studylog"] 

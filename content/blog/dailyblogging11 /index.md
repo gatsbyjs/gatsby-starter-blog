@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing11 - 프로그래머스 순위, 자바스크립트
+title: Daily Study Logging11 - 프로그래머스 순위, 자바스크립트
 date: "2020-05-03T12:14:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 

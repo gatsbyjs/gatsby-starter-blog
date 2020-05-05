@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing2.3 - 2018 KAKAO BLIND 압축, JS
+title: Daily Study Logging2.3 - 2018 KAKAO BLIND 압축, JS
 date: "2020-04-20T12:40:32.169Z"
 description: 카카오2018 3차 문제
 tags: ["algorithm", "studylog"] 

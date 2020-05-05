@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing12 - 카카오 겨울 인턴 호텔방, 파이썬
+title: Daily Study Logging12 - 카카오 겨울 인턴 호텔방, 파이썬
 date: "2020-05-04T12:14:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 

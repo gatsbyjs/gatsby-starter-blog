@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing10 - 프로그래머스 소수 찾기, 자바스크립트
+title: Daily Study Logging10 - 프로그래머스 소수 찾기, 자바스크립트
 date: "2020-04-30T12:14:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 

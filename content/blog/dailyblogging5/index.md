@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing5 - react, redux
+title: Daily Study Logging5 - react, redux
 date: "2020-04-23T13:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 결제 페이지에서 아이템 빼기
 tags: ["knowledge", "studylog", "react"] 

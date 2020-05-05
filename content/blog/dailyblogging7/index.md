@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing7 - react, redux
+title: Daily Study Logging7 - react, redux
 date: "2020-04-27T13:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 페이지를 새로 고침해도 아이템이 남아 있게 하기 
 tags: ["knowledge", "studylog", "react"] 

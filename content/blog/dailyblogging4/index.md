@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing4 - react
+title: Daily Study Logging4 - react
 date: "2020-04-22T12:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 결제 페이지에 카트 아이템 추가하기
 tags: ["knowledge", "studylog", "react"] 

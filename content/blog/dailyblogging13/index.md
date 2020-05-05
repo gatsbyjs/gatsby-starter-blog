@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing13 - 카카오 2019 BLIND 블록게임, 파이썬
+title: Daily Study Logging13 - 카카오 2019 BLIND 블록게임, 파이썬
 date: "2020-05-05T12:14:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 

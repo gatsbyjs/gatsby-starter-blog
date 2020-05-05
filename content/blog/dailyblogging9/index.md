@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing9 - 프로그래머스 완주 못한 선수, 자바스크립트
+title: Daily Study Logging9 - 프로그래머스 완주 못한 선수, 자바스크립트
 date: "2020-04-29T10:14:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 

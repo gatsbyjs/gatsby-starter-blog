@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing6.1 여행경로- 프로그래머스 , 파이썬
+title: Daily Study Logging6.1 여행경로- 프로그래머스 , 파이썬
 date: "2020-04-24T15:18:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 

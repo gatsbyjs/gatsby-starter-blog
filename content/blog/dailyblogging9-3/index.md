@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing9.3 - react, redux
+title: Daily Study Logging9.3 - react, redux
 date: "2020-04-29T16:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - redux로 상태 옮기기 
 tags: ["knowledge", "studylog", "react"] 

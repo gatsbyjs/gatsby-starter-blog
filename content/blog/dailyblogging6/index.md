@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logiing6 - react, redux
+title: Daily Study Logging6 - react, redux
 date: "2020-04-24T13:09:32.169Z"
 description: 리액트로 쇼핑몰 만들기 - 결제 페이지에서 아이템 수량 조절하기
 tags: ["knowledge", "studylog", "react"] 
