@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logging15 - 카카오 2020 BLIND 외벽점검, 파이썬
+title: Daily Study Logging16 - 카카오 2020 BLIND 외벽점검, 파이썬
 date: "2020-05-08T12:14:32.169Z"
 description: 알고리즘 문제풀이
 tags: ["algorithm", "studylog"] 
