@@ -1,7 +1,7 @@
 ---
 title: Daily Study Logging18 - 정규표현식
 date: "2020-05-12T12:14:32.169Z"
-description: 정규표현식 틈틈히 정리해 보자
+description: 정규표현식 기본문법
 tags: ["knowledge", "studylog", "regex"] 
 ---
 
