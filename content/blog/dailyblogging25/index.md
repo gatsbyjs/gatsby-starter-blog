@@ -1,7 +1,7 @@
 ---
-title: Daily Study Logging25 - 자바 스크립트 스코핑
+title: Daily Study Logging25 - 자바스크립트 스코핑
 date: "2020-05-21T21:14:32.169Z"
-description: 자바 스크립트 스코핑
+description: 자바스크립트 스코핑
 tags: ["knowledge", "studylog", "javascript"] 
 ---
 
