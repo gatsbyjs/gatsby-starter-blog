@@ -1,6 +1,6 @@
 ---
 title: Daily Study Logging28 - 정규표현식
-date: "2020-05-18T21:14:32.169Z"
+date: "2020-05-25T21:14:32.169Z"
 description: Greedy Expression vs Lazy Expression
 tags: ["knowledge", "studylog", "regex"] 
 ---
