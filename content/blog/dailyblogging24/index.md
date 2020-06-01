@@ -2,7 +2,7 @@
 title: Daily Study Logging24 - 프로그래머스 기지국 설치
 date: "2020-05-20T21:14:32.169Z"
 description: 알고리즘 문제풀이
-tags: ["knowledge", "studylog", "regex"] 
+tags: ["knowledge", "studylog", "algorithm"] 
 ---
 
 [출처](https://programmers.co.kr/learn/courses/30/lessons/12979)
