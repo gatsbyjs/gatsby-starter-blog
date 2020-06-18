@@ -2,7 +2,7 @@
 title: Daily Study Logging32 - Regular expression
 date: "2020-06-17T21:14:32.169Z"
 description: Anchors
-tags: ["knowledge", "studylog", "node"]
+tags: ["knowledge", "studylog", "regex"]
 ---
 
 특정 문자와 일치를 나타내는 것이 아니라, 일치하는 것의 위치 정보를 나타내는 표현식
