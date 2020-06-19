@@ -1,7 +1,7 @@
 ---
 title: Daily Study Logging33 - nodejs란 뭘까?
 date: "2020-06-18T21:14:32.169Z"
-description: Anchors
+description: 노드 js의 정체에 대하여
 tags: ["knowledge", "studylog", "node"]
 ---
 
