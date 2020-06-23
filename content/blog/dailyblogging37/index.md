@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logging35 - node js로 파일 만들기
+title: Daily Study Logging35 - node js로 JSON 파일 만들기
 date: "2020-06-23T21:14:32.169Z"
 description: JSON데이터 파일 만들기
 tags: ["knowledge", "studylog", "node"]
