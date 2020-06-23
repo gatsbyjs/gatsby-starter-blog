@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logging35 - Type Annotations
+title: Daily Study Logging36 - Type Annotations
 date: "2020-06-21T21:14:32.169Z"
 description: 타입 스크립트의 type annotation
 tags: ["knowledge", "studylog", "ts"]
