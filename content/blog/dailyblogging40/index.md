@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logging39 - 타입스크립트, 디스트럭쳐링에서 타입 선언하기
+title: Daily Study Logging40 - 타입스크립트, 디스트럭쳐링에서 타입 선언하기
 date: "2020-06-29T12:13:32.169Z"
 description: 타입스크립트 annotation 방법
 tags: ["typescript", "studylog"]
