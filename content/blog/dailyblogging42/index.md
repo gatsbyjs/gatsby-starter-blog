@@ -1,6 +1,6 @@
 ---
 title: Daily Study Logging42 - SQL, NoSQL
-date: "2020-06-30T12:13:32.169Z"
+date: "2020-07-02T12:13:32.169Z"
 description: SQL, NoSQL 비교
 tags: ["database", "studylog"]
 ---
