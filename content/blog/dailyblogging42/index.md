@@ -7,8 +7,6 @@ tags: ["database", "studylog"]
 
 MongoDB는 대표적인 비관계형 데이터 베이스(NoSQL)다. Postgres나 MariaDB 같은 관계형 데이터 베이스(SQL)만을 사용해 본 상황에서 MongoDB같은 NoSQL을 쓸 일이 생겨 둘 사이의 차이를 한번 정리해 보고자 한다.
 
-## 데이터 저장방식
-
 ### SQL
 
 **데이터를 테이블의 형태로 저장한다.**
