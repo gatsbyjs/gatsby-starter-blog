@@ -15,9 +15,9 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const title = node.frontmatter.title || node.fields?.slug
         return (
-          <article key={node.fields.slug}>
+          <article key={node.fields?.slug}>
             <header>
               <h3
                 style={{
@@ -57,9 +57,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
