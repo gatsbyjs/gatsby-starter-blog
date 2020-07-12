@@ -1,6 +1,6 @@
 ---
-title: Daily Study Logging45 - 타입스크립트, Instance Method Modifiers
-date: "2020-07-10T12:13:32.169Z"
+title: Daily Study Logging46 - 타입스크립트, Instance Method Modifiers
+date: "2020-07-12T12:13:32.169Z"
 description: 타입스크립트, Instance Method Modifiers
 tags: ["typescript", "studylog"]
 ---
