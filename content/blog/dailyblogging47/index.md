@@ -59,13 +59,13 @@ useState 나 useReducer 는 component state를 다루는 방법이다. class com
 
 나는 context를 애플리케이션 상태 관리에 성공적으로 사용한 사례들을 많이 보았다. 가능한 일이다. 하지만 context는 상태관리를 위해 디자인 된것은 아니다. 반면에 Redux는 상태관리라는 특정한 목적을 염두에 두고 만들어 졌다.
 
-더욱이 hooks는 Redux의 죽음을 의미하지 않는다. 최근 Redux (업데이트 문서)[https://react-redux.js.org/next/api/hooks]를 읽어보면 알 수 있다.
+더욱이 hooks는 Redux의 죽음을 의미하지 않는다. 최근 Redux [업데이트 문서](https://react-redux.js.org/next/api/hooks)를 읽어보면 알 수 있다.
 
 ## Redux역시 hooks를 가지고 있다!
 
 그렇다. React hooks는 Redux 라이브러리를 도우며 Redux의 페인포인트를 해결하려 한다.
 
-(다른 아티클에 더 디테일한 내용을 서술해 놓았다.)[https://medium.com/swlh/clean-up-redux-code-with-react-redux-hooks-71587cfcf87a]여기서는 핵심만 말하겠다. hook등장 이전에는 mapStateToProps와 mapDispatchToProps 함수를 선언해서 사용하고 connect를 사용해 컴포넌트를 감싸며 higher order function을 만들었다. 이를 통해 dispatch function과 Redux store의 스테이트를 props로 넘겨 줄 수 있었다.
+[다른 아티클에 더 디테일한 내용을 서술해 놓았다.](https://medium.com/swlh/clean-up-redux-code-with-react-redux-hooks-7587cfcf87a)여기서는 핵심만 말하겠다. hook등장 이전에는 mapStateToProps와 mapDispatchToProps 함수를 선언해서 사용하고 connect를 사용해 컴포넌트를 감싸며 higher order function을 만들었다. 이를 통해 dispatch function과 Redux store의 스테이트를 props로 넘겨 줄 수 있었다.
 
 간단한 카운터 앱 코드를 한번 보자 ( 너무 간단해서 Redux가 필요없는 예시이지만, 정보 전달을 위해 이정도는 허용해 주도록 하자). Redux store와 increment, decrement action creator를 어딘가 정의해 두었다고 가정하자.(위에 링크된 글에는 전체 코드가 첨부되어 있다.)
 
