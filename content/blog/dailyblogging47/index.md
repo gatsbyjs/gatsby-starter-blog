@@ -5,7 +5,7 @@ description: hooks는 Redux의 대체제가 아니다.
 tags: ["react", "studylog"]
 ---
 
-이 글은 Max González 의 (Stop Asking if React Hooks Replace Redux)[https://medium.com/swlh/stop-asking-if-react-hooks-replace-Redux-448c54d79551] 를 번역(의역) 및 요약한 글 입니다.
+이 글은 Max González 의 [Stop Asking if React Hooks Replace Redux](https://medium.com/swlh/stop-asking-if-react-hooks-replace-Redux-448c54d79551) 를 번역(의역) 및 요약한 글 입니다.
 
 ---
 
