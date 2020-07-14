@@ -1,5 +1,5 @@
 ---
-title: Daily Study Logging47 - \[번역\]React hooks를 쓰면 Redux를 안써도 될까?
+title: Daily Study Logging47 - [번역]React hooks를 쓰면 Redux를 안써도 될까?
 date: "2020-07-14T12:13:32.169Z"
 description: hooks는 Redux의 대체제가 아니다.
 tags: ["react", "studylog"]
