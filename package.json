@@ -51,6 +51,6 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> hhttps://www.gatsbyjs.com/docs/unit-testing\" && exit 1"
   }
 }
