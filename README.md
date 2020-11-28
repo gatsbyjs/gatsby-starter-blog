@@ -96,4 +96,6 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-blog)
 
+Try this gatsby template.
+
 <!-- AUTO-GENERATED-CONTENT:END -->
