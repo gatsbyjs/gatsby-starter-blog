@@ -15,6 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        ogImage={post.frontmatter.ogImage}
       />
       <article
         className="blog-post"
@@ -41,7 +42,7 @@ const BlogPostTemplate = ({ data, location }) => {
             flexWrap: `wrap`,
             justifyContent: `space-between`,
             listStyle: `none`,
-            padding: 0,
+            padding: 0
           }}
         >
           <li>

@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const createSharingImage = require("./src/utils/createSharingImage")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -51,8 +52,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         context: {
           id: post.id,
           previousPostId,
-          nextPostId,
-        },
+          nextPostId
+        }
       })
     })
   }
@@ -67,13 +68,30 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createFieldExtension, createTypes } = actions
+
+  /*
+  Create a field extension to add our Open Graph Image resolution
+  */
+  createFieldExtension({
+    name: "ogImage",
+    extend(options, prevFieldConfig) {
+      return {
+        resolve(source) {
+          return createSharingImage({
+            cloudName: "matiasfha",
+            text: source.title
+          })
+        }
+      }
+    }
+  })
 
   // Explicitly define the siteMetadata {} object
   // This way those will always be defined even if removed from gatsby-config.js
@@ -106,6 +124,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      ogImage: String @ogImage
     }
 
     type Fields {
