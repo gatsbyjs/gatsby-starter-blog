@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@babel/core": "^7.14.6",
     "@material-ui/core": "^4.9.7",
     "gatsby": "^2.18.23",
     "gatsby-image": "^2.2.38",
@@ -41,7 +42,8 @@
     "typography": "^0.16.19",
     "typography-theme-grand-view": "^0.16.19",
     "typography-theme-wordpress-2016": "^0.16.19",
-    "update": "^0.7.4"
+    "update": "^0.7.4",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
