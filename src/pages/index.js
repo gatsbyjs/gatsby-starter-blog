@@ -1,5 +1,7 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+// import Img from 'gatsby-image';
+
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -41,10 +43,13 @@ const BlogIndex = ({ data, location }) => {
                 <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
+                    {/* <Img
+                  fixed={post.frontmatter.thumb}
+                /> */}
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small class="mb-4">{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
