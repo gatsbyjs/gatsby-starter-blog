@@ -1,34 +1,13 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef } from "react"
 import { rhythm } from "../utils/typography"
 import { Link } from "gatsby"
+import { useLocation } from "@reach/router"
 import "./nav.css"
 
-const Nav = ({ tag, location }) => {
+const Nav = ({ tagsForTab }) => {
   let current
   const navRef = useRef(null)
-
-  useEffect(() => {
-    current = document.getElementById(tag)
-    const changeFirstCategory = () => {
-      document.getElementById("all").innerText = tag
-      document
-        .getElementById("all")
-        .parentElement.classList.add("navBox-active")
-    }
-    const changeFirstCategoryToAll = () => {
-      document
-        .getElementById("all")
-        .parentElement.classList.add("navBox-active")
-    }
-    current
-      ? current.parentElement.classList.add("navBox-active")
-      : location && location.pathname === "/"
-      ? changeFirstCategoryToAll()
-      : changeFirstCategory()
-
-    const navWrapper = document.querySelector(".navWrapper")
-    const navPosition = navWrapper.offsetTop
-  }, [])
+  const location = useLocation()
 
   return (
     <div
@@ -38,29 +17,25 @@ const Nav = ({ tag, location }) => {
         marginBottom: rhythm(1),
       }}
     >
-      <div className="navWrapper" ref={navRef}>
-        <div className="navBox">
-          <Link id={"all"} to={"/"}>
-            all
-          </Link>
-        </div>
+      <div className="navWrapper">
+        {tagsForTab.map((tag, i) => {
+          const isActive = location && location.pathname === `/tags/${tag}/`
+          const isHome = location && location.pathname === `/`
+          if (tag === "all") {
+            return (
+              <div className={`navBox ${isHome ? "navBox-active" : ""}`}>
+                <Link to={`/`}>{tag}</Link>
+              </div>
+            )
+          }
+          return (
+            <div className={`navBox ${isActive ? "navBox-active" : ""}`}>
+              <Link to={`/tags/${tag}/`}>{tag}</Link>
+            </div>
+          )
+        })}
 
-        <div className="navBox">
-          <Link id={"algorithm"} to={"/tags/algorithm"}>
-            algorithm
-          </Link>
-        </div>
-        <div className="navBox">
-          <Link id={"knowledge"} to={"/tags/knowledge"}>
-            knowledge
-          </Link>
-        </div>
-
-        <div className="navBox" style={{}}>
-          <Link id={"studylog"} to={"/tags/studylog"}>
-            studylog
-          </Link>
-        </div>
+        {/* css 위치를 잡기위한 안보이는 DOM */}
         <div className="navBox navBox-end">1</div>
       </div>
     </div>
