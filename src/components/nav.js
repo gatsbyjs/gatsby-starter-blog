@@ -4,19 +4,8 @@ import { Link } from "gatsby"
 import "./nav.css"
 
 const Nav = ({ tag, location }) => {
-  const [move, setMove] = useState(false)
   let current
   const navRef = useRef(null)
-
-  const scrollToNav = ref => {
-    ref &&
-      ref.current &&
-      window.scrollTo({
-        top: ref.current.offsetTop,
-        left: 0,
-        behavior: "smooth",
-      })
-  }
 
   useEffect(() => {
     current = document.getElementById(tag)
