@@ -300,6 +300,7 @@ a:focus {
   margin-bottom: var(--spacing-0);
   min-width: 50px;
   border-radius: 100%;
+  transform: translateZ(0);
 }
 
 .blog-post header h1 {
