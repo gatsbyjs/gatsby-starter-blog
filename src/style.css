@@ -54,7 +54,7 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
+  --color-primary: #345B63;
   --color-text: #2e353f;
   --color-text-light: #4f5969;
   --color-heading: #1a202c;
@@ -85,6 +85,10 @@ body {
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
+}
+
+footer a {
+  color: #9D9D9D;
 }
 
 hr {
@@ -298,8 +302,8 @@ a:focus {
 .bio-avatar {
   margin-right: var(--spacing-4);
   margin-bottom: var(--spacing-0);
-  min-width: 50px;
-  border-radius: 100%;
+  min-width: 150px;
+  border-radius: 50%;
 }
 
 .blog-post header h1 {
