@@ -87,7 +87,11 @@ footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
 
-footer a {
+#footnote {
+  color: #9D9D9D;
+}
+
+#footnote a {
   color: #9D9D9D;
 }
 

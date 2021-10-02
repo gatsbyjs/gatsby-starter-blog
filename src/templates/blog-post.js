@@ -11,7 +11,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location} title={"<- Back to Home"}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
