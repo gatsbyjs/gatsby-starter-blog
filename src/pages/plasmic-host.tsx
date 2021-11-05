@@ -1,15 +1,21 @@
 import * as React from "react"
 import { PlasmicCanvasHost } from "@plasmicapp/loader-gatsby"
-import { Helmet } from "react-helmet"
 import "../plasmic-init"
+import { graphql } from "gatsby"
+import { initPlasmicLoaderWithRegistrations } from "../plasmic-init"
 
-export default function Host() {
+export default function Host({ data }) {
+  const { plasmicOptions } = data
+  initPlasmicLoaderWithRegistrations(plasmicOptions)
   return (
     <>
-      <Helmet>
-        <script src="https://static1.plasmic.app/preamble.js" />
-      </Helmet>
       <PlasmicCanvasHost />
     </>
   )
 }
+
+export const pageQuery = graphql`
+  query {
+    plasmicOptions
+  }
+`
