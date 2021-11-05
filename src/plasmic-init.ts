@@ -2,6 +2,7 @@ import { initPlasmicLoader } from "@plasmicapp/loader-gatsby"
 import {
   PostDate,
   PostExcerpt,
+  PostLink,
   PostList,
   PostTitle,
 } from "./components/plasmic"
@@ -19,6 +20,13 @@ export function initPlasmicLoaderWithRegistrations(plasmicOptions: any) {
         defaultValue: 32,
         type: "number",
       },
+    },
+  })
+
+  PLASMIC.registerComponent(PostLink, {
+    name: "PostLink",
+    props: {
+      children: "slot",
     },
   })
 

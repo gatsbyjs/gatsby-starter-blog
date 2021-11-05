@@ -1,6 +1,6 @@
+import React, { createContext, ReactNode, useContext } from "react"
 import { repeatedElement } from "@plasmicapp/host"
-import { graphql, StaticQuery } from "gatsby"
-import { createContext, ReactNode, useContext } from "react"
+import { graphql, Link, StaticQuery } from "gatsby"
 
 type Post = any
 
@@ -18,49 +18,78 @@ function usePostCollection() {
 }
 
 interface PostListProps {
+  className?: string
   gap?: number
   offset?: number
   count?: number
   children: ReactNode
 }
 
-export function PostList({ count, offset, children, gap }: PostListProps) {
-  const posts = usePostCollection()?.slice(
-    offset,
-    count ? (offset || 0) + count : undefined
-  )
-
+export function PostList({
+  className,
+  count,
+  offset,
+  children,
+  gap,
+}: PostListProps) {
+  const posts = usePostCollection()
   const renderPosts = (posts: Post[]) =>
-    posts.map((post, i) => (
-      <PostContext.Provider value={post} key={post.id}>
-        <div>{repeatedElement(i === 0, children)}</div>
-      </PostContext.Provider>
-    ))
+    posts
+      .slice(offset, count ? (offset || 0) + count : undefined)
+      .map((post, i) => (
+        <PostContext.Provider value={post} key={post.id}>
+          <div style={{ ...(i !== 0 && { marginTop: gap }) }}>
+            {repeatedElement(i === 0, children)}
+          </div>
+        </PostContext.Provider>
+      ))
   return (
-    <div>
-      <StaticQuery
-        query={graphql`
-          query {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-            ) {
-              nodes {
-                excerpt
-                fields {
-                  slug
-                }
-                frontmatter {
-                  date(formatString: "MMMM DD, YYYY")
-                  title
-                  description
+    <div className={className}>
+      {posts ? (
+        renderPosts(posts)
+      ) : (
+        <StaticQuery
+          query={graphql`
+            query {
+              allMarkdownRemark(
+                sort: { fields: [frontmatter___date], order: DESC }
+              ) {
+                nodes {
+                  excerpt
+                  fields {
+                    slug
+                  }
+                  frontmatter {
+                    date(formatString: "MMMM DD, YYYY")
+                    title
+                    description
+                  }
                 }
               }
             }
-          }
-        `}
-        render={data => renderPosts(data.allMarkdownRemark.nodes)}
-      />
+          `}
+          render={data => renderPosts(data.allMarkdownRemark.nodes)}
+        />
+      )}
     </div>
+  )
+}
+
+export function PostLink({
+  className,
+  children,
+}: {
+  className?: string
+  children: ReactNode
+}) {
+  const post = usePost()
+  if (!post) {
+    return null
+  }
+  return (
+    <Link className={className} to={post.fields.slug}>
+      {children}
+    </Link>
   )
 }
 
@@ -69,7 +98,7 @@ export function PostTitle({ className }: { className?: string }) {
   if (!post) {
     return null
   }
-  return <div className={className}>{post.title}</div>
+  return <div className={className}>{post.frontmatter.title}</div>
 }
 
 export function PostDate({ className }: { className?: string }) {
@@ -77,7 +106,7 @@ export function PostDate({ className }: { className?: string }) {
   if (!post) {
     return null
   }
-  return <div className={className}>{post.date}</div>
+  return <div className={className}>{post.frontmatter.date}</div>
 }
 
 export function PostExcerpt({ className }) {
