@@ -4,8 +4,6 @@ import {
   PlasmicRootProvider,
 } from "@plasmicapp/loader-gatsby"
 import { graphql } from "gatsby"
-
-// You can use any library you want for <head/> injection
 import { Helmet } from "react-helmet"
 import { initPlasmicLoaderWithRegistrations } from "../plasmic-init"
 
