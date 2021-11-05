@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@plasmicapp/loader-gatsby": "^1.0.29",
     "gatsby": "^4.1.0",
     "gatsby-plugin-feed": "^4.1.0",
     "gatsby-plugin-gatsby-cloud": "^4.1.0",

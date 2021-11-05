@@ -12,6 +12,25 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: "@plasmicapp/loader-gatsby",
+      options: {
+        projects: [
+          {
+            id: "2ABoiE4JzKQjtgspRQSPmS", // ID of a project you are using
+            token:
+              "uA5a3ZG3RqCuQFmjdcTA3k88WcRg63jR7sAJEy0ivzqJ57idt4kIOUeFLL80WqCsQCuCjNVszbRievldAxWA", // API token for that project
+          },
+        ],
+        // Fetches the latest revisions, whether or not they were unpublished!
+        // Disable for production to ensure you render only published changes.
+        preview: true,
+        defaultPlasmicPage: require.resolve(
+          "./src/templates/defaultPlasmicPage.tsx"
+        ),
+        ignorePaths: ["/", "/[slug]"],
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
