@@ -23,18 +23,18 @@ const Navbar = () => {
     <nav>
       <div className="nav-container">
           <div className="brand">
-            <Link to="/">
-              <span className="text">Privacy is Important!</span>
+            <Link to="/" className="header-link-home">
+              Privacy is Important!
             </Link>
           </div>
           <div className="links">
-            <Link to="/" activeClassName="active">
+            <Link to="/" className="header-link-home">
               Home
             </Link>
-            <Link to="/" activeClassName="active">
+            <Link to="/" className="header-link-home">
               Project
             </Link>
-            <Link to="/" activeClassName="active">
+            <Link to="/" className="header-link-home">
               About
             </Link>
             <div className="cta">
