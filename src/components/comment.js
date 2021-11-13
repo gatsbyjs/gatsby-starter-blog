@@ -7,7 +7,7 @@ export default class Comments extends Component {
     this.commentBox = React.createRef(); // Creates a reference to inject the <script> element
   }
   componentDidMount () {
-      const utteranceTheme = "github-light";
+      const utteranceTheme = "github-dark";
       let scriptEl = document.createElement("script");
       scriptEl.setAttribute("src", "https://utteranc.es/client.js");
       scriptEl.setAttribute("crossorigin","anonymous");
