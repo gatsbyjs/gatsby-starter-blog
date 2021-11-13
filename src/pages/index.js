@@ -6,13 +6,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Footer from "../components/footer"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <Seo title="Home" />
         <Bio />
         <p>
@@ -26,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
   }
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <Seo title="Home" />
       <Bio />
       <ol style={{ listStyle: `none` }}>

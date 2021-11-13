@@ -39,7 +39,7 @@ const Navbar = () => {
           </Link>
           <div className="cta">
             <button className="dark-switcher" onClick={ThemeToggle}>
-              {theme.dark ? (
+              {theme === 'dark' ? (
                 <span>
                   <img src={sun} className="theme-icon" alt="Light Mode" />
                 </span>
