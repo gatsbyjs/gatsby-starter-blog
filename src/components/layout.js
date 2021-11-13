@@ -15,10 +15,10 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-      // <Navbar />
+      // <Link className="header-link-home" to="/">
+      //   {title}
+      // </Link>
+      <Navbar />
     )
   }
 

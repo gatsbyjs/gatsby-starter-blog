@@ -20,39 +20,37 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
-      <div className="nav-container">
-          <div className="brand">
-            <Link to="/" className="header-link-home">
-              Privacy is Important!
-            </Link>
-          </div>
-          <div className="links">
-            <Link to="/" className="header-link-home">
-              Home
-            </Link>
-            <Link to="/" className="header-link-home">
-              Project
-            </Link>
-            <Link to="/" className="header-link-home">
-              About
-            </Link>
-            <div className="cta">
-              <button className="dark-switcher" onClick={ThemeToggle}>
-                {theme.dark ? (
-                  <span>
-                    <img src={sun} className="theme-icon" alt="Light Mode" />
-                  </span>
-                ) : (
-                  <span>
-                    <img src={moon} className="theme-icon" alt="Dark Mode" />
-                  </span>
-                )}
-              </button>
-            </div>
-          </div>
+    <div className="nav-container">
+      <div className="brand">
+        <Link to="/" className="header-link-home">
+          Privacy is Important!
+        </Link>
+      </div>
+      <div className="links">
+        <Link to="/" className="header-link-home">
+          Home
+        </Link>
+        <Link to="/" className="header-link-home">
+          Project
+        </Link>
+        <Link to="/" className="header-link-home">
+          About
+        </Link>
+        <div className="cta">
+          <button className="dark-switcher" onClick={ThemeToggle}>
+            {theme.dark ? (
+              <span>
+                <img src={sun} className="theme-icon" alt="Light Mode" />
+              </span>
+            ) : (
+              <span>
+                <img src={moon} className="theme-icon" alt="Dark Mode" />
+              </span>
+            )}
+          </button>
         </div>
-    </nav>
+      </div>
+    </div>
   );
 };
 
