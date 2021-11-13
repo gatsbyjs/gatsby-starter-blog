@@ -6,13 +6,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Comments from "../components/comment"
 
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPostTemplate = ({ data}) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
