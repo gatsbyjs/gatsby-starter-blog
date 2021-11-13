@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Comments from "../components/comment"
+import Footer from "../components/footer"
 
 const BlogPostTemplate = ({ data}) => {
   const post = data.markdownRemark
@@ -29,8 +30,7 @@ const BlogPostTemplate = ({ data}) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <Comments />
-        <hr />
+        {/* <hr /> */}
       </article>
       <Bio />
       <div className="blog-post-nav">
@@ -59,6 +59,8 @@ const BlogPostTemplate = ({ data}) => {
           </li>
         </ul>
       </div>
+      <Comments />
+      <Footer />
     </Layout>
   )
 }

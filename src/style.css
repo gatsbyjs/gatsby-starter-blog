@@ -54,15 +54,11 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: #2e353f;
-  --color-text-light: #4f5969;
-  --color-heading: #1a202c;
-  --color-heading-black: blue;
-  --color-accent: #d1dce5;
-  --color-background: white;
-  --color-navbar: whitesmoke;
-  --color-navbar-text: black;
+  --color-primary: #d23669;
+  --color-text: #222;
+  --color-text-light: #222;
+  --color-background: #ffffff;
+  --color-navbar: #fff;
 }
 
 :root.dark {
@@ -119,15 +115,11 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: #005b99;
-  --color-text: whitesmoke;
-  --color-text-light: gray;
-  --color-heading: white;
-  --color-heading-black: blue;
-  --color-accent: #d1dce5;
-  --color-background: #202020;
-  --color-navbar: black;
-  --color-navbar-text: #c1c6d0;
+  --color-primary: rgb(255, 167, 196); /* fix */
+  --color-text: rgba(255, 255, 255, 0.88);
+  --color-text-light: #ffffff; /* fix */
+  --color-background: #282c35; /* fix */
+  --color-navbar: black; /* fix */
 }
 
 /* HTML elements */
@@ -178,7 +170,7 @@ nav {
  .brand a {
   display: flex;
   align-items: center;
-  color: var(--color-navbar-text);
+  color: var(--color-primary);
   margin-right: 0;
   font-weight: 600;
   font-size: 1.1rem;
@@ -186,10 +178,6 @@ nav {
 
 .brand :hover {
   color: var(--color-text-light);
-}
-
-.brand :focus {
-  color: yellow;
 }
 
  .links {
@@ -207,17 +195,13 @@ nav {
    font-weight: 500;
    padding: 1rem 0.75rem;
    margin: 0;
-   color: var(--color-navbar-text);
+   color: var(--color-primary);
    line-height: 1.2;
    text-align: center;
  }
 
  .links a:hover {
    color: var(--color-text-light);
- }
-
- .links a:active {
-   color: blue;
  }
 
 .cta {
@@ -247,7 +231,7 @@ footer a {
 }
 
 hr {
-  background: var(--color-accent);
+  background: var(--color-primary);
   height: 1px;
   border: 0;
 }
@@ -273,13 +257,13 @@ h4,
 h5,
 h6 {
   font-weight: var(--fontWeight-bold);
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: var(--color-text-light);
 }
 
 h2 {
@@ -383,7 +367,7 @@ table {
 }
 
 table thead tr th {
-  border-bottom: 1px solid var(--color-accent);
+  border-bottom: 1px solid var(--color-primary);
 }
 
 /* Link */
