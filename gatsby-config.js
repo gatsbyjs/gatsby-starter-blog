@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Privacy is Important!`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Heri Setiawan`,
+      summary: `yang mulai peduli dengan privacy saat berselancar di internet.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Berbagi tips dan sharing pengalaman.`,
+    siteUrl: `https://heri.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `analystid`,
     },
   },
   plugins: [
