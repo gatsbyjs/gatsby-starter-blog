@@ -8,6 +8,7 @@ export default class Footer extends Component {
         href="https://github.com/heriswn"
         target="_blank"
         rel="noopener noreferrer"
+        alt="github profil link"
         >
         github
         </a>
@@ -15,11 +16,12 @@ export default class Footer extends Component {
         href="/rss.xml"
         target="_blank"
         rel="noopener noreferrer"
+        alt="rss.xml link"
         >
         rss
         </a>
         <div style={{ float: 'right' }}>
-          <a href="https://github.com/heriswn/heri" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/heriswn/heri" target="_blank" rel="noopener noreferrer" alt="source link">
             source
           </a>
         </div>
