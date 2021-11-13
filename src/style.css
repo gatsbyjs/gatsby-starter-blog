@@ -87,6 +87,10 @@ footer {
   padding: var(--spacing-6) var(--spacing-0);
 }
 
+footer a {
+  padding: var(--spacing-1);
+}
+
 hr {
   background: var(--color-accent);
   height: 1px;
@@ -287,6 +291,7 @@ a:focus {
 }
 
 .bio {
+  padding: var(--spacing-6) var(--spacing-0);
   display: flex;
   margin-bottom: var(--spacing-16);
 }
