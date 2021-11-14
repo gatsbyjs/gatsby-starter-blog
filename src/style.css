@@ -146,6 +146,7 @@ body {
 
 /* navbar */
 nav {
+  /* font-size: calc(1em + 1vw); */
   position: fixed;
   width: 100%;
   top: 0;
@@ -487,14 +488,14 @@ a:focus {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-device-width: 640px) and (orientation: portrait) {
   nav {
-    font-size: var(--fontSize-1);
+    font-size: 12px;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
   nav {
-    font-size: var(--fontSize-0);
+    font-size: 12px;
   }
 }
