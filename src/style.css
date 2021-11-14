@@ -23,10 +23,12 @@
   --spacing-8: 2rem;
   --spacing-10: 2.5rem;
   --spacing-12: 3rem;
+  --spacing-13: 3.5rem;
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
+  --spacing-33:22rem;
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -84,10 +86,12 @@
   --spacing-8: 2rem;
   --spacing-10: 2.5rem;
   --spacing-12: 3rem;
+  --spacing-13: 3.5rem;
   --spacing-16: 4rem;
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
+  --spacing-33:22rem;
   --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -146,78 +150,46 @@ body {
 
 /* navbar */
 nav {
-  /* font-size: calc(1em + 1vw); */
   position: fixed;
+  display: flex;
+  background: var(--color-navbar);
   width: 100%;
   top: 0;
   left: 0;
+  justify-content: space-between;
+  height: var(--spacing-16);
+  padding-left: var(--spacing-33);
+  padding-right: var(--spacing-33);
   z-index: 3;
-  width: 100%;
-  background: var(--color-navbar);
   box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
 }
 
-.nav-container {
-  padding: var(--spacing-5) var(--spacing-5);
-  height: 55px;
-  max-width: var(--maxWidth-wrapper);
-  margin: auto;
+nav ul {
   display: flex;
-  align-items: center;
+  list-style: none;
   justify-content: space-between;
-  transition: height 0.3s ease;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
- .brand a {
-  display: flex;
-  align-items: center;
+nav ul li a {
   color: var(--color-primary);
-  margin-right: 0;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: var(--fontWeight-bold);
+  font-family: var(--font-heading);
+  font-size: var(--fontSize-0);
+  padding: var(--spacing-2);
+  text-decoration: none;
 }
 
-.brand :hover {
-  color: var(--color-text-light);
-}
-
- .links {
-   display: flex;
-   flex-direction: row;
-   justify-content: flex-end;
-   flex: 1;
-   margin: 0;
- }
-
- .links a {
-   display: flex;
-   align-items: center;
-   font-size: 1.05rem;
-   font-weight: 500;
-   padding: 1rem 0.75rem;
-   margin: 0;
-   color: var(--color-primary);
-   line-height: 1.2;
-   text-align: center;
- }
-
- .links a:hover {
-   color: var(--color-text-light);
- }
-
-.cta {
-  display: flex;
-  align-items: center;
-}
-
-.dark-switcher {
+nav ul li button {
   -webkit-appearance: none;
   border: 0;
   margin: 0;
   background: transparent;
 }
 
-.theme-icon {
+nav ul li button img {
   height: 18px;
   width: 18px;
   margin-bottom: 0;
@@ -488,7 +460,7 @@ a:focus {
   }
 }
 
-@media screen and (max-device-width: 640px) and (orientation: portrait) {
+/* @media screen and (max-device-width: 640px) and (orientation: portrait) {
   nav {
     font-size: 12px;
   }
@@ -498,4 +470,4 @@ a:focus {
   nav {
     font-size: 12px;
   }
-}
+} */
