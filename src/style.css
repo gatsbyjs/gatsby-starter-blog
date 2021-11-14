@@ -115,11 +115,11 @@
   --fontSize-5: 2.074rem;
   --fontSize-6: 2.488rem;
   --fontSize-7: 2.986rem;
-  --color-primary: rgb(255, 167, 196); /* fix */
+  --color-primary: rgb(255, 167, 196);
   --color-text: rgba(255, 255, 255, 0.88);
-  --color-text-light: #ffffff; /* fix */
-  --color-background: #282c35; /* fix */
-  --color-navbar: black; /* fix */
+  --color-text-light: #ffffff;
+  --color-background: #282c35;
+  --color-navbar: black;
 }
 
 /* HTML elements */
@@ -222,11 +222,22 @@ nav {
   margin-bottom: 0;
 }
 
+/* footer */
+
 footer {
+  display: flex;
+  justify-content: space-between;
   padding: var(--spacing-6) var(--spacing-0);
 }
 
+footer ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
 footer a {
+  color: var(--color-primary);
   padding: var(--spacing-1);
 }
 
@@ -473,5 +484,17 @@ a:focus {
   ul,
   ol {
     list-style-position: inside;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    font-size: var(--fontSize-1);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    font-size: var(--fontSize-0);
   }
 }
