@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'gatsby';
 import sun from '../images/sun.svg'
 import moon from '../images/moon.svg'
 
@@ -21,37 +20,35 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="nav-container">
-        <div className="brand">
-          <Link to="/" className="header-link-home">
-            Privacy is Important!
-          </Link>
-        </div>
-        <div className="links">
-          <Link to="/" className="header-link-home">
-            Home
-          </Link>
-          <Link to="/" className="header-link-home">
-            Project
-          </Link>
-          <Link to="/" className="header-link-home">
-            About
-          </Link>
-          <div className="cta">
-            <button className="dark-switcher" onClick={ThemeToggle}>
-              {theme === 'dark' ? (
-                <span>
-                  <img src={sun} className="theme-icon" alt="Light Mode" />
-                </span>
-              ) : (
-                <span>
-                  <img src={moon} className="theme-icon" alt="Dark Mode" />
-                </span>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
+      <ul>
+        <li>
+          <a href="/">Privacy</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/">Project</a>
+        </li>
+        <li>
+          <a href="/">About</a>
+        </li>
+        <li>
+          <button onClick={ThemeToggle}>
+            {theme === 'dark' ? (
+              <span>
+                <img src={sun} alt="Light Mode" />
+              </span>
+            ) : (
+              <span>
+                <img src={moon} alt="Dark Mode" />
+              </span>
+            )}
+          </button>
+        </li>
+      </ul>
     </nav>
   );
 };

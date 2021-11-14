@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "heri-setiawan-page",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "Fork from Gatsby starter for a blog powered by Gatsby and Markdown",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Heri Setiawan <herisetiawan1453@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/heriswn/heri/issues"
   },
   "dependencies": {
     "gatsby": "^4.1.3",
