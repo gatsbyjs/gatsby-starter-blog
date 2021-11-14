@@ -488,6 +488,12 @@ a:focus {
   }
 }
 
+@media screen and (max-device-width: 640px) and (orientation: portrait) {
+  nav {
+    font-size: 12px;
+  }
+}
+
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
   nav {
     font-size: 12px;
