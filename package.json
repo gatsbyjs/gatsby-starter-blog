@@ -25,6 +25,7 @@
     "gatsby-source-filesystem": "^4.1.1",
     "gatsby-transformer-remark": "^5.1.2",
     "gatsby-transformer-sharp": "^4.1.0",
+    "joi": "^17.4.2",
     "prismjs": "^1.25.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
