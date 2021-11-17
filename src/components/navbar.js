@@ -20,35 +20,29 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul>
-        <li>
+      <div className="nav-container">
+        <div className="brand">
           <a href="/">Privacy</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
+        </div>
+        <div className="links">
+          <a href="/">Blog</a>
           <a href="/">Project</a>
-        </li>
-        <li>
           <a href="/">About</a>
-        </li>
-        <li>
-          <button onClick={ThemeToggle}>
-            {theme === 'dark' ? (
-              <span>
-                <img src={sun} alt="Light Mode" />
-              </span>
-            ) : (
-              <span>
-                <img src={moon} alt="Dark Mode" />
-              </span>
-            )}
-          </button>
-        </li>
-      </ul>
+          <div className="cta">
+            <button onClick={ThemeToggle}>
+              {theme === 'dark' ? (
+                <span>
+                  <img className="theme-icon" src={sun} alt="Light Mode" />
+                </span>
+              ) : (
+                <span>
+                  <img className="theme-icon" src={moon} alt="Dark Mode" />
+                </span>
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

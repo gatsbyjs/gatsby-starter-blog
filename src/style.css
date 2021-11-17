@@ -151,45 +151,69 @@ body {
 /* navbar */
 nav {
   position: fixed;
-  display: flex;
   background: var(--color-navbar);
   width: 100%;
   top: 0;
   left: 0;
-  justify-content: space-between;
-  height: var(--spacing-16);
-  padding-left: var(--spacing-33);
-  padding-right: var(--spacing-33);
   z-index: 3;
-  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 18px var(--color-primary);
 }
 
-nav ul {
+.nav-container {
+  padding: var(--spacing-0) var(--spacing-6);
+  height: 55px;
+  max-width: var(--maxWidth-wrapper);
+  margin: auto;
   display: flex;
-  list-style: none;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
   align-items: center;
+  justify-content: space-between;
+  transition: height 0.3s ease;
 }
 
-nav ul li a {
-  color: var(--color-primary);
-  font-weight: var(--fontWeight-bold);
-  font-family: var(--font-heading);
+.brand a {
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+  margin-right: 0;
+  font-weight: 600;
   font-size: var(--fontSize-0);
-  padding: var(--spacing-2);
   text-decoration: none;
 }
 
-nav ul li button {
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+  margin: 0;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  font-size: var(--fontSize-0);
+  font-weight: 500;
+  padding: var(--spacing-4) var(--spacing-3);
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+}
+
+button {
   -webkit-appearance: none;
   border: 0;
   margin: 0;
   background: transparent;
 }
 
-nav ul li button img {
+.theme-icon {
   height: 18px;
   width: 18px;
   margin-bottom: 0;
