@@ -28,7 +28,7 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 ## Acknowledgements
 
-- Gatsby Starter Blog - [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog)
+- Gatsby - [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog)
 - Kyle Mathews - [Kyle Mathews](https://github.com/KyleAMathews)
 
 ## License
