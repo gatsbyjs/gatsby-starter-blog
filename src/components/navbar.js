@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'gatsby'
 import sun from '../images/sun.svg'
 import moon from '../images/moon.svg'
 
@@ -24,12 +25,12 @@ const Navbar = () => {
     <nav>
       <div className="nav-container">
         <div className="brand">
-          <a href="/">Privacy</a>
+          <Link to="/">Privacy</Link>
         </div>
         <div className="links">
-          <a href="/">Blog</a>
-          <a href="/">Project</a>
-          <a href="/">About</a>
+          <Link to="/">Blog</Link>
+          <Link to="/">Project</Link>
+          <Link to="/">About</Link>
           <div className="cta">
             <button className="dark-switcher" onClick={ThemeToggle}>
               {theme === 'dark' ? (
