@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React, { Component } from 'react';
 
 export default class Footer extends Component {
@@ -6,27 +7,27 @@ export default class Footer extends Component {
       <footer>
         <ul>
           <li>
-            <a
+            <Link
             href="https://github.com/heriswn"
             target="_blank"
             rel="noopener noreferrer"
-            >Github</a>
+            >Github</Link>
           </li>
           <li>
-            <a
+            <Link
             href="https://heri.gatsbyjs.io/rss.xml"
             target="_blank"
             rel="noopener noreferrer"
-            >RSS</a>
+            >RSS</Link>
           </li>
         </ul>
         <ul>
           <li>
-            <a
+            <Link
             href="https://github.com/heriswn/heri"
             target="_blank"
             rel="noopener noreferrer"
-            >Source</a>
+            >Source</Link>
           </li>
         </ul>
       </footer>
