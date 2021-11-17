@@ -4,9 +4,11 @@ import moon from '../images/moon.svg'
 
 const Navbar = () => {
   let websiteTheme;
+
   if (typeof window !== `undefined`) {
     websiteTheme = window.__theme;
   }
+
   useEffect(() => {
     setTheme(window.__theme);
   }, []);
@@ -29,15 +31,11 @@ const Navbar = () => {
           <a href="/">Project</a>
           <a href="/">About</a>
           <div className="cta">
-            <button onClick={ThemeToggle}>
+            <button className="dark-switcher" onClick={ThemeToggle}>
               {theme === 'dark' ? (
-                <span>
-                  <img className="theme-icon" src={sun} alt="Light Mode" />
-                </span>
+                <img className="theme-icon" src={sun} alt="Light Mode" />
               ) : (
-                <span>
-                  <img className="theme-icon" src={moon} alt="Dark Mode" />
-                </span>
+                <img className="theme-icon" src={moon} alt="Dark Mode" />
               )}
             </button>
           </div>

@@ -206,7 +206,7 @@ nav {
   align-items: center;
 }
 
-button {
+.dark-switcher {
   -webkit-appearance: none;
   border: 0;
   margin: 0;
