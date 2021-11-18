@@ -11,7 +11,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
               if (theme === 'dark') {
                 document.documentElement.className = 'dark';
               } else {
-                document.documentElement.className = '';
+                document.documentElement.className = 'light';
               }
             };
             window.__setPreferredTheme = function(theme) {
