@@ -15,7 +15,7 @@ export default class Footer extends Component {
           </li>
           <li>
             <Link
-            href="https://heri.gatsbyjs.io/rss.xml"
+            href="https://gatsbyimprovedstarterblog.gatsbyjs.io/rss.xml"
             target="_blank"
             rel="noopener noreferrer"
             >RSS</Link>
