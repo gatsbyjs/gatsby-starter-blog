@@ -1,6 +1,6 @@
 ## Quickstart
 
-Personal website running on Gatsby, React, and Node.js
+Personal website running on Gatsby.Js, React.Js, and Node.js improved from [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 
 To install
 
@@ -21,6 +21,7 @@ Navigate to `localhost:8000`.
 
 - Posts and pages in Markdown
 - Night mode
+- Comments with [utterances 🔮](https://utteranc.es)
 
 ## Contributing
 
