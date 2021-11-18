@@ -24,7 +24,7 @@ export default class Footer extends Component {
         <ul>
           <li>
             <Link
-            href="https://github.com/heriswn/heri"
+            href="https://github.com/heriswn/gatsby-improved-starter-blog"
             target="_blank"
             rel="noopener noreferrer"
             >Source</Link>
