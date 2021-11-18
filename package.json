@@ -1,7 +1,7 @@
 {
-  "name": "heri-setiawan-page",
+  "name": "gatsby-improved-starter-blog",
   "private": true,
-  "description": "Fork from Gatsby starter for a blog powered by Gatsby and Markdown",
+  "description": "Personal blog site using GatsbyJs, ReactJs, and NodeJs improved from Gatsby Starter Blog.",
   "version": "0.1.0",
   "author": "Heri Setiawan <herisetiawan1453@gmail.com>",
   "bugs": {
