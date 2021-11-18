@@ -123,7 +123,7 @@
   --color-text: rgba(255, 255, 255, 0.88);
   --color-text-light: #ffffff;
   --color-background: #282c35;
-  --color-navbar: black;
+  --color-navbar: #222;
 }
 
 /* HTML elements */
@@ -151,12 +151,16 @@ body {
 /* navbar */
 nav {
   position: fixed;
-  background: var(--color-navbar);
   width: 100%;
   top: 0;
   left: 0;
   z-index: 3;
-  box-shadow: 1px 2px 18px var(--color-primary);
+  background: var(--color-background);
+}
+
+.nav-scroll {
+  background: var(--color-navbar);
+  box-shadow: 1px 2px 18px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
