@@ -2,7 +2,7 @@
   "name": "gatsby-improved-starter-blog",
   "private": true,
   "description": "Personal blog site using GatsbyJs, ReactJs, and NodeJs improved from Gatsby Starter Blog.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Heri Setiawan <herisetiawan1453@gmail.com>",
   "bugs": {
     "url": "https://github.com/heriswn/heri/issues"
