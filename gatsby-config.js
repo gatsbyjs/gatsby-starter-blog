@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Privacy is Important!`,
+    title: `Gatsby Improved Starter Blog`,
     author: {
       name: `Heri Setiawan`,
-      summary: `yang mulai peduli dengan privacy saat berselancar di internet.`,
+      summary: `who lives and works in Indonesia building useful things.`,
     },
-    description: `Berbagi tips dan sharing pengalaman.`,
+    description: `An improved starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbyimprovedstarterblog.gatsbyjs.io/`,
     social: {
       twitter: `analystid`,

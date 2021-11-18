@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "author": "Heri Setiawan <herisetiawan1453@gmail.com>",
   "bugs": {
-    "url": "https://github.com/heriswn/heri/issues"
+    "url": "https://github.com/heriswn/gatsby-improved-starter-blog/issues"
   },
   "dependencies": {
     "gatsby": "^4.2.0",
@@ -35,15 +35,15 @@
   "devDependencies": {
     "prettier": "^2.4.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/heriswn/gatsby-improved-starter-blog#readme",
   "keywords": [
-    "gatsby"
+    "gatsby, gatsby-plugin, gatsby-theme"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/heriswn/gatsby-improved-starter-blog.git"
   },
   "scripts": {
     "build": "gatsby build",
