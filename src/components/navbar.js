@@ -34,18 +34,9 @@ export default class Navbar extends Component {
           </div>
           <div className="links">
             <Link to="/">Blog</Link>
-            <Link to="/">Project</Link>
-            <Link to="/">About</Link>
+            <Link to="/project">Project</Link>
+            <Link to="/about">About</Link>
             <ToggleMode />
-            {/* <div className="cta">
-              <button className="dark-switcher" onClick={ThemeToggle}>
-                {theme === 'dark' ? (
-                  <img className="theme-icon" src={sun} alt="Light Mode" />
-                ) : (
-                  <img className="theme-icon" src={moon} alt="Dark Mode" />
-                )}
-              </button>
-            </div> */}
           </div>
         </div>
       </nav>
