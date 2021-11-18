@@ -1,6 +1,6 @@
 ## Quickstart
 
-Personal website running on Gatsby.Js, React.Js, and Node.js improved from [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+Personal website running on GatsbyJs, ReactJs, and Nodejs improved from [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 
 To install
 
@@ -19,7 +19,10 @@ Navigate to `localhost:8000`.
 
 ## Features
 
+- Gatsby V4
 - Posts and pages in Markdown
+- RSS Feeds
+- SEO
 - Night mode
 - Comments with [utterances 🔮](https://utteranc.es)
 
@@ -30,7 +33,6 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 ## Acknowledgements
 
 - Gatsby - [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog)
-- Kyle Mathews - [Kyle Mathews](https://github.com/KyleAMathews)
 
 ## License
 
