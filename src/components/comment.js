@@ -12,7 +12,7 @@ export default class Comments extends Component {
       scriptEl.setAttribute("src", "https://utteranc.es/client.js");
       scriptEl.setAttribute("crossorigin","anonymous");
       scriptEl.setAttribute("async", true);
-      scriptEl.setAttribute("repo", "heriswn/heri.gatsbyjs.io-comments");
+      scriptEl.setAttribute("repo", "heriswn/gatsby-improved-starter-blog-comments");
       scriptEl.setAttribute("issue-term", "pathname");
       scriptEl.setAttribute( "theme", utteranceTheme);
       this.commentBox.current.appendChild(scriptEl);

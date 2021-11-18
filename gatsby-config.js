@@ -6,7 +6,7 @@ module.exports = {
       summary: `yang mulai peduli dengan privacy saat berselancar di internet.`,
     },
     description: `Berbagi tips dan sharing pengalaman.`,
-    siteUrl: `https://heri.gatsbyjs.io/`,
+    siteUrl: `https://gatsbyimprovedstarterblog.gatsbyjs.io/`,
     social: {
       twitter: `analystid`,
     },
