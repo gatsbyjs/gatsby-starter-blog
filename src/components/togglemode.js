@@ -3,10 +3,12 @@ import sun from '../images/sun.svg'
 import moon from '../images/moon.svg'
 
 const ToggleMode = () => {
-  let websiteTheme;
+  let websiteTheme = 'light';
+
   if (typeof window !== `undefined`) {
     websiteTheme = window.__theme;
   }
+
   useEffect(() => {
     setTheme(window.__theme);
   }, []);
@@ -22,9 +24,9 @@ const ToggleMode = () => {
     <div className="cta">
         <button className="dark-switcher" onClick={ThemeToggle}>
             {theme === 'dark' ? (
-            <img className="theme-icon" src={sun} alt="Light Mode" />
+              <img className="theme-icon" src={sun} alt="Light Mode" />
             ) : (
-            <img className="theme-icon" src={moon} alt="Dark Mode" />
+              <img className="theme-icon" src={moon} alt="Dark Mode" />
             )}
         </button>
     </div>
