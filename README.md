@@ -26,6 +26,8 @@ Navigate to `localhost:8000`.
 - Night mode
 - Comments with [utterances 🔮](https://utteranc.es)
 
+## View stat blog in [Umami](https://web-umami.herokuapp.com/share/RzkgB2wL/gatsby-improved-starter-blog)
+
 ## Contributing
 
 If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!
