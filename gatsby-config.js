@@ -58,6 +58,16 @@ module.exports = {
     //   },
     // },
     {
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: '7b05d25e-abbb-44b1-a86c-eb399d2d48f4',
+        srcUrl: 'https://web-umami.herokuapp.com/umami.js',
+        includeInDevelopment: false,
+        autoTrack: true,
+        respectDoNotTrack: true
+      },
+    },
+    {
       resolve: `gatsby-plugin-feed`,
       options: {
         query: `
