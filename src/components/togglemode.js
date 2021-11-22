@@ -3,7 +3,7 @@ import sun from '../images/sun.svg'
 import moon from '../images/moon.svg'
 
 const ToggleMode = () => {
-  let websiteTheme = 'light';
+  let websiteTheme;
 
   if (typeof window !== `undefined`) {
     websiteTheme = window.__theme;
