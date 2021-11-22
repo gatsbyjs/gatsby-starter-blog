@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Footer from "../components/footer"
+import { formatPostDate, formatReadingTime } from "../utils/helpers"
 
 const BlogIndex = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -45,7 +46,8 @@ const BlogIndex = ({ data }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
+                  <small>{formatPostDate(post.frontmatter.date)}
+                    {` • ${formatReadingTime(post.timeToRead)}`}</small>
                 </header>
                 <section>
                   <p
@@ -80,6 +82,7 @@ export const pageQuery = graphql`
         fields {
           slug
         }
+        timeToRead
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
