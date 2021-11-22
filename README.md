@@ -19,13 +19,14 @@ Navigate to `localhost:8000`.
 
 ## Features
 
-- Gatsby V4
-- Posts and pages in Markdown
-- RSS Feeds
-- SEO
-- Support Dark Mode with useState
-- Support Comments with [utterances 🔮](https://utteranc.es)
-- Support Umami Analytics [view](https://web-umami.herokuapp.com/share/RzkgB2wL/gatsby-improved-starter-blog)
+- Gatsby 4.
+- Posts and pages in Markdown.
+- RSS Feeds.
+- SEO.
+- Time to read display.
+- Support Dark Mode with useState.
+- Support Comments with [utterances 🔮](https://utteranc.es).
+- Support Umami Analytics (view in [here](https://web-umami.herokuapp.com/share/RzkgB2wL/gatsby-improved-starter-blog)).
 
 ## Contributing
 
@@ -33,7 +34,7 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 ## Acknowledgements
 
-- Gatsby - [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog)
+- Gatsby - [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 
 ## License
 
