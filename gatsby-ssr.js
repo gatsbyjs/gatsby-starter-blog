@@ -25,7 +25,7 @@ exports.onRenderBody = ({ setHeadComponents }) => {
               preferredTheme = localStorage.getItem('color-theme');
             } catch (e) {}
             let darkQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : ''));
+            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'));
           })();`,
       }}
     />,

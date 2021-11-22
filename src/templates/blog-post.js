@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Comments from "../components/comment"
 import Footer from "../components/footer"
+import { formatPostDate, formatReadingTime } from "../utils/helpers"
 
 const BlogPostTemplate = ({ data}) => {
   const post = data.markdownRemark
@@ -24,7 +25,8 @@ const BlogPostTemplate = ({ data}) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <p>{formatPostDate(post.frontmatter.date)}
+                {` • ${formatReadingTime(post.timeToRead)}`}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -82,6 +84,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
