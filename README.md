@@ -23,8 +23,9 @@ Navigate to `localhost:8000`.
 - Posts and pages in Markdown
 - RSS Feeds
 - SEO
-- Night mode
-- Comments with [utterances 🔮](https://utteranc.es)
+- Support Dark Mode with useState
+- Support Comments with [utterances 🔮](https://utteranc.es)
+- Support Umami Analytics [view](https://web-umami.herokuapp.com/share/RzkgB2wL/gatsby-improved-starter-blog)
 
 ## Contributing
 
