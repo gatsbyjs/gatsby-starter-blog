@@ -37,9 +37,9 @@ const Bio = () => {
         layout="fixed"
         formats={["auto", "webp", "avif"]}
         src="../images/smac.jpg"
-        width={70}
-        height={70}
-        quality={130}
+        width={60}
+        height={60}
+        quality={95}
         alt="Profile picture"
       />
       {author?.name && (
