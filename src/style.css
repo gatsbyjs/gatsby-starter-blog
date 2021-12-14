@@ -81,6 +81,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color:#fff1f1;
 }
 
 footer {
@@ -120,7 +121,7 @@ h6 {
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
-  color: var(--color-heading-black);
+  color: #ff1d1d;
 }
 
 h2 {
