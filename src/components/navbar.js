@@ -30,7 +30,7 @@ export default class Navbar extends Component {
       <nav className={scrolled ? 'nav-scroll' : 'nav'}>
         <div className="nav-container">
           <div className="brand">
-            <Link to="/">Privacy</Link>
+            <Link to="/">Gatsby Improved Starter Blog</Link>
           </div>
           <div className="links">
             <Link to="/">Blog</Link>

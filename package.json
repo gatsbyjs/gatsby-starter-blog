@@ -17,6 +17,7 @@
     "gatsby-plugin-offline": "^5.4.0",
     "gatsby-plugin-react-helmet": "^5.4.0",
     "gatsby-plugin-sharp": "^4.4.0",
+    "gatsby-plugin-umami": "^0.1.3",
     "gatsby-remark-copy-linked-files": "^5.4.0",
     "gatsby-remark-images": "^6.4.0",
     "gatsby-remark-prismjs": "^6.4.0",
