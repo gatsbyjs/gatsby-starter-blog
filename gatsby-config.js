@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Gatsby Starter Blog with Second Edition`,
     author: {
       name: `Kyle Mathews`,
       summary: `who lives and works in San Francisco building useful things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A starter with Second Edition integration, lightly forked from gatsby-starter-blog.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
       twitter: `kylemathews`,
@@ -28,11 +28,22 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-secondedition",
+      options: {
+        // Copy paste this from:
+        // https://secondedition.io/account
+        // accessToken: "",
+        //
+        // Change this number to see more/fewer of your posts
+        // maxPosts: 25
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-images-remote`,
             options: {
               maxWidth: 630,
             },
@@ -71,8 +82,9 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.nodes.map(node => {
                 return Object.assign({}, node.frontmatter, {
+                  title: node.fields.title,
                   description: node.excerpt,
-                  date: node.frontmatter.date,
+                  date: node.fields.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
@@ -82,15 +94,13 @@ module.exports = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { order: DESC, fields: [fields___date] },
                 ) {
                   nodes {
                     excerpt
                     html
                     fields {
                       slug
-                    }
-                    frontmatter {
                       title
                       date
                     }
@@ -99,7 +109,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Gatsby Starter Blog with Second Edition RSS Feed",
           },
         ],
       },
@@ -107,7 +117,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
+        name: `Gatsby Starter Blog with Second Edition`,
         short_name: `GatsbyJS`,
         start_url: `/`,
         background_color: `#ffffff`,

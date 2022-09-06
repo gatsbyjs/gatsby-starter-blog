@@ -19,8 +19,8 @@ const BlogPostTemplate = ({
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <h1 itemProp="headline">{post.fields.title}</h1>
+          <p>{post.fields.date}</p>
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -44,14 +44,14 @@ const BlogPostTemplate = ({
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                ← {previous.fields.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.fields.title} →
               </Link>
             )}
           </li>
@@ -64,8 +64,8 @@ const BlogPostTemplate = ({
 export const Head = ({ data: { markdownRemark: post } }) => {
   return (
     <Seo
-      title={post.frontmatter.title}
-      description={post.frontmatter.description || post.excerpt}
+      title={post.fields.title}
+      description={post.fields.description || post.excerpt}
     />
   )
 }
@@ -87,25 +87,23 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
-      frontmatter {
+      fields {
         title
         date(formatString: "MMMM DD, YYYY")
+      }
+      frontmatter {
         description
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
       fields {
         slug
-      }
-      frontmatter {
         title
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
       fields {
         slug
-      }
-      frontmatter {
         title
       }
     }

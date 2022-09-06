@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const makeSlug = require("slug")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -12,7 +13,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
+          sort: { fields: [fields___date], order: ASC }
           limit: 1000
         ) {
           nodes {
@@ -61,13 +62,56 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
+  // Like querying gatsby-transformer-remark's excerpt field with the
+  // pruneLength parameter
+  function trimOnBoundary(s, l) {
+    if (s.length <= l) {
+      return s
+    }
+    const chopped = s.substring(s, l + 1)
+    const m = chopped.lastIndexOf(` `)
+    return chopped.substring(0, m >= 0 ? m : m.length)
+  }  
+  
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
-
+    const { slug, date, title } = (() => {
+    const parent = getNode(node.parent)
+    if (parent.internal.type === `SecondEdition`) {
+        // NOTE: In theory, gatsby-transformer-remark's excerpt field would work
+        //       here but it's not available at the time onCreateNode is
+        //       called - additionally, parent.intro is limited to just the first
+        //       sentence and has a little more processing performed on it to
+        //       make it more "title-like"
+        const title = trimOnBoundary(parent.intro, 100)
+        return {
+          // Trailing and leading slashes to match the behaviour of
+          // createFilePath, used below - without them, some of the links in
+          // this starter break
+          slug: `/${makeSlug(title)}/`,
+          date: parent.date,
+          title
+        }
+      }
+      return {
+        slug: createFilePath({ node, getNode }),
+        date: node.frontmatter.date,
+        title: node.frontmatter.title
+      }
+    })()
     createNodeField({
-      name: `slug`,
       node,
-      value,
+      name: `slug`,
+      value: slug
+    })
+    createNodeField({
+      node,
+      name: `date`,
+      value: date
+    })
+    createNodeField({
+      node,
+      name: `title`,
+      value: title
     })
   }
 }
@@ -103,13 +147,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Frontmatter {
-      title: String
       description: String
-      date: Date @dateformat
     }
 
     type Fields {
       slug: String
+      title: String
+      date: Date @dateformat
     }
   `)
 }

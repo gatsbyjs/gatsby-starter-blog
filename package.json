@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "gatsby-starter-secondedition",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A starter for a blog powered by Gatsby, Markdown, and Second Edition",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/trevj/gatsby-starter-secondedition/issues"
   },
   "dependencies": {
     "gatsby": "^4.22.0",
@@ -14,30 +14,32 @@
     "gatsby-plugin-manifest": "^4.22.0",
     "gatsby-plugin-sharp": "^4.22.0",
     "gatsby-remark-copy-linked-files": "^5.22.0",
-    "gatsby-remark-images": "^6.22.0",
+    "gatsby-remark-images-remote": "^2.1.1",
     "gatsby-remark-prismjs": "^6.22.0",
     "gatsby-remark-responsive-iframe": "^5.22.0",
     "gatsby-remark-smartypants": "^5.22.0",
     "gatsby-source-filesystem": "^4.22.0",
+    "gatsby-source-secondedition": "0.0.1",
     "gatsby-transformer-remark": "^5.22.0",
     "gatsby-transformer-sharp": "^4.22.0",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "slug": "^8.0.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
     "prettier": "^2.7.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/trevj/gatsby-starter-secondedition#readme",
   "keywords": [
     "gatsby"
   ],
   "license": "0BSD",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/trevj/gatsby-starter-secondedition.git"
   },
   "scripts": {
     "build": "gatsby build",
