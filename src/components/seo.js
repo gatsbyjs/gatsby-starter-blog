@@ -17,7 +17,7 @@ const Seo = ({ description, title, children }) => {
             title
             description
             social {
-              twitter
+              linkedin
             }
           }
         }
@@ -35,13 +35,13 @@ const Seo = ({ description, title, children }) => {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="linkedin:card" content="summary" />
       <meta
-        name="twitter:creator"
-        content={site.siteMetadata?.social?.twitter || ``}
+        name="linkedin:creator"
+        content={site.siteMetadata?.social?.linkedin || ``}
       />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={metaDescription} />
+      <meta name="linkedin:title" content={title} />
+      <meta name="linkedin:description" content={metaDescription} />
       {children}
     </>
   )
