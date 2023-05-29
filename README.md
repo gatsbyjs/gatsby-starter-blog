@@ -14,6 +14,16 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
 ## 🚀 Quick start
 
+0. **Bump dependencies.**
+
+    Use latest libraries.
+
+    ```shell
+    npm update
+    npm install --legacy-peer-deps
+    ```
+
+
 1.  **Create a Gatsby site.**
 
     Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the blog starter.
