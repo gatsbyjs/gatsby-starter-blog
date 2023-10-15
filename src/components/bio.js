@@ -47,7 +47,7 @@ const Bio = () => {
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
           <a href={`https://www.linkedin.com/in/${social?.linkedin || ``}`}>
-            You can follow him on LindedIn
+            Follow him on LindedIn
           </a>
         </p>
       )}
