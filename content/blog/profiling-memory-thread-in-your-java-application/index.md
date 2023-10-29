@@ -4,7 +4,7 @@ date: "2023-10-28T21:37:00Z"
 description: ""
 ---
 
-In recent weeks, I tried to import a library maintained by another team, which aims to establish a connection between the server and the client using a customized protocol. However, after completing the implementation and deployment, a serious memory leak occurred. 
+On a recent endeavor, I integrated a new library maintained by another team, which aims to establish a connection between the server and the client using a customized protocol. However, after completing the implementation and deployment, the system experienced a significant memory leak. 
 
 ![Memory Leak](./ocp_mleak.png)
 
@@ -134,7 +134,7 @@ _java_thread_list=0x00007f7070002140, length=660, elements={
 JNI global refs: 26, weak refs: 4
 ```
 
-Upon seeing these messages, I noticed that there seem to be too many runnable threads that are not being released: 
+When I saw these messages, I noticed that the output is longer than I expected, and it appears that there are numerous active threads that have not been released: 
 
 ```bash
 $ jstack -l 7 | grep client
@@ -158,7 +158,7 @@ Therefore, it's now clear that too many unreleased threads are causing the leak.
 
 ## Conclusion
 
-It's very frustrating when a memory leak occurs, and you spend a lot of time on it without seeing any productive results. Nonetheless, taking advantage of various profiling tools can greatly alleviate your stress. Remember this: no matter the issue, it definitely exists. As long as you use the right approaches and leverage the right tools, you're on the path to success.  
+Profiling and debugging memory leaks in a Java application, especially if you're new to the Java ecosystem, might appear challenging. However, with the right tools and techniques, one can efficiently pinpoint the issues and ensure efficient application performance. Regular monitoring, understanding error messages, and leveraging built-in JDK tools can illuminate potential pitfalls and lead to effective solutions.
 
 ## References
 

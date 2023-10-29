@@ -12,7 +12,7 @@ module.exports = {
     title: `One More for The Code`,
     author: {
       name: `J.W. Liang`,
-      summary: `who lives in München building interesting things.`,
+      summary: `who lives in Munich and builds interesting things.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,

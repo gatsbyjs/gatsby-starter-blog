@@ -6,7 +6,7 @@ description: ""
 
 Getting past the Great Wall of China's internet restrictions is no easy feat. Today, China invests significantly in analyzing and detecting unusual packets to prevent its citizens from accessing certain parts of the Internet. To avoid having data transmitted via OpenVPN inspected and blocked by Chinese authorities, this study outlines how to set up OpenVPN and Stunnel for discreet data transmission.
 
-## 0x10 OpenVPN Architecture
+## OpenVPN Architecture
 
 First of all, let's take a look at the architecture. There are 2 parts forming the OpenVPN tunnel: 
 
@@ -22,7 +22,7 @@ OpenVPN Client Service
 
 When the connection is established, a new interface is created on your devices, which is used for your requests and traffics. 
 
-### 0x11 OpenVPN Server
+### OpenVPN Server
 
 Here are the settings of OpenVPN on the server side (Ubuntu 22.04 LTS): 
 
@@ -84,7 +84,7 @@ status /var/log/openvpn/openvpn-status.log
 verb 3
 ```
 
-### 0x12 OpenVPN Client
+### OpenVPN Client
 
 Here are the settings of OpenVPN on the client side (Ubuntu 22.04 LTS): 
 
@@ -140,7 +140,7 @@ route server.example.com 255.255.255.255 net_gateway
 ```shell!
 ``` -->
 
-## 0x20 Stunnel Architecture
+## Stunnel Architecture
 
 OK, here we are for the OpenVPN plus Stunnel. Before we start it, let's see the architect: 
 
@@ -175,7 +175,7 @@ If you do not want to download and use [`NetCat`](https://nmap.org/ncat/) for te
 https://blog.csdn.net/hou09tian/article/details/100806600  
 https://blog.gtwang.org/linux/linux-utility-netcat-examples/   -->
 
-### 0x21 Stunnel Server
+### Stunnel Server
 
 Here are the settings of Stunnel on the server side (Ubuntu 22.04 LTS): 
 
@@ -203,7 +203,7 @@ accept = 443
 connect = server.example.com:1194
 ```
 
-### 0x22 Stunnel Client
+### Stunnel Client
 
 Here are the settings of Stunnel on the client side (Ubuntu 22.04 LTS): 
 
@@ -226,7 +226,7 @@ accept=1194
 connect=minipc.hopto.org:443
 ```
 
-### 0x23 OpenVPN Client
+### OpenVPN Client
 
 Here are the settings of OpenVPN on the server side (Ubuntu 22.04 LTS): 
 
@@ -269,7 +269,7 @@ route server.example.com 255.255.255.255 net_gateway
 ```shell!
 ``` -->
 
-## 0x30 Reference
+## References
 
 * [Open Source Community | OpenVPN](https://openvpn.net/community/)
 * [stunnel: Home](https://www.stunnel.org/)
