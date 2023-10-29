@@ -1,14 +1,10 @@
 ---
-title: How to construct the OpenVPN Server via Stunnel on Ubuntu 22.04?
-date: "2022-09-10T22:12:03Z"
-description: "Encrypt your OpenVPN connection for extreme safety."
+title: Bypass the Great Wall with OpenVPN and Stunnel
+date: "2022-09-10T22:12:00Z"
+description: ""
 ---
 
-## 0x00 Why OpenVPN + Stunnel? 
-
-Passing the Great Wall of China is not an easy thing. Nowadays, China does lots of work to analyze and detect abnormal packets for prohibiting their citizens from accessing the Internet, and this is a research and implementation on 08/18, 2022.
-
-In order to prohibit the data transmitted via OpenVPN inspected and blocked by the China authority, here is the study about how to set up OpenVPN and Stunnel for secret data transmission.
+Getting past the Great Wall of China's internet restrictions is no easy feat. Today, China invests significantly in analyzing and detecting unusual packets to prevent its citizens from accessing certain parts of the Internet. To avoid having data transmitted via OpenVPN inspected and blocked by Chinese authorities, this study outlines how to set up OpenVPN and Stunnel for discreet data transmission.
 
 ## 0x10 OpenVPN Architecture
 

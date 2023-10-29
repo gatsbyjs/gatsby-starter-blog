@@ -1,10 +1,8 @@
 ---
-title: What's Helm Charts - Intro
-date: "2023-12-12T17:33:05Z"
-description: "It's common and easy to deploy services to Openshift or Kubernets using Template and CLI. However, on the growing of services, managing many configurations become a heavy load for developers. Aiming to make the work easier, Helm Charts..."
+title: An Introduction to Helm Chart
+date: "2022-12-12T17:33:00Z"
+description: ""
 ---
-
-## Intro
 
 It's common and easy to deploy services to Openshift or Kubernets using __Template__ and __CLI__. However, on the growing of services, managing many configurations become a heavy load for developers. Aiming to make the work easier, [Helm Charts](https://helm.sh/) comes to people's eyes, and it realy does good job managing all the services to be deployed. 
 

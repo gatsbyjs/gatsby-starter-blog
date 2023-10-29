@@ -1,16 +1,10 @@
 ---
-title: Golang - What's Go modules?
-date: "2023-11-19T13:47:19Z"
-description: "A Go module is a collection of Go packages, and other Go projects could easily import modules for development. As of Go 1.11, the go command has enabled the use of modules. Starting in Go 1.13, module mode became the default for all development."
+title: Embrace Go Modules for Effective Dependency Management
+date: "2022-11-19T13:47:00Z"
+description: ""
 ---
 
-## Contexts
-
-A Go module is a collection of Go packages, and other Go projects could easily import modules for development. 
-
-As of Go 1.11, the go command has enabled the use of modules. Starting in Go 1.13, module mode became the default for all development. 
-
-I would like to talk some important contexts about the importing and management of Go modules.
+A Go module is a collection of Go packages that other Go projects can easily import for development. Starting with Go 1.11, the `go` command began supporting the use of modules. From Go 1.13 onwards, module mode became the default for all development. I'd like to discuss some important aspects of importing and managing Go modules.
 
 ## Introduction
 
