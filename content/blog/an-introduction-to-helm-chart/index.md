@@ -10,7 +10,7 @@ It's common and easy to deploy services to Openshift or Kubernets using __Templa
 
 A Helm Chart is a collection of __YAML__ files describing resources which could be used for the deployment in the Kubernetes or OpenShift, and a simple chart often looks like that: 
 
-```shell
+```bash
 helm/web-app/            # An example web app
   |- Chart.yaml          # A YAML file containing information about the chart
   |- values.yaml         # The default configuration values for this chart
@@ -51,13 +51,13 @@ dependencies:
 
 Then, you could execute: 
 
-```shell
+```bash
 $ helm dependency update
 ```
 
 After you update the dependencies successfully, the chart of nginx will be downloaded and placed in the `chart` directory like that: 
 
-```shell
+```bash
 helm/web-app/
   |- Chart.yaml
   |- values.yaml
@@ -75,7 +75,7 @@ The packing feature allows developers to transform the original files and direct
 
 First, let's package an example chart: 
 
-```shell
+```bash
 $ helm package helm/web-app --app-version 1.0.8 --version 1.0.8
 ```
 
@@ -86,25 +86,25 @@ Both two arguments are set in the file `Chart.yaml` defaultly.
 
 Then, before you are going to install the chart, you could generate the template derived from the chart for double check: 
 
-```shell
+```bash
 $ helm template web-app web-app-1.0.8.tgz -f helm/web-app/values.yaml 
 ```
 
 Also, you could use the official linter for it: 
 
-```shell
+```bash
 $ helm lint web-app-1.0.8.tgz -f helm/web-app/values.yaml 
 ```
 
 Finally, deploy your chart on the Kubernetes or OpenShift: 
 
-```shell
+```bash
 $ helm install web-app web-app-1.0.8.tgz -f helm/web-app/values.yaml 
 ```
 
 or 
 
-```shell
+```bash
 $ helm upgrade web-app web-app-1.0.8.tgz -f helm/web-app/values.yaml --install
 ```
 
@@ -116,13 +116,13 @@ According to [The Chart Repository Guide][1], there are several places for you t
 
 By the way, on installing the Helm CLI, a repository named `stable` is added for you. you could search for its charts on CNCF [Artifact Hub][2], or execute: 
 
-```shell
+```bash
 $ helm search repo stable
 ```
 
 OK, let's turn back to host your own repository, and begin it with the most familiar GitHub. Before the next step, you have to know what it looks like in a repository: 
 
-```shell
+```bash
 my-repo/
   |- index.yaml
   |- web-app-1.0.8.tgz
@@ -131,7 +131,7 @@ my-repo/
 
 The first file is the index file of the repository, containing neccessary metadata about the package. You could simply generated it via: 
 
-```shell
+```bash
 $ helm repo index
 ```
 
@@ -139,7 +139,7 @@ Needless to say, the second file is the chart you packaging. As for the third fi
 
 Thus, after you packaging your own chart and update the `index.yaml` file, you could directly push your repository: 
 
-```shell
+```bash
 $ git clone git@github.com:[GitHub ID]/my-repo/.git
 $ mv helm/web-app my-repo/
 $ cd my-repo/
@@ -150,19 +150,19 @@ $ git push
 
 When you are going to access the repository, you add it via helm command: 
 
-```shell
+```bash
 $ helm repo add my-repo https://github.com:[GitHub ID]/my-repo
 ```
 
 or
 
-```shell
+```bash
 $ helm repo add my-repo https://github.com:[GitHub ID]/my-repo --username [Your Username] --password [Your Password]
 ```
 
 Then you could search all charts in these repos: 
 
-```shell
+```bash
 $ helm repo list
 NAME  	URL
 stable	https://charts.helm.sh/stable
@@ -192,7 +192,7 @@ Once you have logged in to your Kubernetes or OpenShift on your workstation, you
 
 After a successful deployment, you can list your deployment with chart verion and app version:
 
-```shell
+```bash
 $ helm list
 NAME     NAMESPACE  REVISION  UPDATED                                  STATUS    CHART          APP VERSION
 web-app  dev        8         2022-11-17 04:53:36.174486224 +0000 UTC  deployed  web-app-1.0.8  1.0.8
@@ -200,7 +200,7 @@ web-app  dev        8         2022-11-17 04:53:36.174486224 +0000 UTC  deployed 
 
 Also, you could check the historial revisions of a release: 
 
-```shell
+```bash
 $ helm history web-app
 REVISION  UPDATED                   STATUS      CHART          DESCRIPTION
 1         Fri Oct 21 13:08:51 2022  superseded  web-app-1.0.1  An example Web App
@@ -215,7 +215,7 @@ REVISION  UPDATED                   STATUS      CHART          DESCRIPTION
 
 Even, it's quite easy for you to rollback to a certain revision: 
 
-```shell
+```bash
 $ helm rollback web-app 7
 NAME: web-app
 LAST DEPLOYED: Thu Nov 17 05:34:53 2022

@@ -10,7 +10,7 @@ Getting past the Great Wall of China's internet restrictions is no easy feat. To
 
 First of all, let's take a look at the architecture. There are 2 parts forming the OpenVPN tunnel: 
 
-```!
+```
 OpenVPN Server Service
 (The Server: port 1194)
           |
@@ -26,7 +26,7 @@ When the connection is established, a new interface is created on your devices, 
 
 Here are the settings of OpenVPN on the server side (Ubuntu 22.04 LTS): 
 
-```shell!
+```bash
 # This port is defined as the opening port on the server side. 
 port 1194
 
@@ -88,7 +88,7 @@ verb 3
 
 Here are the settings of OpenVPN on the client side (Ubuntu 22.04 LTS): 
 
-```shell!
+```bash
 # This device is a client. 
 client
 
@@ -119,32 +119,11 @@ nobind
 route server.example.com 255.255.255.255 net_gateway
 ```
 
-<!-- ### Stunnel Client on Windows 11
-
-#### OpenVPN Configuration
-
-```shell!
-```
-
-### OpenVPN Client on Android 12
-
-#### OpenVPN Configuration
-
-```shell!
-```
-
-### OpenVPN Client on iOS 15.6
-
-#### OpenVPN Configuration
-
-```shell!
-``` -->
-
 ## Stunnel Architecture
 
 OK, here we are for the OpenVPN plus Stunnel. Before we start it, let's see the architect: 
 
-```!
+```
 OpenVPN Server Service --- Stunnel Server Service
      (Port 1194)                |(Port 443) |
                                 |           |
@@ -158,7 +137,7 @@ As you see, a Stunnel was constructed, and the portal of the OpenVPN server is p
 
 Also, In order to test the construction of tunnel, you can use [`tcpdump`](https://www.tcpdump.org/) and [`NetCat`](https://nmap.org/ncat/): 
 
-```shell!
+```bash
 # Use tcpdump to capture packets received and 
 # transmitted to OpenVPN Server Service on port 1194. 
 user@server:~$ sudo tcpdump -i lo port 1194 -n -vvvv
@@ -179,7 +158,7 @@ https://blog.gtwang.org/linux/linux-utility-netcat-examples/   -->
 
 Here are the settings of Stunnel on the server side (Ubuntu 22.04 LTS): 
 
-```shell!
+```bash
 pid = /var/run/stunnel4/stunnel.pid
 output = /var/log/stunnel4/stunnel.log
 
@@ -207,7 +186,7 @@ connect = server.example.com:1194
 
 Here are the settings of Stunnel on the client side (Ubuntu 22.04 LTS): 
 
-```shell!
+```bash
 pid = /var/run/stunnel4/stunnel.pid
 output = /var/log/stunnel4/stunnel.log
 
@@ -230,7 +209,7 @@ connect=minipc.hopto.org:443
 
 Here are the settings of OpenVPN on the server side (Ubuntu 22.04 LTS): 
 
-```shell!
+```bash
 client
 dev tun
 proto tcp
@@ -256,18 +235,6 @@ verb 3
 # which set the default gateway to 127.0.0.1:1194. 
 route server.example.com 255.255.255.255 net_gateway
 ```
-
-<!-- ### Stunnel Client on Windows 11
-
-#### Stunnel Configuration
-
-```shell!
-```
-
-#### OpenVPN Configuration
-
-```shell!
-``` -->
 
 ## References
 
