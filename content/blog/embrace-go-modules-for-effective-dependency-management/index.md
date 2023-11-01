@@ -1,5 +1,5 @@
 ---
-title: Embrace Go Modules for Effective Dependency Management
+title: "Embrace Go Modules for Effective Dependency Management"
 date: "2022-11-19T13:47:00Z"
 description: ""
 ---

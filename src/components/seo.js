@@ -42,6 +42,7 @@ const Seo = ({ description, title, children }) => {
       />
       <meta name="linkedin:title" content={title} />
       <meta name="linkedin:description" content={metaDescription} />
+      <meta name="google-site-verification" content="zgVlUObHWYQZekMRBidCSyG1osOhUBdjiNGhTW-VHn0" />
       {children}
     </>
   )
