@@ -16,6 +16,7 @@
     "gatsby-plugin-manifest": "^5.10.0",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-sharp": "^5.10.0",
+    "gatsby-plugin-sitemap": "^6.12.3",
     "gatsby-remark-images": "^7.10.0",
     "gatsby-remark-prismjs": "^7.10.0",
     "gatsby-remark-responsive-iframe": "^6.10.0",
