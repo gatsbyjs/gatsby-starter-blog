@@ -16,7 +16,7 @@ module.exports = {
       summary: `@ubcigem’s scientific blog. Stay tuned for up-and-coming synthetic biology news!`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `http://ubcigem.com/SimplySynbio/`,
+    siteUrl: `http://ubcigem.com/simplysynbio/`,
     social: {
       instagram: `simplysynbio`,
     },
