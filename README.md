@@ -10,7 +10,7 @@ Check out the instructions here [TODO].
   - If locally, you will need to install [Node.js](https://nodejs.org/en), and [npm](https://www.npmjs.com/).
 3. When you are done with your issue:
     1. Make a new branch with your name and the issue number. For instance, "lucy-4".
-    2. Commit your changes with a message mentioning your issue number such as "done #4". Push you changes to that branch and open a PR. You are responsible for dealing with any merge conflicts. If your PR has merge conflicts I will not review it.
+    2. Commit your changes with a message mentioning your issue number such as "done #4", please include the # because GitHub will automatically link that commit to the issue. Push you changes to that branch and open a PR. You are responsible for dealing with any merge conflicts. If your PR has merge conflicts I will not review it.
     3. If your changes are approved, I'll merge your branch into the master branch.
 
 If you claim and issue and have not worked on it for 2 weeks, I'll check in. If you can't complete the issue I will unassign you.
