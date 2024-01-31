@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/SimplySynbio",
+  pathPrefix: "/simplysynbio",
   siteMetadata: {
     title: `Simply Synbio`,
     author: {
