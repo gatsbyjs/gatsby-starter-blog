@@ -17,8 +17,6 @@ If you claim and issue and have not worked on it for 2 weeks, I'll check in. If 
 
 Most issues are related to this [Figma](https://www.figma.com/file/RzhBu1jmK21fMMzofxSshe/SimplySynbio-Blog?type=design&node-id=0%3A1&mode=design&t=iNl9B1xCUgCbwUg0-1). Ask Lucy for clarifying questions.
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FRzhBu1jmK21fMMzofxSshe%2FSimplySynbio-Blog%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DiNl9B1xCUgCbwUg0-1" allowfullscreen></iframe>
-
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a typical Gatsby project.
