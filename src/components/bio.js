@@ -32,23 +32,10 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      <StaticImage
-        src="../images/logo.png"
-        width={200}
-        height={200}
-        alt="Profile picture"
-        quality={100}
-      />
-      {author?.name && (
-        <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
-          {" "}Follow us on{" "}
-          <a href={`https://instagram.com/${social?.instagram || ``}`}>
-            Instagram
-          </a>
-          .
-        </p>
-      )}
+      <p>
+        Welcome to UBC iGEM’s Scientific Blog. Tune in every other week to see
+        the latest synthetic biology happenings in the scientific community!
+      </p>
     </div>
   )
 }
